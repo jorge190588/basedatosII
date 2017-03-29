@@ -51,3 +51,5 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 6. Cache
 7. Formatos de resultado (Tabla, Json y xml)
 8. Cursores.
+9. Pruebas unitarias.
+10. Analisis multidimensional
