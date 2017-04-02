@@ -36,9 +36,10 @@ go
 
 -- Tabla Productos, en esta tabla hay referencias a las tablas anteriores
 create table Productos(
-idProducto int primary key not null identity,
-nombreProducto varchar(100),
-descripcionProducto varchar(255),
+id int primary key not null identity,
+codigo varchar(50),
+nombre varchar(100),
+descripcion varchar(255),
 precio float,
 costo float,
 existencia int,
