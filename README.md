@@ -47,7 +47,7 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 2. Prodecimientos almacenados (sin parametros, con parametros y con TVP)
 3. Try Catch 
 4. Sql y TransSql
-5. Indices.
+5. [Indices Clustered y Non-clustered](http://www.ticout.com/blog/2012/08/29/sql-server-diferencias-entre-clustered-index-y-non-clustered-index/)
 6. Cache
 7. Formatos de resultado (Tabla, Json y xml)
 8. Cursores.
