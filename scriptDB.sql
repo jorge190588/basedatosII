@@ -1,15 +1,24 @@
---ssh-keygen -t rsa -b 4096 -C guayoswing@gmail.com"
-create database ComputerDB
-use ComputerDB
+use master;
+
+if db_id('ComputerDB') is not null begin
+   print 'db exists'
+   drop database ComputerDB;
+end
+
+create database ComputerDB;
+use ComputerDB;
+
 go
 -- creación de tablas independientes
 
 -- Tabla Marca, la tabla productos depende de esta
 create table Marca(
-idMarca int primary key not null identity,
-nombreMarca varchar(50)
+	idMarca int primary key not null identity,
+	nombreMarca varchar(50)
 );
+
 go
+
 -- Tabla Color, la tabla productos depende de esta
 create table Color(
 idColor int primary key not null identity,
@@ -154,4 +163,87 @@ costo float
 constraint fk_idEntrada foreign key(idEntrada)references Entrada(idEntrada)
 );
 go
+
+create table Cliente_categoria(
+	id int primary key not null identity,
+	nombre varchar(50),
+	montoInicial decimal(18,2),
+	montoFinal decimal(18,2)
+);
+go
+
+use ComputerDB
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		Jorge Santos
+-- Create date: 01/04/2017
+-- Description:	Add comment to column field on table
+-- =============================================
+create PROCEDURE dbo.table_column_description_insert
+	@tableName varchar(100),
+	@columnName varchar(50),
+	@description varchar(100)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    EXEC sp_addextendedproperty 
+@name = N'MS_Description', @value = @description,
+@level0type = N'Schema', @level0name = 'dbo', 
+@level1type = N'Table',  @level1name = @tableName, 
+@level2type = N'Column', @level2name = @columnName;
+
+END
+GO
+
+
+
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		Jorge Santos
+-- Create date: 01/04/2017
+-- Description:	Select table comments
+-- =============================================
+CREATE PROCEDURE dbo.table_column_description_select
+	@table varchar(50)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+     select 
+        st.name [Table],
+        sc.name [Column],
+        sep.value [Description]
+    from sys.tables st
+    inner join sys.columns sc on st.object_id = sc.object_id
+    left join sys.extended_properties sep on st.object_id = sep.major_id
+                                         and sc.column_id = sep.minor_id
+                                         and sep.name = 'MS_Description'
+    where st.name = @table
+    
+END
+GO
+
+
+
+
+
+/*command for select definition table */
+
+-- exec dbo.table_column_description_insert 'Cliente_categoria','montoInicial','Monto inicial en unidades monetarias de ventas la clasificacion ABC de client'
+-- exec sp_columns Cliente_categoria
+-- EXEC sp_help Cliente_categoria
+-- Select * From INFORMATION_SCHEMA.COLUMNS Where TABLE_NAME = 'Cliente_categoria'
 
