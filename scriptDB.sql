@@ -247,4 +247,4 @@ GO
 -- exec sp_columns Cliente_categoria
 -- EXEC sp_help Cliente_categoria
 -- Select * From INFORMATION_SCHEMA.COLUMNS Where TABLE_NAME = 'Cliente_categoria'
-
+-- select @@SERVERNAME
