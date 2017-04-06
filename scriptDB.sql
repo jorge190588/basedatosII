@@ -104,9 +104,9 @@ create table Proveedor(
 idProveedor int not null primary key identity,
 nombreProveedor varchar(100),
 nit varchar(10),
-telefono int,
 direccion varchar(255),
 idMunicipio int,
+telefono int,
 idFormaPago int,
 constraint fk_idMunicipio foreign key(idMunicipio)references Municipio(idMunicipio),
 constraint fk_formaDePago foreign key(idFormaPago)references FormaDePago(idFormaPago)
@@ -139,7 +139,7 @@ idSalida int,
 idProducto int,
 cantidad int,
 precio float,
-costo float
+costoTotal float
 constraint fk_idSalida foreign key(idSalida)references Salida(idSalida)
 );
 go
@@ -160,7 +160,7 @@ idEntrada int,
 idProducto int,
 cantidad int,
 precio float,
-costo float
+costoTotal float
 constraint fk_idEntrada foreign key(idEntrada)references Entrada(idEntrada)
 );
 go
