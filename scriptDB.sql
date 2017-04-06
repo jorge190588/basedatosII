@@ -9,7 +9,7 @@ create database ComputerDB;
 use ComputerDB;
 
 go
--- creación de tablas independientes
+-- creaciÃ³n de tablas independientes
 
 -- Tabla Marca, la tabla productos depende de esta
 create table Marca(
@@ -25,7 +25,7 @@ idColor int primary key not null identity,
 nombreColor varchar(50)
 );
 go
--- Tabla Dimensión, la tabla productos depende de esta
+-- Tabla DimensiÃ³n, la tabla productos depende de esta
 create table Dimension(
 idDimension int primary key not null identity,
 nombreDimension varchar(50),
@@ -113,7 +113,7 @@ constraint fk_formaDePago foreign key(idFormaPago)references FormaDePago(idForma
 );
 go
 
--- Tabla Clasificación de Cliente
+-- Tabla ClasificaciÃ³n de Cliente
 -- Se clasificacn los clientes segun las ventas A,B,C, etc
 create table ClasificacionCliente(
 idClasificacion int not null primary key identity,
@@ -127,7 +127,7 @@ go
 create table Salida(
 idSalida int not null primary key identity,
 fecha date,
-documento int,
+documento varchar(20),
 idCliente int,
 constraint fk_Cliente foreign key(idCliente)references Clientes(idCliente)
 );
@@ -148,7 +148,7 @@ go
 create table Entrada(
 idEntrada int not null primary key identity,
 fecha date,
-documento int,
+documento varchar(20),
 idProveedor int,
 constraint fk_Proveedor foreign key(idProveedor)references Proveedor(idProveedor)
 );
@@ -248,3 +248,10 @@ GO
 -- EXEC sp_help Cliente_categoria
 -- Select * From INFORMATION_SCHEMA.COLUMNS Where TABLE_NAME = 'Cliente_categoria'
 -- select @@SERVERNAME
+
+ALTER TABLE [dbo].[SalidaDetalle]  WITH CHECK ADD  CONSTRAINT [FK_SalidaDetalle_Productos] FOREIGN KEY([idProducto])
+REFERENCES [dbo].[Productos] ([id])
+GO
+ALTER TABLE [dbo].[SalidaDetalle] CHECK CONSTRAINT [FK_SalidaDetalle_Productos]
+GO
+
