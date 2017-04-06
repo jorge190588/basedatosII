@@ -127,7 +127,7 @@ go
 create table Salida(
 idSalida int not null primary key identity,
 fecha date,
-documento varchar(20),
+documento int,
 idCliente int,
 constraint fk_Cliente foreign key(idCliente)references Clientes(idCliente)
 );
@@ -148,7 +148,7 @@ go
 create table Entrada(
 idEntrada int not null primary key identity,
 fecha date,
-documento varchar(20),
+documento int,
 idProveedor int,
 constraint fk_Proveedor foreign key(idProveedor)references Proveedor(idProveedor)
 );
