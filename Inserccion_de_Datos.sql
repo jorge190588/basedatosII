@@ -10,12 +10,12 @@ insert into Color(nombreColor) values('Negro'),('Gris'),('Blanco'),('Azul'),('Ro
 go									
 
 -- Volcado de datos Tabla Dimension
-insert into Dimension(nombreDimension,alto,ancho) values('Ejemplo',6.5,10.4),('Ejemplo2',20,14)
+insert into Dimension(nombreDimension,alto,ancho) values('Ejemplo',6.5,10.4),('Ejemplo2',20,14),('Ejemplo3',10,17)
 go
 
 
 -- Volcado de datos Tabla Productos
-insert into Productos(nombreProducto,descripcionProducto,precio,costo,existencia,idMarca,idDimension,idColor)
+insert into Productos(nombre,descripcion,precio,costo,existencia,idMarca,idDimension,idColor)
 values('Monitor','Monitor para PC',3000,2000,15,1,3,1),('Mouse','Mouse inlámbrico usb',400,150,25,1,3,5),
 	  ('Laptop','Computadora Laptop pequeña',6000,5000,12,4,2,5),('Teclado','Teclado inalámbrico usb',250,175,20,2,1,1),
 	  ('Memoria USB','Dispositivo de almacenamiento usb de 32gb',150,90,50,8,1,2),('PC Hp','Computadora de Escritorio sin CPU',4000,3400,8,6,3,3),
