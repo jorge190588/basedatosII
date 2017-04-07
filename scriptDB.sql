@@ -5,8 +5,8 @@ if db_id('ComputerDB') is not null begin
    drop database ComputerDB;
 end
 
-create database ComputerDB;
-use ComputerDB;
+create database ComputerDB
+use ComputerDB
 
 go
 -- creación de tablas independientes

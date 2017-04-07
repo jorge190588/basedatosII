@@ -166,7 +166,7 @@ insert into Proveedor(nombreProveedor,nit,direccion,idMunicipio,telefono,idForma
 		  ('Freddy Herrera','8754332-8','Colonia Mendizabal Zona 2',35,41793176,6)
 go		 
 
-
+/*
 
 -- altere el campo documento de la Tabla Salida lo converti a int para poder
 -- ingresar datos mas rapido, si usted no ha creado la base de datos con base a este script
@@ -197,5 +197,5 @@ end
 exec sp_rename 'EntradaDetalle.costo','costoTotal'
 exec sp_rename 'SalidaDetalle.costo','costoTotal'
 
--- Volcado de Datos Tabla SalidaDetalle
-insert into SalidaDetalle(idSalida,idProducto,cantidad,precio,costo)
+
+*/

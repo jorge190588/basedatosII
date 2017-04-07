@@ -9,19 +9,19 @@ use ComputerDB
 -- PROCEDIMIENTO ALMACENADO PARA INSERTAR SALIDAS DE MANERA MASIVA
 
 create procedure sp_InsertarSalidaMasivo 
-@fecha date,
-@contador int
+	@contador int
 as
 begin
 ---- Creacion de la variables para definir un rango en base a los ids existentes de clientes
-declare @Random int;
-declare @maximo int;
-declare @minimo int;
+	declare @Random int;
+	declare @maximo int;
+	declare @minimo int;
 
-SET @minimo = 1
-SET @maximo = 15 
-SELECT @Random = ROUND(((@maximo - @minimo -1) * RAND() + @minimo), 0)
---SELECT @Random as [Aleatorio]	
+	SET @minimo = 1
+	SET @maximo = 15 
+	SELECT @Random = ROUND(((@maximo - @minimo -1) * RAND() + @minimo), 0)
+	declare @fecha datetime
+	select @fecha=dbo.getRandomDate('01/01/2013','10/04/2017')
 
 	insert into dbo.Salida(fecha,documento,idCliente)
 	values(@fecha,@contador,@Random)
@@ -36,9 +36,9 @@ drop proc sp_InsertarSalidaMasivo
 declare @documento int
 set @documento=1
 --select @variable as [Variable]
-while(@documento <= 1000)
+while(@documento <= 100000)
 begin
-	execute sp_InsertarSalidaMasivo '2015-08-10',@documento 
+	execute sp_InsertarSalidaMasivo @documento 
 	set @documento = @documento+1
 end
 
@@ -48,7 +48,7 @@ end
 
 -- PROCEDIMIENTO ALMACENADO PARA INSERTAR SALIDADETALLE DE MANERA MASIVA
 create procedure sp_InsertarSalidaDetalleMasivo
-@idSalida int
+	@idSalida int
 as
 begin
 declare @ProductoAzar int;
@@ -77,10 +77,10 @@ end
 
 -- EJECUTAR EL SP ANTERIOR DENTRO DE UN WHILE
 declare @IdSalida int
-set @IdSalida=1001
+set @IdSalida=1 --id de salida inicial
 --select @IdSalida as [IDsalida]
 
-while(@IdSalida <= 2000)
+while(@IdSalida <= 100000) --id de salida maximo
 begin
 	execute sp_InsertarSalidaDetalleMasivo @IdSalida
 	set @IdSalida = @IdSalida+1
