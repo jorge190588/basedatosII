@@ -255,3 +255,5 @@ GO
 ALTER TABLE [dbo].[SalidaDetalle] CHECK CONSTRAINT [FK_SalidaDetalle_Productos]
 GO
 
+//ejemplo de commit
+
