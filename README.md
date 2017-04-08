@@ -1,6 +1,30 @@
 # basedatosII
 El proyecto contiene un script de la base de datos de un giro de negocio de ventas.   Los movimientos registrados deben de ser sobre productos de computadoras
 
+# Grupos
+
+## 1. Salidas
+  1.
+  2.
+  3.
+  4.
+  
+## 2. Entradas
+  1.
+  2.
+  3.
+  4.
+  5.
+  
+## 3. Inventarios.
+  1.
+  2.
+  3.
+  4.
+  5.
+  
+
+
 # Alumnos
 Deben aportan en el proyecto por medio de commits, actualizando el script de la base de datos e ingresando como minimo 500,000 registros en las transacciones principales que son movimientos de compras y ventas.
 
