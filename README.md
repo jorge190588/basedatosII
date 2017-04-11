@@ -78,12 +78,12 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 9. Pruebas unitarias.
 10. Analisis multidimensional
 11. [Mineria de datos](https://www.youtube.com/watch?v=hbiRtv2WxDY)
-  1. Asociacion de patrones
-  2. Clustering
-  3. Arboles de desicion.
-  4. Regresion lineal
-  5. Regresion logistica
-  6. Teorema de Bayes
-  7. Reres neuronales.
-  8. Secuencia de clustering
-  9. Series de tiempo.
+  *. Asociacion de patrones
+  *. Clustering
+  *. Arboles de desicion.
+  *. Regresion lineal
+  *. Regresion logistica
+  *. Teorema de Bayes
+  *. Reres neuronales.
+  *. Secuencia de clustering
+  *. Series de tiempo.
