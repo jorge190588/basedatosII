@@ -10,7 +10,10 @@ insert into Color(nombreColor) values('Negro'),('Gris'),('Blanco'),('Azul'),('Ro
 go									
 
 -- Volcado de datos Tabla Dimension
-insert into Dimension(nombreDimension,alto,ancho) values('Ejemplo',6.5,10.4),('Ejemplo2',20,14),('Ejemplo3',10,17)
+insert into Dimension(nombreDimension,alto,ancho) values('Ejemplo',6.5,10.4),
+														('Ejemplo2',20,14),
+														('Ejemplo3',10,17),
+														('Normal',6.2,11.3)
 go
 
 
@@ -19,7 +22,11 @@ insert into Productos(nombre,descripcion,precio,costo,existencia,idMarca,idDimen
 values('Monitor','Monitor para PC',3000,2000,15,1,3,1),('Mouse','Mouse inlámbrico usb',400,150,25,1,3,5),
 	  ('Laptop','Computadora Laptop pequeña',6000,5000,12,4,2,5),('Teclado','Teclado inalámbrico usb',250,175,20,2,1,1),
 	  ('Memoria USB','Dispositivo de almacenamiento usb de 32gb',150,90,50,8,1,2),('PC Hp','Computadora de Escritorio sin CPU',4000,3400,8,6,3,3),
-	  ('Laptop','Laptop con tecládo alfanumerico',6000,4500,22,7,3,2)
+	  ('Laptop','Laptop con tecládo alfanumerico',6000,4500,22,7,3,2),
+	  ('Teclado','Teclado Usb Imexx Pc Computadora Laptop',125,90,100,8,1,2),
+	  ('Teclado','Logitech Bluetooth Illuminated Keyboard K810',250,180,100,8,1,1),
+	  ('Mouse','M510 Wireless Laser Mouse',80,60,100,5,4,1),
+	  ('Mouse','Mouse M100',250,180,100,8,4,3)
 go
 
 
@@ -143,7 +150,8 @@ insert into Clientes(nombreCliente,nit,direccion,idMunicipio,telefono,idFormaPag
 		  ('Akasio Martinez','5643243-7','Hacienda San Joaquín Zona 4',30,56753476,2),
 		  ('Miguel Quintanilla','1223436-3','Frente al Cementerio Zona 3',44,77713245,5),
 		  ('Jose Luis López','2133879-1','Zona 4',42,77719452,3),
-		  ('Canario Ortíz','8754332-8','Colonia Mendizabal Zona 2',35,41793176,6)
+		  ('Canario Ortíz','8754332-8','Colonia Mendizabal Zona 2',35,41793176,6),
+		  ('Elvin Morales','278638-8','Ciudad',1,34064744,1)
 go		 
 
 
@@ -165,6 +173,8 @@ insert into Proveedor(nombreProveedor,nit,direccion,idMunicipio,telefono,idForma
 		  ('Marlon Mejía','2133879-1','Zona 4',42,77719452,3),
 		  ('Freddy Herrera','8754332-8','Colonia Mendizabal Zona 2',35,41793176,6)
 go		 
+
+-- Volcado de Datos Tabla Proveedor
 
 /*
 

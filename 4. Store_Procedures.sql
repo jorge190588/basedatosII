@@ -1,3 +1,4 @@
+use ComputerDB
 -- =============================================
 -- Author:		Eduardo Barrios
 -- Create date: 06/04/2017
@@ -67,27 +68,19 @@ set @CantidadMaxima = 5
 select @CantidadAzar = ROUND(((@CantidadMaxima - @CantidadMinima -1) * RAND() + @CantidadMinima), 0)
 
 declare @Precio float;
-select @Precio = precio from Productos where idProducto = @ProductoAzar
+select @Precio = precio from Productos where id = @ProductoAzar
 
 	insert into SalidaDetalle(idSalida,idProducto,cantidad,precio,costoTotal)
 	values(@idSalida,@ProductoAzar,@CantidadAzar,@Precio,(@CantidadAzar*@Precio))
 end
 
 
-
 -- EJECUTAR EL SP ANTERIOR DENTRO DE UN WHILE
 declare @IdSalida int
-<<<<<<< HEAD
-set @IdSalida=101
---select @IdSalida as [IDsalida]
-
-while(@IdSalida <= 200)
-=======
 set @IdSalida=1 --id de salida inicial
 --select @IdSalida as [IDsalida]
 
 while(@IdSalida <= 100000) --id de salida maximo
->>>>>>> origin/master
 begin
 	execute sp_InsertarSalidaDetalleMasivo @IdSalida
 	set @IdSalida = @IdSalida+1
@@ -157,7 +150,7 @@ set @CantidadMaxima = 5
 select @CantidadAzar = ROUND(((@CantidadMaxima - @CantidadMinima -1) * RAND() + @CantidadMinima), 0)
 
 declare @Precio float;
-select @Precio = precio from Productos where idProducto = @ProductoAzar
+select @Precio = precio from Productos where id = @ProductoAzar
 
 	insert into EntradaDetalle(idEntrada,idProducto,cantidad,precio,costoTotal)
 	values(@idEntrada,@ProductoAzar,@CantidadAzar,@Precio,(@CantidadAzar*@Precio))
@@ -175,5 +168,3 @@ begin
 end
 
 --------------------------------------------------------------------------------------------------
-
-
