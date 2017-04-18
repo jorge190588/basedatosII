@@ -250,5 +250,6 @@ values('Cable','Usb Extension Cable',35,15,15,13,3,1),('Cable','Cable Usb 4 Pine
       ('Lectora CD','Lee y Quema CD/DVD',325,200,15,2,3,1),('Memoria Ram 8GB','DDR3',450,225,25,14,3,3),
       ('Memoria Ram 4GB','DDR4',300,200,15,14,3,1),('Memoria Ram DDR3L','Micro 8GB',450,225,25,14,3,3),
       ('Memoria ValueRam 4GB','FlueRam',300,200,15,14,3,1),('Memoria Ram HyperX','8GB',450,225,25,14,3,3),
-      ('Disco Duro Externo','2TB',1000,600,15,14,3,1),('Disco Duro Interno','1TB',850,500,25,14,1,3),
+      ('Disco Duro Externo','2TB',1000,600,15,14,3,1),('Disco Duro Interno','1TB',850,500,25,14,1,3)
+      go
       
