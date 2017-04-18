@@ -151,7 +151,50 @@ insert into Clientes(nombreCliente,nit,direccion,idMunicipio,telefono,idFormaPag
 		  ('Miguel Quintanilla','1223436-3','Frente al Cementerio Zona 3',44,77713245,5),
 		  ('Jose Luis López','2133879-1','Zona 4',42,77719452,3),
 		  ('Canario Ortíz','8754332-8','Colonia Mendizabal Zona 2',35,41793176,6),
-		  ('Elvin Morales','278638-8','Ciudad',1,34064744,1)
+		  ('Elvin Morales','278638-8','Ciudad',1,34064744,1),
+		  ('Zelik Ramirez','912201-3','8va avenida calle 4-05 Zona 1',2,49500324,1),
+		  ('Hamilton Lopez','57768-2','7ma avenida Zona 1',1,52534588,2),
+		  ('Nicolas Hagen','435647-6','8va avenida calle 2-01 Zona 8',4,46102241,3),
+		  ('Mauro Portillo','64356-7','2da avenida calle 7-09 Zona 10',10,54675465,4),
+		  ('Agustin Herrera','456754-1','8ra avenida calle 5-05 Zona 3',6,46563452,1),
+		  ('Bryan Ordoñez','763224-9','9na avenida calle 4-05 Zona 1',7,54235468,5),
+		  ('Carlos Ruiz','672143-1','7ma avenida calle 6-05 Zona 2',13,31246578,2),
+		  ('Guillermo Alvarez','2134567-2','5ta avenida calle 2-03 Zona 4',22,56789832,1),
+		  ('Cristian Sanchez','678542-2','5ta avenida calle 7-05 Zona 2',25,54678765,5),
+		  ('Gaston Puerari','653208-6','6ta avenida calle 9-03 Zona 1',9,42312345,2),
+		  ('Paulo Mota','5443525-2','4ta avenida calle 4-05 Zona 1',19,32457687,3),
+		  ('Darwin Oliva','554243-7','8va avenida calle 2-04 Zona 4',20,54555445,4),
+		  ('Carlos Kamiani','654387-3','7ma avenida calle 9-25 Zona 3',24,77543457,1),
+		  ('Osman Lopez','324567-1','3ra avenida calle 8-15 Zona 8',42,43657843,1),
+		  ('Luis suarez','534121-8','5ta avenida calle 2-05 Zona 2',25,44032881,1),
+		  ('Pedro Altan','564321-7','9na avenida calle 3-05 Zona 4',30,31498790,3),
+		  ('Jaime Alas','762346-3','8va avenida calle 4-05 Zona 1',14,49163929,1),
+		  ('Danilo Guerra','413389-1','6ta avenida calle 3-07 Zona 2',22,45388396,1),
+		  ('John Mendez','475432-9','9na avenida calle 2-07 Zona 1',45,30182131,1),
+		  ('Ricardo Foster','7865432-3','4ta avenida calle 4-05 Zona 3',24,50000908,1),
+		  ('Dennis Laparra','458321-1','9na avenida calle 1-05 Zona 2',32,44678798,3),
+		  ('Dario Flores','974653-8','8va avenida calle 4-05 Zona 1',15,41793175,1),
+		  ('Jefri Payeras','8634503-8','9na avenida calle 3-05 Zona 4',10,59753476,1),
+		  ('Cristian Jimenez','543678-2','5ta avenida calle 7-05 Zona 2',44,71713245,2),
+		  ('Alexis Matta','876543-9','2da avenida calle 7-09 Zona 10',22,54194562,4),
+		  ('Gustavo Machain','87532-1','7ma avenida calle 6-05 Zona 2',32,49793176,2),
+		  ('Jonatan Lopez','434567-1','7ma avenida calle 6-05 Zona 9',27,54657843,1),
+		  ('Israel Silva','3234121-8','8va avenida calle 4-05 Zona 1',26,56032881,1),
+		  ('Kevin Arreola','824321-7','9na avenida calle 3-05 Zona 4',40,51498790,3),
+		  ('Fernando Paterson','212346-3','6ta avenida calle 9-03 Zona 1',29,74163929,1),
+		  ('Jonny Cubero','513389-1','6ta avenida calle 3-07 Zona 2',42,55388396,1),
+		  ('Milton Sanchez','375432-9','9na avenida calle 2-07 Zona 1',35,50182131,1),
+		  ('Tyson Nuñez','2865432-3','5ta avenida calle 2-03 Zona 4',44,30000908,1),
+		  ('Edison Escobar','658321-1','9na avenida calle 1-05 Zona 2',42,34678798,3),
+		  ('Rudy Diaz','774653-8','8va avenida calle 4-05 Zona 1',35,41793175,1),
+		  ('Rocio Rodas','9634503-8','9na avenida calle 3-05 Zona 4',30,56789832,1),
+		  ('Glandys Samayoa','843678-2','5ta avenida calle 7-05 Zona 2',21,41713245,2),
+		  ('William Reyes','476543-9','2da avenida calle 7-09 Zona 10',41,44194562,4),
+		  ('Daniela Ramirez','37532-1','7ma avenida calle 6-05 Zona 2',35,59793176,2)
+		  
+		  
+      
+      
 go		 
 
 
