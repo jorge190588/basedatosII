@@ -4,6 +4,7 @@ El proyecto contiene un script de la base de datos de un giro de negocio de vent
 ## Grupos
 
 ### 1. Salidas
+
   1.Eduardo Barrios
   2.Gabriel Rodriguez
   3.Angel Gonzales
@@ -87,3 +88,4 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
   *. Reres neuronales.
   *. Secuencia de clustering
   *. Series de tiempo.
+12. [SQL Server y Amazon](https://www.youtube.com/watch?v=K8gSaS_E4JM)
