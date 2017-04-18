@@ -216,3 +216,39 @@ insert into Marca(nombreMarca) values('Epson'),('Canon'),('Xtech'),('Kingston'),
 				     ('Aoc'),('Ubiquiti'),('SanDisk'),('Forza'),('Microsoft'),
 				     ('APC'),('Aorus'),('HyperX'),('seagate'),('Wacom')
 				      go
+
+-- Agregando mas datos Tabla Productos
+insert into Productos(nombre,descripcion,precio,costo,existencia,idMarca,idDimension,idColor)
+values('Cable','Usb Extension Cable',35,15,15,13,3,1),('Cable','Cable Usb 4 Pines',35,15,25,13,3,5),
+      ('Cable','Cable de audio stereo',50,15,15,1,3,1),('Cable','Cable audio 3.5 milimetros',35,15,25,13,3,5),
+      ('Cable','Apple LightNigth',200,150,15,13,3,1),('Cable Adaptador','Microsoft Wireless Adapter',200,100,25,3,1),
+      ('Espuma Limpiadora','Kit Limpieza',60,22,15,13,3,1),('Limpia Contactos','Kit Limpieza',80,32,25,13,3,2),
+      
+-- Agregando mas datos Tabla Productos
+insert into Productos(nombre,descripcion,precio,costo,existencia,idMarca,idDimension,idColor)
+values('Cable','Usb Extension Cable',35,15,15,13,3,1),('Cable','Cable Usb 4 Pines',35,15,25,13,3,5),
+      ('Cable','Cable de audio stereo',50,15,15,1,3,1),('Cable','Cable audio 3.5 milimetros',35,15,25,13,3,5),
+      ('Cable','Apple LightNigth',200,150,15,13,3,1),('Cable Adaptador','Microsoft Wireless Adapter',200,100,15,25,3,1),
+      ('Espuma Limpiadora','Kit Limpieza',60,22,15,13,3,1),('Limpia Contactos','Kit Limpieza',80,32,25,13,3,2),
+      ('Pad','Alfombra para mouse',50,20,15,5,3,1),('Aire Comprimido','Kit Limpieza',85,32,25,13,3,2),
+      ('Notebook Stan','Ventilador y soporte Laptop',300,100,15,25,3,2),('Adaptador Cargador','regula voltaje 110/220 laptop',250,100,15,24,3,2),
+      ('Servidor','Para montar en bastidos',7900,5000,15,1,3,1),('Servidor Dell','Rack-Moutable',10200,7500,15,1,3,2),
+      ('Computador Todo en uno','Todo en uno',3500,2000,15,2,3,2),('Computadora','De esccritorio',3750,2000,15,3,3,2),
+      ('Adaptador de Corriente','C/A 110/220',250,100,15,3,3,1),('Power Adapter','Adaptador de potencia',250,100,15,24,3,2),
+      ('UPS','Para conectar equipos',550,300,15,24,3,1),('Bateria Backup','Distribuidor de voltaje para UPS',500,200,25,13,3,2),
+      ('Regulador en Linea','Regulador automatico de Voltaje',750,450,15,20,3,1),('Barebones','MiniOrdenador',900,700,25,1,3,2),
+      ('Gabinete','Media Torre para ensamblaje',250,100,15,1,3,2),('Ventilador','Para Gabinete 120 mm',100,45,15,5,3,1),
+      ('Sistema Refrigeracion Lìquida','Ventilador para Servidor',450,300,15,5,3,3),('Ventilador de Sistema','Para Prolian 90',600,400,15,6,3,2),
+      ('Tarjeta Madre','Placa Base ATX',500,300,15,14,1,1),('Motherboard','Micro ATX',750,500,15,15,1,2),
+      ('Placa Base','tarjeta madre modelo MSI A68',300,150,15,14,1,1),('Fuente de Poder','500 wats',250,100,15,1,1,2),
+      ('Fuente Alimentacion','Para gabinente 12V',225,100,15,2,1,1),('Fuente Redundante','Para Servidor',450,300,15,14,3,2),
+      ('Procesador 8 nucleos','Intel Xenon X5',1200,750,15,15,1,1),('Procesador 10 nucleos','intel Xenon 2.4 GH',1750,1200,25,15,3,2),
+      ('Procesador 4 nucleos','Core i5',1100,800,15,15,1,1),('Tarjeta de Video','Radeon R7',500,400,25,28,1,2),
+      ('Tarjeta Grafica','GF GT 730',650,450,15,28,3,1),('Adaptador Micro Sd','hasta 32GB',75,25,25,14,1,3),
+      ('Tarjeta de Memoria Flash','Estandar SanDisk 16GB',80,45,15,14,1,1),('Memoria MicroSD 8GB','Micro 8GB',85,32,25,13,3,2),
+      ('Memoria MicroSD 16GB','Micro 16GB',90,45,15,15,1,1),('Memoria MicroSD 32GB','Micro 32GB',125,75,25,15,1,3),
+      ('Lectora CD','Lee y Quema CD/DVD',325,200,15,2,3,1),('Memoria Ram 8GB','DDR3',450,225,25,14,3,3),
+      ('Memoria Ram 4GB','DDR4',300,200,15,14,3,1),('Memoria Ram DDR3L','Micro 8GB',450,225,25,14,3,3),
+      ('Memoria ValueRam 4GB','FlueRam',300,200,15,14,3,1),('Memoria Ram HyperX','8GB',450,225,25,14,3,3),
+      ('Disco Duro Externo','2TB',1000,600,15,14,3,1),('Disco Duro Interno','1TB',850,500,25,14,1,3),
+      
