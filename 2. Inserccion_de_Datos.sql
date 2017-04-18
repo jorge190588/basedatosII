@@ -214,7 +214,22 @@ insert into Proveedor(nombreProveedor,nit,direccion,idMunicipio,telefono,idForma
 		  ('Karla Arenas','5643243-7','Hacienda San Joaquín Zona 4',30,56753476,2),
 		  ('Dina Arroyo','1223436-3','Frente al Cementerio Zona 3',44,77713245,5),
 		  ('Marlon Mejía','2133879-1','Zona 4',42,77719452,3),
-		  ('Freddy Herrera','8754332-8','Colonia Mendizabal Zona 2',35,41793176,6)
+		  ('Freddy Herrera','8754332-8','Colonia Mendizabal Zona 2',35,41793176,6),
+		  ('David Espinoza','1416539-2','7ma avenida calle 6-05 Zona 2',9,59793176,1),
+		  ('Selvin Gudiel','543667-7','2da avenida calle 7-09 Zona 10',3,44194562,2),
+		  ('Kevin Carreto','324432-1','5ta avenida calle 7-05 Zona 2',7,34678798,4),
+		  ('Alvaro Ticuru','12345-7','9na avenida calle 3-05 Zona 4',11,54563321,6),
+		  ('David Guerra','444444-1','8va avenida calle 4-05 Zona 1',12,34678798,5),
+		  ('Jorge Izazola','7654324-9','2da avenida calle 7-09 Zona 10',13,54326690,3),
+		  ('Pablo Silva','6789445-1','6ta avenida calle 9-03 Zona 1',14,50182131,6),
+		  ('Jorge Mario ','000000-2','5ta avenida calle 7-05 Zona 2',15,78710432,2),
+		  ('Juan Paredes','1111111-2','4ta avenida calle 4-05 Zona 3',16,51356743,5),
+		  ('Diego Orozco','6539808-6','8va avenida calle 4-05 Zona 1',6,48345564,4),
+		  ('Jimmy Moraes','5467325-2','2da avenida calle 7-09 Zona 10',19,47715127,4),
+		  ('Dayana Morales','5643243-7','5ta avenida calle 7-05 Zona 2',20,50753476,2),
+		  ('Jorge Ortiz','1223436-3','5ta avenida calle 7-05 Zona 5',4,37713245,5),
+		  ('Marlon Negrete','2133879-1','4ta avenida calle 4-05 Zona 6',2,41194562,3),
+		  ('Fredy Orellana','8754332-8','8va avenida calle 4-05 Zona 1',15,42793176,6)
 go		 
 
 -- Volcado de Datos Tabla Proveedor
