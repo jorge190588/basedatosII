@@ -1,7 +1,7 @@
 -- =============================================
 -- Author:		Eduardo Barrios
 -- Create date: 06/04/2017
--- Description:	Example Cursor
+-- Description:	Example Cursor And Index Clustered, NonClustered
 -- =============================================
 
 -- EJEMPLO CURSOR
@@ -38,3 +38,26 @@ close CursorReporteClientes
 
 -- liberamos de memoria el cursor
 deallocate CursorReporteClientes
+
+
+
+
+--EJEMPLO DE INDICES
+
+-- Saber que indices tenemos en determinada tabla
+execute sp_helpindex 'nombre de la tabla';
+
+
+-- NON CLUSTERED
+-- creacion de un indice no ordenado en la tabla Productos
+create nonclustered index Indice_nombreProducto
+on Productos(nombreProducto)
+
+
+-- CLUSTERED
+-- creacion de un indice ordenado en X tabla
+-- nota estos solo se pueden crear cuando la tabla no tiene llave primaria
+create clustered index Indice_clustered
+	on tabla (campo de tabla)
+
+
