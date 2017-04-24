@@ -3,7 +3,11 @@ use ComputerDB
 -- Volcado de datos Tabla Marca
 insert into Marca(nombreMarca) values('Dell'),('Toshiba'),('Compaq'),('Acer'),('Logitech'),
 									 ('Hp-Invent'),('Sony'),('Samsumg'),('Asus'),('IBM'),('HP'),('Epson'),
-									 ('Canon'),('Kingston')
+									 ('Canon'),('Kingston'),('Apple'),('Sony'),('Microsoft'),('Nokia'),('Intel'),
+									 ('LG'),('Adobe'),('Lenovo'),('Oracle'),('Nikon'),('Kodak'),('Huawei'),
+									 ('Alcatel'),('BlackBerry'),('AT&T'),('Fujitsu'),('HTC'),('Ebay'),
+									 ('ZTE'),('Panasonic'),('Philips'),('Cisco')
+
 									 go
 
 -- Volcado de datso Tabla Color
