@@ -396,7 +396,16 @@ insert into Clientes(nombreCliente,nit,direccion,idMunicipio,telefono,idFormaPag
 		  ('Barbara Bermudo','89995-7','canton san luis',35,15278734,2),
 		  ('Pamela Silva','9845354-4','barrio san luis',35,78872342,2),
 		  ('Tony Andrade','432489-1','vista hermosa',35,78871234,2),
-		  ('Flora Peluche','76534-1','tableros',35,77676238,2)
+		  ('Flora Peluche','76534-1','tableros',35,77676238,2),
+		  ('Helmer Puac','26173-2','la guitarra',35,77714272,1),
+		  ('Juan Sanic','87459-0','el manchon',35,77714282,1),
+		  ('Maylin Chochon','34552-2','el retiro',35,77714292,1),
+		  ('Edith Chum','97645-4','las pilas',35,77714202,1),
+		  ('Sindy Casta','23454-0','las flores',35,77714262,1),
+		  ('Emerson Quiej','96462-2','las delicias',35,77714252,1),
+		  ('Jaqueline Guadarrama','74853-1','texococo',35,77714242,1),
+		  ('Jennifer Arellano','83462-9','5ta avenida 1ra. calle zona 1',35,77714232,1),
+		  ('Gaby Graciel','34701-5','canton peru',35,77714222,1)
       
 go		 
 
