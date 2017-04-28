@@ -11,11 +11,11 @@ El proyecto contiene un script de la base de datos de un giro de negocio de vent
   4.
   
 ### 2. Entradas
-  1.
-  2.
-  3.
-  4.
-  5.
+  1.Elvin Morales
+  2.Pedro Lol
+  3.Eddy Delgado
+  4.Abel Hidalgo
+  5.Zelik Ramirez
   
 ### 3. Inventarios.
   1.
