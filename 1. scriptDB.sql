@@ -1,13 +1,20 @@
+-- first step
 use master;
 
+-- second step
 if db_id('ComputerDB') is not null begin
    print 'db exists'
+   alter database ComputerDB set single_user with rollback immediate
    drop database ComputerDB;
 end
 
+-- Third step
 create database ComputerDB;
+
+--four step
 use ComputerDB;
 
+-- five step, create tables
 go
 -- creación de tablas independientes
 
@@ -255,6 +262,40 @@ GO
 ALTER TABLE [dbo].[SalidaDetalle] CHECK CONSTRAINT [FK_SalidaDetalle_Productos]
 GO
 
-select * from clientes
 
+--tabla del estado del usuario(activo,inactivo)
+create table estadoUsuario(
+id_estado int not null identity primary key,
+nombre_estado varchar(80)
+);
+go
 
+--tabla de tipo_usuario es como admin,usuario normal,cajero
+create table tipoUsuario(
+id_tipo_usuario int not null identity primary key,
+nombre_tipo_usuario varchar(80)
+);
+go
+
+--tabla de acceso para diferentes modulos como ventas,inventario,compras,etc.
+create table accesoUsuario(
+id_acceso int not null identity primary key,
+nombre_acceso varchar(80),
+);
+go
+
+--tabla de usuario depende de tipo_usuario,de estado_usuario, y acceso_usuario
+create table Usuarios(
+id_usuarios int not null identity primary key,
+nombre varchar(80),
+apellido varchar(80),
+usuario varchar(80),
+contraseña varchar(20),
+id_tipo_usuario int,
+id_estado int,
+id_acceso int,
+constraint id_tipo_usuario foreign key(id_tipo_usuario) references tipoUsuario(id_tipo_usuario),
+constraint id_estado foreign key(id_estado) references estadoUsuario(id_estado),
+constraint id_acceso foreign key(id_acceso) references accesoUsuario(id_acceso)
+);
+go

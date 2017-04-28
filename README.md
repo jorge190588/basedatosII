@@ -77,7 +77,7 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 7. Formatos de resultado (Tabla, Json y xml)
 8. Cursores.
 9. Pruebas unitarias.
-10. Analisis multidimensional
+10. [Analisis multidimensional (cubos olap)](https://www.youtube.com/watch?v=PDqmZY1msZs)
 11. [Mineria de datos](https://www.youtube.com/watch?v=hbiRtv2WxDY)
   *. Asociacion de patrones
   *. Clustering
