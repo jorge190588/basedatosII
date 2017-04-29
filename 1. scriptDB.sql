@@ -1,4 +1,4 @@
-use master;
+﻿use master;
 
 if db_id('ComputerDB') is not null begin
    print 'db exists'
