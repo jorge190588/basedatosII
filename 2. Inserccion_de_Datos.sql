@@ -10,15 +10,17 @@ insert into Marca(nombreMarca) values('Dell'),('Toshiba'),('Compaq'),('Acer'),('
 
 									 go
 
--- Volcado de datso Tabla Color
-insert into Color(nombreColor) values('Negro'),('Gris'),('Blanco'),('Azul'),('Rojo'),('Verde'),('Amarillo')
+insert into Color(nombreColor) values('Negro'),('Gris'),('Blanco'),('Azul'),('Rojo'),('Verde'),('Amarillo'),('Rosado'),('Marron'),('Celeste'),('Purpura')
 go									
 
 -- Volcado de datos Tabla Dimension
-insert into Dimension(nombreDimension,alto,ancho) values('Ejemplo',6.5,10.4),
-														('Ejemplo2',20,14),
-														('Ejemplo3',10,17),
-														('Normal',6.2,11.3)
+insert into Dimension(nombreDimension,alto,ancho) values('Clase A',6.5,10.4),
+														('Clase B',20,14),
+														('Clase C',10,17),
+														('Clase D',6.2,11.3),
+														('Clase E',8,15),
+														('Clase F',10,20),
+														('Clase G',6.2,11.3)
 go
 
 
@@ -532,11 +534,12 @@ insert into Marca(nombreMarca) values('Epson'),('Canon'),('Xtech'),('Kingston'),
 				      go
 
 -- Agregando mas datos Tabla Productos
+
 insert into Productos(nombre,descripcion,precio,costo,existencia,idMarca,idDimension,idColor)
 values('Cable','Usb Extension Cable',35,15,15,13,3,1),('Cable','Cable Usb 4 Pines',35,15,25,13,3,5),
       ('Cable','Cable de audio stereo',50,15,15,1,3,1),('Cable','Cable audio 3.5 milimetros',35,15,25,13,3,5),
-      ('Cable','Apple LightNigth',200,150,15,13,3,1),('Cable Adaptador','Microsoft Wireless Adapter',200,100,25,3,1),
-      ('Espuma Limpiadora','Kit Limpieza',60,22,15,13,3,1),('Limpia Contactos','Kit Limpieza',80,32,25,13,3,2),
+      ('Cable','Apple LightNigth',200,150,15,13,3,1),('Cable Adaptador','Microsoft Wireless Adapter',200,100,25,3,1,4),
+      ('Espuma Limpiadora','Kit Limpieza',60,22,15,13,3,1),('Limpia Contactos','Kit Limpieza',80,32,25,13,3,2)
       
 -- Agregando mas datos Tabla Productos
 insert into Productos(nombre,descripcion,precio,costo,existencia,idMarca,idDimension,idColor)

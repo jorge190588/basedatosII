@@ -1,13 +1,20 @@
+-- first step
 use master;
 
+-- second step
 if db_id('ComputerDB') is not null begin
    print 'db exists'
+   alter database ComputerDB set single_user with rollback immediate
    drop database ComputerDB;
 end
 
+-- Third step
 create database ComputerDB;
+
+--four step
 use ComputerDB;
 
+-- five step, create tables
 go
 -- creación de tablas independientes
 
@@ -255,7 +262,6 @@ GO
 ALTER TABLE [dbo].[SalidaDetalle] CHECK CONSTRAINT [FK_SalidaDetalle_Productos]
 GO
 
-select * from clientes
 
 --tabla del estado del usuario(activo,inactivo)
 create table estadoUsuario(
