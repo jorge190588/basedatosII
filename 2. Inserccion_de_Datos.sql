@@ -10,15 +10,17 @@ insert into Marca(nombreMarca) values('Dell'),('Toshiba'),('Compaq'),('Acer'),('
 
 									 go
 
--- Volcado de datso Tabla Color
-insert into Color(nombreColor) values('Negro'),('Gris'),('Blanco'),('Azul'),('Rojo'),('Verde'),('Amarillo')
+insert into Color(nombreColor) values('Negro'),('Gris'),('Blanco'),('Azul'),('Rojo'),('Verde'),('Amarillo'),('Rosado'),('Marron'),('Celeste'),('Purpura')
 go									
 
 -- Volcado de datos Tabla Dimension
-insert into Dimension(nombreDimension,alto,ancho) values('Ejemplo',6.5,10.4),
-														('Ejemplo2',20,14),
-														('Ejemplo3',10,17),
-														('Normal',6.2,11.3)
+insert into Dimension(nombreDimension,alto,ancho) values('Clase A',6.5,10.4),
+														('Clase B',20,14),
+														('Clase C',10,17),
+														('Clase D',6.2,11.3),
+														('Clase E',8,15),
+														('Clase F',10,20),
+														('Clase G',6.2,11.3)
 go
 
 
@@ -132,7 +134,51 @@ values('Monitor','Monitor para PC',3000,2000,15,1,3,1),('Mouse','Mouse inlámbri
 	  ('Impresora','Impresora De Inyección De Tinta A Color HP',1200,1100,100,13,4,3),
 	  ('Impresora','Impresora Epson L120 con Sistema de Tinta Continua',755,550,100,13,4,1),
 	  ('Impresora','Multifuncional de Tinta Inyectable',890,490,100,13,4,1),
-	  ('Impresora','EPSON Impresora L310 33PPM Tinta Continua',1200,760,100,13,4,3)
+	  ('Impresora','EPSON Impresora L310 33PPM Tinta Continua',1200,760,100,13,4,3),
+	  ('Discos Rigidos','HD 100GB FUJITSU NOTEBOOK',500,270,4,2,6,5),
+	  ('Disco Duro','DISCO DURO 80GB IDE ULTRA DMA 7200RPM',420,380,7,4,1,6),
+	  ('Disco Duro','DISCO DURO 80GB IDE UDMA 7200RPM SAMSUNG 3 A¥OS GAR.',600,570,10,4,3,5),
+          ('Disco Duro','DISCO DURO 160GB IDE ULTRA DMA 7200RPM',400,380,5,4,1,2),
+          ('Disco Duro','DISCO DURO 160GB IDE UDMA 7200RPM SAMSUNG 3 A¥OS GAR.',430,390,7,4,4,1),
+          ('Disco Duro','DISCO DURO 250GB IDE ULTRA DMA 7200RPM',410,380,5,1,4,3),
+          ('Disco Duro','DISCO DURO 80GB SERIAL ATA 7200RPM',510,470,6,1,4,7),
+          ('Disco Duro','DISCO DURO 160GB SERIAL ATA 7200RPM',530,500,7,4,1,5),
+          ('Disco Duro','DISCO DURO 250GB SERIAL ATA 7200RPM',600,505,2,3,4,1),
+          ('Disco Duro','DISCO DURO 300GB SERIAL ATA 7200RPM',500,405,3,4,2,8),
+          ('Disco Duro','DISCO DURO 160GB SERIAL ATA II 300MB/SEG 7200RPM',530,470,2,1,2,9),
+          ('Disco Duro','DISCO DURO 250GB SERIAL ATA II 300MB/SEG 7200RPM',500,482,7,4,1,7),
+          ('Disco Duro','DISCO DURO 320GB SERIAL ATA II 300MB/SEG 7200RPM',510,450,3,3,1,5),
+          ('Disco Duro','DISCO DURO 500GB SERIAL ATA II 500MB/SEG 7200RPM',440,370,7,4,1,9),
+          ('Disco Duro','DISCO DURO 2.5" 80GB IDE 4200RPM',500,440,7,4,1,5),
+          ('Disco Duro','DISCO DURO 2.5" 120GB IDE 4200RPM',520,495,1,6,2,3),
+	  ('Disco Duro','DISCO DURO SEAGATE PORTATIL 160GB EXTERNO USB 2.0',400,370,4,4,1,2),
+	  ('Disco Duro','DISCO DURO EXT. SEAGATE 250GB USB 2.0',600,570,2,1,2,4),
+	  ('Disco Duro','DISCO DURO SEAGATE 320GB EXTERNO USB 2.0 /eSATA ',400,370,7,4,1,5),
+	  ('Disco Duro','DISCO DURO EXT. 2.5" IOMEGA 100GB USB 2.0"',600,590,2,4,5,5),
+	  ('Disco Duro','DISCO DURO IOMEGA EGO PORTATIL 160GB USB 2.0 ',620,600,8,4,1,5),
+	  ('Disco Duro','DISCO DURO EXT. IOMEGA 250GB USB 2.0 ',600,580,7,2,4,6),
+	  ('Disco Duro','DISCO DURO EXT. IOMEGA 1 TB USB 2.0',690,450,7,4,1,5),
+	  ('Disco Duro','DISCO DURO EXT. IOMEGA 1 TB USB 2.0 FIREWIRE / ULTRAMAX',700,570,7,4,1,5),
+	  ('Disco Duro','DISCO DURO EXT. MAXTOR 300GB USB 2.0',400,450,4,4,4,3),
+	  ('Pantalla','PANTALLA LCD AOC 17"',300,270,3,2,1,2),
+	  ('Pantalla','PANTALLA LCD AOC 19" WIDE',330,260,1,3,4,9),
+	  ('Pantalla','PANTALLA LCD AOC 22" WIDE',430,330,7,4,1,2),
+	  ('Pantalla','PANTALLA LCD SAMSUNG 17" 710N',230,210,4,4,5,1),
+	  ('Pantalla','PANTALLA LCD SAMSUNG 17" WIDE',250,210,7,4,1,5),
+	  ('Pantalla','PANTALLA LCD SAMSUNG 19" WIDE 940NW',430,360,1,3,2,5),
+	  ('Pantalla','PANTALLA LCD 17" LG',430,320,1,2,1,5),
+	  ('Pantalla','PANTALLA LCD 19" LG WIDE',380,260,2,1,2,7),
+	  ('Pantalla','PANTALLA LCD 15" VE510s VIEWSONIC',430,290,1,4,1,1),
+	  ('Pantalla','PANTALLA LCD 17" VIEWSONIC',340,290,7,4,4,6),
+	  ('Pantalla','PANTALLA LCD 17" VA1703wb VIEWSONIC',420,380,3,2,1,2),
+	  ('Pantalla','PANTALLA LCD 19" WIDE VIEWSONIC / optiquest',330,290,2,4,1,9),
+	  ('Pantalla','PANTALLA LCD 20" WIDE OPTIQUEST By VIEWSONIC',420,325,1,2,5,5),
+	  ('Pantalla','PANTALLA LCD 20" WIDE VIEWSONIC',430,260,1,3,3,4),
+	  ('Pantalla','PANTALLA LCD/TV 19" AOC TV TUNNER',510,460,3,1,3,3),
+	  ('Pantalla','PANTALLA LCD/TV 32" AOC TV TUNNER',440,320,7,4,1,5),
+	  ('Pantalla','PANTALLA LCD tV 32" VIEWSONIC 1368*768 HDTV N3251/60W',330,260,7,4,1,9),
+	  ('Pantalla','PANTALLA LCD/TV 32" SAMSUNG BORDEAUX HD LN32S81BDX',480,420,1,4,1,5),
+	  ('Pantalla','PANTALLA LCD/TV 32" TOSHIBA REGZA 32HL86',590,560,1,2,1,7)
 go
 
 
@@ -488,11 +534,12 @@ insert into Marca(nombreMarca) values('Epson'),('Canon'),('Xtech'),('Kingston'),
 				      go
 
 -- Agregando mas datos Tabla Productos
+
 insert into Productos(nombre,descripcion,precio,costo,existencia,idMarca,idDimension,idColor)
 values('Cable','Usb Extension Cable',35,15,15,13,3,1),('Cable','Cable Usb 4 Pines',35,15,25,13,3,5),
       ('Cable','Cable de audio stereo',50,15,15,1,3,1),('Cable','Cable audio 3.5 milimetros',35,15,25,13,3,5),
-      ('Cable','Apple LightNigth',200,150,15,13,3,1),('Cable Adaptador','Microsoft Wireless Adapter',200,100,25,3,1),
-      ('Espuma Limpiadora','Kit Limpieza',60,22,15,13,3,1),('Limpia Contactos','Kit Limpieza',80,32,25,13,3,2),
+      ('Cable','Apple LightNigth',200,150,15,13,3,1),('Cable Adaptador','Microsoft Wireless Adapter',200,100,25,3,1,4),
+      ('Espuma Limpiadora','Kit Limpieza',60,22,15,13,3,1),('Limpia Contactos','Kit Limpieza',80,32,25,13,3,2)
       
 -- Agregando mas datos Tabla Productos
 insert into Productos(nombre,descripcion,precio,costo,existencia,idMarca,idDimension,idColor)
