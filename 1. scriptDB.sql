@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 ﻿use master;
-=======
+
 -- first step
 use master;
->>>>>>> origin/master
 
 -- second step
 if db_id('ComputerDB') is not null begin

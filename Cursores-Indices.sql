@@ -39,7 +39,7 @@ close CursorReporteClientes
 -- liberamos de memoria el cursor
 deallocate CursorReporteClientes
 
-
+--===========================================================================
 
 
 --EJEMPLO DE INDICES
@@ -51,7 +51,7 @@ execute sp_helpindex 'nombre de la tabla';
 -- NON CLUSTERED
 -- creacion de un indice no ordenado en la tabla Productos
 create nonclustered index Indice_nombreProducto
-on Productos(nombreProducto)
+on Productos(nombre)
 
 
 -- CLUSTERED
