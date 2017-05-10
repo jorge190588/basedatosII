@@ -88,4 +88,5 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
   *. Reres neuronales.
   *. Secuencia de clustering
   *. Series de tiempo.
+13. [Factores](https://miblogtecnico.wordpress.com/2014/03/18/mineria-de-datos-en-sql-server-2012/)  
 12. [SQL Server y Amazon](https://www.youtube.com/watch?v=K8gSaS_E4JM)
