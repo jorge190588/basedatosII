@@ -1,8 +1,8 @@
 ﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
   <Target>
     <Database>OlapEjemplo</Database>
-    <Server>JAVI\SQL12</Server>
-    <ConnectionString>DataSource=JAVI\SQL12;Timeout=0</ConnectionString>
+    <Server>localhost</Server>
+    <ConnectionString>DataSource=localhost;Timeout=0</ConnectionString>
   </Target>
   <Options>
     <TransactionalDeployment>false</TransactionalDeployment>
@@ -19,50 +19,92 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>MN/R6wTST4Uc7lUOyetO3hNVtR8=29/04/2017 11:35:39 a. m.29/04/2017 11:35:38 a. m.</TimeStamp>
+        <TimeStamp>MN/R6wTST4Uc7lUOyetO3hNVtR8=13/05/2017 12:59:53 p.m.13/05/2017 12:59:53 p.m.</TimeStamp>
+        <ID>
+          <String>Computer DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>W/QHVDHMTs3mUwQ8/533RXbCRkE=13/05/2017 02:18:20 p.m.13/05/2017 02:10:32 p.m.</TimeStamp>
+        <ID>
+          <String>Computer DB 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>URWBTfHkmXGNZXyZFtFsalcRA5I=13/05/2017 12:59:53 p.m.13/05/2017 12:59:53 p.m.</TimeStamp>
         <ID>
           <String>Computer DB</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>URWBTfHkmXGNZXyZFtFsalcRA5I=29/04/2017 12:25:49 p. m.29/04/2017 11:36:31 a. m.</TimeStamp>
+        <TimeStamp>XfNQrWyQIOEMfUyx1zPYl4MAVq0=13/05/2017 02:32:07 p.m.13/05/2017 02:11:05 p.m.</TimeStamp>
         <ID>
-          <String>Computer DB</String>
+          <String>Computer DB 1</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>pBk0yT+B987/SmGFWJoXyRyA2dA=29/04/2017 11:51:05 a. m.29/04/2017 11:51:05 a. m.</TimeStamp>
+        <TimeStamp>pBk0yT+B987/SmGFWJoXyRyA2dA=13/05/2017 12:59:53 p.m.13/05/2017 12:59:53 p.m.</TimeStamp>
         <ID>
           <String>Salidas</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>xOilUQCNMB9uTg8yMoIQh+A6Om4=29/04/2017 11:51:23 a. m.29/04/2017 11:51:23 a. m.</TimeStamp>
+        <TimeStamp>xOilUQCNMB9uTg8yMoIQh+A6Om4=13/05/2017 12:59:53 p.m.13/05/2017 12:59:53 p.m.</TimeStamp>
         <ID>
           <String>Clientes</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>pn6xkux5bdiEfuiwOPlk+6LFiFw=29/04/2017 12:26:20 p. m.29/04/2017 12:26:19 p. m.</TimeStamp>
+        <TimeStamp>pn6xkux5bdiEfuiwOPlk+6LFiFw=13/05/2017 12:59:53 p.m.13/05/2017 12:59:53 p.m.</TimeStamp>
         <ID>
           <String>Tiempos</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>5GuWadFQaEyBCXgPMYpAUM/bhXM=13/05/2017 02:40:26 p.m.13/05/2017 02:28:39 p.m.</TimeStamp>
+        <ID>
+          <String>Clientes 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>vpO7Ikc9JArGqbzs3zLvczWgVmQ=13/05/2017 02:41:10 p.m.13/05/2017 02:27:22 p.m.</TimeStamp>
+        <ID>
+          <String>Salidas1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>AhIZUZfcmE1FjUYaeXpo8sgtswI=13/05/2017 02:41:25 p.m.13/05/2017 02:29:53 p.m.</TimeStamp>
+        <ID>
+          <String>Tiempos1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>xdo+PnbLsOWq8CMrJHQdhpEo+aA=29/04/2017 12:28:24 p. m.29/04/2017 11:51:34 a. m.8Ov8BxtBpy9A0K7c5igBJNdWCNw=29/04/2017 11:51:58 a. m.29/04/2017 11:51:34 a. m.</TimeStamp>
+        <TimeStamp>xdo+PnbLsOWq8CMrJHQdhpEo+aA=13/05/2017 12:59:53 p.m.13/05/2017 12:59:53 p.m.8Ov8BxtBpy9A0K7c5igBJNdWCNw=13/05/2017 12:59:53 p.m.13/05/2017 12:59:53 p.m.</TimeStamp>
         <ID>
           <String>Computer DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>03XCOX57Rwcvol5o9BJuUAGdG0s=13/05/2017 02:53:17 p.m.13/05/2017 02:32:07 p.m.RN6g0Y3XkKrnPjo+V50W8G9kKAI=13/05/2017 02:53:17 p.m.13/05/2017 02:32:07 p.m.</TimeStamp>
+        <ID>
+          <String>Computer DB 1</String>
         </ID>
       </ObjectSnapshot>
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>z6rp4tTpmz+NB/cM0BXAv8ysWp0=29/04/2017 12:23:32 p. m.29/04/2017 11:33:11 a. m.</TimeStamp>
+      <TimeStamp>z6rp4tTpmz+NB/cM0BXAv8ysWp0=13/05/2017 12:59:53 p.m.13/05/2017 12:59:53 p.m.</TimeStamp>
       <ID>
         <String>OlapEjemplo</String>
       </ID>
@@ -71,5 +113,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2017-04-29T18:28:35.236667Z</LastDeployed>
+  <LastDeployed>2017-05-13T20:54:39.436667Z</LastDeployed>
 </DeploymentSnapshot>

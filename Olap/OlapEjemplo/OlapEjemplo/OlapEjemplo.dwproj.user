@@ -1,0 +1,39 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Computer DB 1</Id>
+            <Name>Computer DB 1</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfTB+KhM0fU6M7QpzfoWHoQAAAAAcAAAAQwBvAG0AcAB1AHQAZQByACAARABCACAAMQAAABBmAAAAAQAAIAAAALHeOZ3wrIt+1Lz9tNnqlDSHCZel5X+eecbnb0ydv5nSAAAAAA6AAAAAAgAAIAAAADA4N9G++sChBbSEBhvbOSB6s5vKKeyhbj4Jsh6EAHv0EAAAAOBfkDMhqVU98nC7A09z0ORAAAAAg1ixQFUh3uhYFazFB90w6GoQyZdqzGRqxvnqGCZNFUB9KcJqOT+83DzZmiILPwJykfEucguEub4udGZqemy1PQ==</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Computer DB</Id>
+            <Name>Computer DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfTB+KhM0fU6M7QpzfoWHoQAAAAAYAAAAQwBvAG0AcAB1AHQAZQByACAARABCAAAAEGYAAAABAAAgAAAAIdmAiiA1+SNz512SNwuEXtwlSSwLJuDnAsviOh01OKcAAAAADoAAAAACAAAgAAAAPJURa3w0gmHrM2nOgKdEDGdpURkDEWSUyG6GjHPKR9UQAAAA8rX+fxAhid08ntg99V09s0AAAACz6GDnca+lwIYBA/9hIXtGo/GGdFk6kmUmCpwOSCthjugagIn5/DaqYhWAAWaTrpQQu8LoDhaLwGLUocNHGui7</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Computer DB 1</Id>
+            <Name>Computer DB 1</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfTB+KhM0fU6M7QpzfoWHoQAAAAAcAAAAQwBvAG0AcAB1AHQAZQByACAARABCACAAMQAAABBmAAAAAQAAIAAAANwBqMGXysRsQ7IGU/vT413K2zbaj0H6mX+wM0OpKKU0AAAAAA6AAAAAAgAAIAAAABx6eoxYCEa1BnRH73NbEgyz1T3MFPxJXgQyLkkl+x0YEAAAAFwXc/igbIHj9GtNJ0QcHF5AAAAAJ/xJUQ9RjlAa1sUvEDxswQPE80WegVjnHDLporf2UIqILzYECLlfFwc3syfRMNXNppPFy369RILgG9zztdSMRA==</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Computer DB</Id>
+            <Name>Computer DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfTB+KhM0fU6M7QpzfoWHoQAAAAAYAAAAQwBvAG0AcAB1AHQAZQByACAARABCAAAAEGYAAAABAAAgAAAAXzdOsT2aCWSLDK4c3rp+pcbtBXP6Cx5af9tsIQ9MMe0AAAAADoAAAAACAAAgAAAAU2xvdhq7Yd9tnGXCwHFrEl8Ymiou3OVv+FR8jhxEq6UQAAAAs5KLXRWhcYzUBoQCLuZIu0AAAAAvaWzu+o8X5dWfMqBuyOqh5glOibPdswJDATIAdbfdXgYMhovoNuc59PLSnCdoJTvflXCWO44uC+bpp4y04f2i</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>localhost</TargetServer>
+        <TargetDatabase>OlapEjemplo</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>
