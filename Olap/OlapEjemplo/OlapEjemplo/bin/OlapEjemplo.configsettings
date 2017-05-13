@@ -17,6 +17,14 @@
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
         </ImpersonationInfo>
       </DataSource>
+      <DataSource>
+        <ID>Computer DB 1</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=ELVIN-PC;Persist Security Info=True;Password=;User ID=;Initial Catalog=ComputerDB</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
     </DataSources>
     <Dimensions>
       <Dimension>
@@ -29,6 +37,7 @@
         <ID>Tiempos</ID>
       </Dimension>
       <Dimension>
+<<<<<<< HEAD
         <ID>Salida Detalle</ID>
       </Dimension>
       <Dimension>
@@ -36,6 +45,15 @@
       </Dimension>
       <Dimension>
         <ID>Productos</ID>
+=======
+        <ID>Clientes 1</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Salidas1</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Tiempos1</ID>
+>>>>>>> origin/master
       </Dimension>
     </Dimensions>
     <Cubes>
@@ -53,7 +71,11 @@
         </MeasureGroups>
       </Cube>
       <Cube>
+<<<<<<< HEAD
         <ID>FRANK-PC</ID>
+=======
+        <ID>Computer DB 1</ID>
+>>>>>>> origin/master
         <MeasureGroups>
           <MeasureGroup>
             <ID>Salida Detalle</ID>

@@ -18,12 +18,21 @@
       </Dependencies>
     </ProjectItem>
     <ProjectItem>
+<<<<<<< HEAD
       <Name>FRANK-PC.cube</Name>
       <FullPath>FRANK-PC.cube</FullPath>
       <Dependencies>
         <ProjectItem>
           <Name>FRANK-PC.partitions</Name>
           <FullPath>FRANK-PC.partitions</FullPath>
+=======
+      <Name>Computer DB 1.cube</Name>
+      <FullPath>Computer DB 1.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Computer DB 1.partitions</Name>
+          <FullPath>Computer DB 1.partitions</FullPath>
+>>>>>>> origin/master
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
@@ -38,6 +47,7 @@
       <FullPath>Tiempos.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
+<<<<<<< HEAD
       <Name>Productos.dim</Name>
       <FullPath>Productos.dim</FullPath>
     </ProjectItem>
@@ -52,6 +62,18 @@
     <ProjectItem>
       <Name>Clientes.dim</Name>
       <FullPath>Clientes.dim</FullPath>
+=======
+      <Name>Salidas1.dim</Name>
+      <FullPath>Salidas1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Clientes 1.dim</Name>
+      <FullPath>Clientes 1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Tiempos1.dim</Name>
+      <FullPath>Tiempos1.dim</FullPath>
+>>>>>>> origin/master
     </ProjectItem>
   </Dimensions>
   <DataSources>
@@ -60,8 +82,13 @@
       <FullPath>Computer DB.ds</FullPath>
     </ProjectItem>
     <ProjectItem>
+<<<<<<< HEAD
       <Name>FRANK-PC.ds</Name>
       <FullPath>FRANK-PC.ds</FullPath>
+=======
+      <Name>Computer DB 1.ds</Name>
+      <FullPath>Computer DB 1.ds</FullPath>
+>>>>>>> origin/master
     </ProjectItem>
   </DataSources>
   <DataSourceViews>
@@ -70,8 +97,13 @@
       <FullPath>Computer DB.dsv</FullPath>
     </ProjectItem>
     <ProjectItem>
+<<<<<<< HEAD
       <Name>FRANK-PC.dsv</Name>
       <FullPath>FRANK-PC.dsv</FullPath>
+=======
+      <Name>Computer DB 1.dsv</Name>
+      <FullPath>Computer DB 1.dsv</FullPath>
+>>>>>>> origin/master
     </ProjectItem>
   </DataSourceViews>
   <Configurations>
@@ -89,6 +121,11 @@
             <Name>FRANK-PC</Name>
             <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=FRANK-PC;Integrated Security=SSPI</Value>
           </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Computer DB 1</Id>
+            <Name>Computer DB 1</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=ELVIN-PC;Persist Security Info=True;Password=;User ID=;Initial Catalog=ComputerDB</Value>
+          </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
           <ConfigurationSetting>
@@ -100,6 +137,11 @@
             <Id>FRANK-PC</Id>
             <Name>FRANK-PC</Name>
             <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Computer DB 1</Id>
+            <Name>Computer DB 1</Name>
+            <Value xsi:type="xsd:int">1</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>
       </Options>
