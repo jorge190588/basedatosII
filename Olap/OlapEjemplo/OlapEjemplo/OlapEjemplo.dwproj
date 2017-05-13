@@ -17,6 +17,16 @@
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
+    <ProjectItem>
+      <Name>FRANK-PC.cube</Name>
+      <FullPath>FRANK-PC.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>FRANK-PC.partitions</Name>
+          <FullPath>FRANK-PC.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>
@@ -24,12 +34,24 @@
       <FullPath>Salidas.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Clientes.dim</Name>
-      <FullPath>Clientes.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Tiempos.dim</Name>
       <FullPath>Tiempos.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Productos.dim</Name>
+      <FullPath>Productos.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Salida Detalle.dim</Name>
+      <FullPath>Salida Detalle.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Tiempo.dim</Name>
+      <FullPath>Tiempo.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Clientes.dim</Name>
+      <FullPath>Clientes.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
@@ -37,11 +59,19 @@
       <Name>Computer DB.ds</Name>
       <FullPath>Computer DB.ds</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>FRANK-PC.ds</Name>
+      <FullPath>FRANK-PC.ds</FullPath>
+    </ProjectItem>
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
       <Name>Computer DB.dsv</Name>
       <FullPath>Computer DB.dsv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>FRANK-PC.dsv</Name>
+      <FullPath>FRANK-PC.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
   <Configurations>
@@ -52,14 +82,24 @@
           <ConfigurationSetting>
             <Id>Computer DB</Id>
             <Name>Computer DB</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=JAVI\SQL12;Persist Security Info=True;Password=;User ID=;Initial Catalog=ComputerDB</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=FRANK-PC;Integrated Security=SSPI;Initial Catalog=ComputerDB</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>FRANK-PC</Id>
+            <Name>FRANK-PC</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=FRANK-PC;Integrated Security=SSPI</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
           <ConfigurationSetting>
             <Id>Computer DB</Id>
             <Name>Computer DB</Name>
-            <Value xsi:type="xsd:int">1</Value>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>FRANK-PC</Id>
+            <Name>FRANK-PC</Name>
+            <Value xsi:type="xsd:int">0</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>
       </Options>

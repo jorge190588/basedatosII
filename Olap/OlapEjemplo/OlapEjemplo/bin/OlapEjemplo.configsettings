@@ -3,7 +3,15 @@
     <DataSources>
       <DataSource>
         <ID>Computer DB</ID>
-        <ConnectionString>Provider=SQLNCLI11.1;Data Source=JAVI\SQL12;Persist Security Info=True;Password=;User ID=;Initial Catalog=ComputerDB</ConnectionString>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=FRANK-PC;Integrated Security=SSPI;Initial Catalog=ComputerDB</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+      <DataSource>
+        <ID>FRANK-PC</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=FRANK-PC;Integrated Security=SSPI</ConnectionString>
         <ImpersonationInfo>
           <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
@@ -20,10 +28,32 @@
       <Dimension>
         <ID>Tiempos</ID>
       </Dimension>
+      <Dimension>
+        <ID>Salida Detalle</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Tiempo</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Productos</ID>
+      </Dimension>
     </Dimensions>
     <Cubes>
       <Cube>
         <ID>Computer DB</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Salida Detalle</ID>
+            <Partitions>
+              <Partition>
+                <ID>Salida Detalle</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>FRANK-PC</ID>
         <MeasureGroups>
           <MeasureGroup>
             <ID>Salida Detalle</ID>

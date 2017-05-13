@@ -1,8 +1,8 @@
 ﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
   <Target>
     <Database>OlapEjemplo</Database>
-    <Server>JAVI\SQL12</Server>
-    <ConnectionString>DataSource=JAVI\SQL12;Timeout=0</ConnectionString>
+    <Server>FRANK-PC</Server>
+    <ConnectionString>DataSource=FRANK-PC;Timeout=0</ConnectionString>
   </Target>
   <Options>
     <TransactionalDeployment>false</TransactionalDeployment>
@@ -19,50 +19,92 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>MN/R6wTST4Uc7lUOyetO3hNVtR8=29/04/2017 11:35:39 a. m.29/04/2017 11:35:38 a. m.</TimeStamp>
+        <TimeStamp>9VJHfOrcEtui1LuA75CG5Snl/So=13/05/2017 13:46:3706/05/2017 14:10:38</TimeStamp>
+        <ID>
+          <String>Computer DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>eLw7cSFvNR8kDwBji1ZBVeHt5E4=13/05/2017 13:50:1413/05/2017 13:50:13</TimeStamp>
+        <ID>
+          <String>FRANK-PC</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>URWBTfHkmXGNZXyZFtFsalcRA5I=06/05/2017 14:10:3806/05/2017 14:10:38</TimeStamp>
         <ID>
           <String>Computer DB</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>URWBTfHkmXGNZXyZFtFsalcRA5I=29/04/2017 12:25:49 p. m.29/04/2017 11:36:31 a. m.</TimeStamp>
+        <TimeStamp>/XZYWgjNexpsDKPIx/k18iYbxf4=13/05/2017 14:45:2313/05/2017 14:05:20</TimeStamp>
         <ID>
-          <String>Computer DB</String>
+          <String>FRANK-PC</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>pBk0yT+B987/SmGFWJoXyRyA2dA=29/04/2017 11:51:05 a. m.29/04/2017 11:51:05 a. m.</TimeStamp>
+        <TimeStamp>pBk0yT+B987/SmGFWJoXyRyA2dA=06/05/2017 14:10:3806/05/2017 14:10:38</TimeStamp>
         <ID>
           <String>Salidas</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>xOilUQCNMB9uTg8yMoIQh+A6Om4=29/04/2017 11:51:23 a. m.29/04/2017 11:51:23 a. m.</TimeStamp>
+        <TimeStamp>Kx3dEdDcugsKDDTpz0CZor2WE7E=13/05/2017 14:45:2313/05/2017 14:45:23</TimeStamp>
         <ID>
           <String>Clientes</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>pn6xkux5bdiEfuiwOPlk+6LFiFw=29/04/2017 12:26:20 p. m.29/04/2017 12:26:19 p. m.</TimeStamp>
+        <TimeStamp>8TzJR0fFnfRRrHDQw/sEvh2GsVI=13/05/2017 14:47:5606/05/2017 14:10:38</TimeStamp>
         <ID>
           <String>Tiempos</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>BjJG3hx90VqVi2qpoouqQzav3H8=13/05/2017 14:47:5713/05/2017 14:29:09</TimeStamp>
+        <ID>
+          <String>Salida Detalle</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>POJuHrrhXig9P+i7poagvF0R7aI=13/05/2017 15:09:0813/05/2017 14:30:36</TimeStamp>
+        <ID>
+          <String>Tiempo</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>fwVlnwYereSYm4R3bVL9TM0dMeg=13/05/2017 15:09:0813/05/2017 14:19:08</TimeStamp>
+        <ID>
+          <String>Productos</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>xdo+PnbLsOWq8CMrJHQdhpEo+aA=29/04/2017 12:28:24 p. m.29/04/2017 11:51:34 a. m.8Ov8BxtBpy9A0K7c5igBJNdWCNw=29/04/2017 11:51:58 a. m.29/04/2017 11:51:34 a. m.</TimeStamp>
+        <TimeStamp>hn32fWc2+eaHjVNzGsrAfieU/9I=13/05/2017 14:47:5706/05/2017 14:10:388Ov8BxtBpy9A0K7c5igBJNdWCNw=06/05/2017 14:10:3806/05/2017 14:10:38</TimeStamp>
         <ID>
           <String>Computer DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>WOs5I1mn7FLFnAs6mqMb9J78RtY=13/05/2017 14:54:1813/05/2017 14:32:40TVz+Esk3mlC+rEM8QyNQGExTFuk=13/05/2017 14:54:1813/05/2017 14:32:40</TimeStamp>
+        <ID>
+          <String>FRANK-PC</String>
         </ID>
       </ObjectSnapshot>
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>z6rp4tTpmz+NB/cM0BXAv8ysWp0=29/04/2017 12:23:32 p. m.29/04/2017 11:33:11 a. m.</TimeStamp>
+      <TimeStamp>z6rp4tTpmz+NB/cM0BXAv8ysWp0=06/05/2017 14:10:3806/05/2017 14:10:38</TimeStamp>
       <ID>
         <String>OlapEjemplo</String>
       </ID>
@@ -71,5 +113,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2017-04-29T18:28:35.236667Z</LastDeployed>
+  <LastDeployed>2017-05-13T21:09:09.733333Z</LastDeployed>
 </DeploymentSnapshot>

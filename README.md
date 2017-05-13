@@ -8,7 +8,7 @@ El proyecto contiene un script de la base de datos de un giro de negocio de vent
   1.Eduardo Barrios
   2.Gabriel Rodriguez
   3.Angel Gonzales
-  4.
+  4.Denis Rosales
   
 ### 2. Entradas
   1.
