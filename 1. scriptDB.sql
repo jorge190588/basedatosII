@@ -1,3 +1,5 @@
+﻿use master;
+
 -- first step
 use master;
 
@@ -172,7 +174,7 @@ constraint fk_idEntrada foreign key(idEntrada)references Entrada(idEntrada)
 );
 go
 
-create table Cliente_categoria(
+create table clienteCategoria(
 	id int primary key not null identity,
 	nombre varchar(50),
 	montoInicial decimal(18,2),
@@ -264,38 +266,38 @@ GO
 
 
 --tabla del estado del usuario(activo,inactivo)
-create table estadoUsuario(
-id_estado int not null identity primary key,
-nombre_estado varchar(80)
+create table EstadoUsuario(
+idEstado int not null identity primary key,
+nombreEstado varchar(80)
 );
 go
 
 --tabla de tipo_usuario es como admin,usuario normal,cajero
-create table tipoUsuario(
-id_tipo_usuario int not null identity primary key,
-nombre_tipo_usuario varchar(80)
+create table TipoUsuario(
+idTipoUsuario int not null identity primary key,
+nombreTipoUsuario varchar(80)
 );
 go
 
 --tabla de acceso para diferentes modulos como ventas,inventario,compras,etc.
-create table accesoUsuario(
-id_acceso int not null identity primary key,
-nombre_acceso varchar(80),
+create table AccesoUsuario(
+idAcceso int not null identity primary key,
+nombreAcceso varchar(80),
 );
 go
 
 --tabla de usuario depende de tipo_usuario,de estado_usuario, y acceso_usuario
 create table Usuarios(
-id_usuarios int not null identity primary key,
-nombre varchar(80),
-apellido varchar(80),
-usuario varchar(80),
+idUsuario int not null identity primary key,
+nombreUsuario varchar(80),
+apellidoUsuario varchar(80),
+nickUsuario varchar(80),
 contraseña varchar(20),
-id_tipo_usuario int,
-id_estado int,
-id_acceso int,
-constraint id_tipo_usuario foreign key(id_tipo_usuario) references tipoUsuario(id_tipo_usuario),
-constraint id_estado foreign key(id_estado) references estadoUsuario(id_estado),
-constraint id_acceso foreign key(id_acceso) references accesoUsuario(id_acceso)
+idTipoUsuario int,
+idEstado int,
+idAcceso int,
+constraint idTipoUsuario_fk foreign key(idTipoUsuario) references TipoUsuario(idTipoUsuario),
+constraint idEstado_fk foreign key(idEstado) references EstadoUsuario(idEstado),
+constraint idAcceso_fk foreign key(idAcceso) references AccesoUsuario(idAcceso)
 );
 go
