@@ -571,3 +571,31 @@ values('Cable','Usb Extension Cable',35,15,15,13,3,1),('Cable','Cable Usb 4 Pine
       ('Disco Duro Externo','2TB',1000,600,15,14,3,1),('Disco Duro Interno','1TB',850,500,25,14,1,3)
       go
       
+use ComputerDB
+
+insert into Pais(nombrePais) values('Guatemala'),
+									('Mexico')
+go
+
+insert into Departamento(nombreDepartamento,idPais) values ('Retalhuleu',1),
+													('mazatenango',1),
+													('Quetzaltenango',1),
+													('Solola',1),
+													('San Marcos',1),
+													('Huehuetenango',1)
+go
+
+insert into Municipio(nombreMunicipio,idDepartamento,idPais) values('san felipe',1,1),
+															('san Carlos',1,1),
+															('san Martin',1,1),
+															('Mulua',1,1),
+															('Champerico',1,1)
+go
+
+insert into sucursal(nombreSucursal,idMunicipio) values('la bendicion',1),
+													('la pudricion',1),
+													('las joyas',1),
+													('las putas',1),
+													('los sexy lady',1)
+go
+

@@ -44,6 +44,31 @@ ancho float
 );
 go
 
+--tabla tipo bodega(hardware,software)
+create table tipoBodega( 
+idtipoBodega int not null identity primary key,
+nombreTipoBodega varchar(40)
+);
+go
+
+--tabla estado bodega
+create table estadoBodega(
+idestadoBodega int not null identity primary key,
+estadoBodega varchar(80)
+);
+go
+
+--tabla bodega a producto
+create table bodega(
+idBodega int not null identity primary key,
+nombreBodega varchar(80),
+idtipoBodega int,
+idestadoBodega int,
+constraint fk_idtipoBodega foreign key(idtipoBodega) references tipoBodega(idtipoBodega),
+constraint fk_idestadoBodega foreign key(idestadoBodega) references estadoBodega(idestadoBodega)
+);
+go
+
 -- Tabla Productos, en esta tabla hay referencias a las tablas anteriores
 create table Productos(
 id int primary key not null identity,
@@ -56,9 +81,11 @@ existencia int,
 idMarca int,
 idDimension int,
 idColor int,
+idBodega int
 constraint fk_marca foreign key(idMarca) references Marca(idMarca),
 constraint fk_dimension foreign key(idDimension) references Dimension(idDimension),
-constraint fk_color foreign key(idColor) references Color(idColor)
+constraint fk_color foreign key(idColor) references Color(idColor),
+constraint fk_bodega foreign key(idBodega) references bodega(idBodega)
 );
 go
 
@@ -79,6 +106,8 @@ create table Departamento(
 );
 go 
 
+
+
 --tabla municipio
 create table Municipio(
 	idMunicipio int not null primary key identity,
@@ -90,6 +119,16 @@ create table Municipio(
 );
 go
 
+--tabla sucursal
+create table sucursal(
+idSucursal int not null identity primary key,
+nombreSucursal varchar(80),
+idMunicipio int,
+constraint municipio_fk foreign key(idMunicipio) references Municipio(idMunicipio)
+);
+go
+
+--tabla tipo cliente
 create table tipoCliente(
 idtipoCliente int not null identity primary key,
 nombre varchar(80)
