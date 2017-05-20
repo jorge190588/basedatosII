@@ -10,6 +10,7 @@ begin
 	set @documento = @documento+1
 end
 
+------------------------------------------------------------------------------------------
 -- INSERTAR DETALLE DE PRODUCTOS
 
 declare @IdSalida int

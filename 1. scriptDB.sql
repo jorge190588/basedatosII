@@ -12,7 +12,7 @@ end
 
 -- Third step
 create database ComputerDB;
-
+go
 --four step
 use ComputerDB;
 
@@ -34,6 +34,7 @@ idColor int primary key not null identity,
 nombreColor varchar(50)
 );
 go
+
 -- Tabla Dimensión, la tabla productos depende de esta
 create table Dimension(
 idDimension int primary key not null identity,
@@ -69,6 +70,7 @@ create table Pais(
 );
 go
 
+--tabla departamento
 create table Departamento(
 	idDepartamento int not null primary key identity,
 	nombreDepartamento varchar(100),
@@ -77,6 +79,7 @@ create table Departamento(
 );
 go 
 
+--tabla municipio
 create table Municipio(
 	idMunicipio int not null primary key identity,
 	nombreMunicipio varchar(100),
@@ -87,10 +90,9 @@ create table Municipio(
 );
 go
 
--- Tabla Forma de Pago
-create table FormaDePago(
-idFormaPago int not null primary key identity,
-nombre varchar(100)
+create table tipoCliente(
+idtipoCliente int not null identity primary key,
+nombre varchar(80)
 );
 go
 
@@ -102,9 +104,30 @@ nit varchar(10),
 direccion varchar(255),
 idMunicipio int,
 telefono int,
-idFormaPago int,
+idtipoCliente int,
 constraint fk_Municipio foreign key(idMunicipio)references Municipio(idMunicipio),
-constraint fk_formaPago foreign key(idFormaPago)references FormaDePago(idFormaPago)
+constraint fk_idtipoCliente foreign key(idtipoCliente) references tipoCliente(idtipoCliente)
+);
+go
+
+--tabla tipo proveedor
+create table tipoProveedor(
+idtipoProveedor int not null identity primary key,
+nombre varchar(80)
+);
+go
+
+-- Tabla Forma de Pago
+create table FormaDePago(
+idFormaPago int not null identity primary key,
+nombre varchar(100)
+);
+go
+
+--table tipo de pago
+create table tipoPago(
+idTipoPago int not null identity primary key,
+nombre varchar(80)
 );
 go
 
@@ -117,8 +140,10 @@ direccion varchar(255),
 idMunicipio int,
 telefono int,
 idFormaPago int,
+idtipoProveedor int,
 constraint fk_idMunicipio foreign key(idMunicipio)references Municipio(idMunicipio),
-constraint fk_formaDePago foreign key(idFormaPago)references FormaDePago(idFormaPago)
+constraint fk_formaDePago foreign key(idFormaPago)references FormaDePago(idFormaPago),
+constraint fk_idtipoProveedor foreign key(idtipoProveedor) references tipoProveedor(idtipoProveedor)
 );
 go
 
@@ -132,14 +157,20 @@ ventaMaxima float
 );
 go
 
+
 -- Tablas Salida y SalidaDetalle
 create table Salida(
 idSalida int not null primary key identity,
 fecha date,
 documento varchar(20),
 idCliente int,
-constraint fk_Cliente foreign key(idCliente)references Clientes(idCliente)
+idtipoPago int,
+idFormaPago int,
+constraint fk_Cliente foreign key(idCliente)references Clientes(idCliente),
+constraint idFormaPago_fk foreign key(idFormaPago) references FormaDePago(idFormaPago),
+constraint fk_idtipoPago foreign key(idtipoPago) references tipoPago(idTipoPago)
 );
+go
 
 -- Tabla SalidaDetalle
 create table SalidaDetalle(
@@ -161,6 +192,7 @@ documento varchar(20),
 idProveedor int,
 constraint fk_Proveedor foreign key(idProveedor)references Proveedor(idProveedor)
 );
+go
 
 -- Tabla EntradaDetalle
 create table EntradaDetalle(
