@@ -325,3 +325,44 @@ constraint idEstado_fk foreign key(idEstado) references EstadoUsuario(idEstado),
 constraint idAcceso_fk foreign key(idAcceso) references AccesoUsuario(idAcceso)
 );
 go
+
+--se agregaron las 3 tablas solicitadas para salidas 
+create table Descuento
+(
+idDescuento int Identity(1,1) Primary Key,
+Descuento int
+)
+
+create table Promocionales
+(
+idPromocional int identity(1,1) primary key,
+promocional varchar (40)
+)
+
+create table Rango_Consumo
+(
+IdRango int identity(1,1) primary key,
+Rango varchar (30)
+)
+
+--se modifico la tabla clasificacioncliente, se agregaron atributos para que los tipos dependiendo de su consumo 
+--puedan tomar una clasificacion como clientes VIP, PRIMIUM, ALTO, MEDIANO, BAJO 
+
+create table Clasificacion
+(
+IdClasificacion int identity(1,1) primary key,
+Clasificacion varchar (5),
+RangoConsumo_Id int,
+Descuento_Id int,
+Promocional_Id int,
+constraint RangoConsumo_Id foreign key(RangoConsumo_Id) references Rango_Consumo(IdRango),
+constraint Descuento_Id foreign key (Descuento_Id) references Descuento(Id_Descuento),
+constraint Promocional_Id foreign key (Promocional_Id) references Promocionales(idPromocional)
+)
+
+--se altero la tabla clientes para relacinarla con Clasificacion
+alter table clientes add constraint Clasificacion_ID foreign key (Clasificacion_ID) 
+references Clasificacion(IdClasificacion)
+
+--se elimino cliente categoria ya que no estaba relacionada
+drop table Cliente_categoria
