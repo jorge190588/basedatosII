@@ -367,4 +367,4 @@ references Clasificacion(IdClasificacion)
 --se elimino cliente categoria ya que no estaba relacionada
 drop table Cliente_categoria
 
--- FIN DE MODIFICACION
+-- 
