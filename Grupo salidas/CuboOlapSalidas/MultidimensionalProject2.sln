@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "olapSalidas", "MultidimensionalProject2\olapSalidas.dwproj", "{BD95B20B-F20E-4E54-ACA2-C02F452EC11A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD95B20B-F20E-4E54-ACA2-C02F452EC11A}.Development|Default.ActiveCfg = Development
+		{BD95B20B-F20E-4E54-ACA2-C02F452EC11A}.Development|Default.Build.0 = Development
+		{BD95B20B-F20E-4E54-ACA2-C02F452EC11A}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
