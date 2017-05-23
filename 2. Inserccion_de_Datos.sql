@@ -592,10 +592,11 @@ insert into Municipio(nombreMunicipio,idDepartamento,idPais) values('san felipe'
 															('Champerico',1,1)
 go
 
-insert into sucursal(nombreSucursal,idMunicipio) values('la bendicion',1),
-													('la pudricion',1),
-													('las joyas',1),
-													('las putas',1),
-													('los sexy lady',1)
-go
+--Esta insercion de sucursal ya no funciona
+--insert into sucursal(nombreSucursal,idMunicipio) values('la bendicion',1),
+--													('la pudricion',1),
+--													('las joyas',1),
+--													('las putas',1),
+--													('los sexy lady',1)
+--go
 
