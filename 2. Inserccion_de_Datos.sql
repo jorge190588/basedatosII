@@ -600,3 +600,66 @@ go
 --													('los sexy lady',1)
 --go
 
+--Esta insercion es la correcta para sucursal
+insert into sucursal values ('La Soledad',1,2);
+insert into sucursal values ('La Trinidad',1,1);
+insert into sucursal values ('La Esperanza',1,1);
+insert into sucursal values ('Matamoros',1,2);
+insert into sucursal values ('El centro',2,3);
+insert into sucursal values ('El universo',3,3);
+insert into sucursal values ('La Campana',4,3);
+insert into sucursal values ('El parque',5,3);
+insert into sucursal values ('Nueva Luna',6,3);
+insert into sucursal values ('Nueva Linda',7,3);
+insert into sucursal values ('El palmar',8,3);
+insert into sucursal values ('Florista',9,3);
+insert into sucursal values ('Loma linda',10,3);
+insert into sucursal values ('Intcomex',11,3);
+insert into sucursal values ('El punto',2,3);
+insert into sucursal values ('Bodeguitas',1,4);
+insert into sucursal values ('Las Palmas',1,4);
+insert into sucursal values ('San Carlos',1,4);
+insert into sucursal values ('Parcelas',1,4);
+insert into sucursal values ('Nuevo Amanecer',2,4);
+insert into sucursal values ('El Tunel',3,4);
+insert into sucursal values ('Sercom',4,4);
+insert into sucursal values ('Access',5,4);
+insert into sucursal values ('La sirena',6,4);
+insert into sucursal values ('La Patrona',7,4);
+insert into sucursal values ('El Gallo',8,4);
+insert into sucursal values ('La Blanca',9,4);
+insert into sucursal values ('Educom',10,4);
+insert into sucursal values ('Guateexx',11,4);
+insert into sucursal values ('Zona Verde',2,4);
+insert into sucursal values ('La Soledad II',1,5);
+insert into sucursal values ('La Trinidad II',1,5);
+insert into sucursal values ('La Esperanza II',1,5);
+insert into sucursal values ('Matamoros II',1,5);
+insert into sucursal values ('El centro II',2,5);
+insert into sucursal values ('El universo II',3,6);
+insert into sucursal values ('La Campana II',4,6);
+insert into sucursal values ('El parque II',5,6);
+insert into sucursal values ('Nueva Luna II',6,6);
+insert into sucursal values ('Nueva Linda II',7,6);
+insert into sucursal values ('El palmar II',8,6);
+insert into sucursal values ('Florista II',9,6);
+insert into sucursal values ('Loma linda II',10,7);
+insert into sucursal values ('Intcomex II',11,7);
+insert into sucursal values ('El punto II',2,7);
+insert into sucursal values ('Bodeguitas II',1,7);
+insert into sucursal values ('Las Palmas II',1,7);
+insert into sucursal values ('San Carlos II',1,7);
+insert into sucursal values ('Parcelas II',1,7);
+insert into sucursal values ('Nuevo Amanecer II',2,7);
+insert into sucursal values ('El Tunel II',3,7);
+insert into sucursal values ('Sercom II',4,8);
+insert into sucursal values ('Access II',5,8);
+insert into sucursal values ('La sirena II',6,8);
+insert into sucursal values ('La Patrona II',7,8);
+insert into sucursal values ('El Gallo II',8,8);
+insert into sucursal values ('La Blanca II',9,8);
+insert into sucursal values ('Educom II',10,8);
+insert into sucursal values ('Guateexx II',11,8);
+insert into sucursal values ('Zona Verde II',2,8);
+
+
