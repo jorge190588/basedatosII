@@ -412,9 +412,11 @@ go
 --se elimino cliente categoria ya que no estaba relacionada
 drop table clienteCategoria
 
+go
 -- Corrigiendo Tabla Sucursal
 drop table sucursal
 
+go
 --tabla sucursal
 create table sucursal(
 idSucursal int not null identity primary key,
