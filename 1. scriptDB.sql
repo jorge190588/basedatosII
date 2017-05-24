@@ -412,4 +412,15 @@ go
 --se elimino cliente categoria ya que no estaba relacionada
 drop table clienteCategoria
 
--- 
+-- Corrigiendo Tabla Sucursal
+drop table sucursal
+
+--tabla sucursal
+create table sucursal(
+idSucursal int not null identity primary key,
+nombreSucursal varchar(80),
+idMunicipio int,
+idCliente int not null,
+constraint municipio_fk foreign key(idMunicipio) references Municipio(idMunicipio),
+constraint cliente_fk foreign key(idCliente) references Clientes(idCliente)
+);
