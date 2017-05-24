@@ -662,4 +662,11 @@ insert into sucursal values ('Educom II',10,8);
 insert into sucursal values ('Guateexx II',11,8);
 insert into sucursal values ('Zona Verde II',2,8);
 
+--Insertando datos a estadoBodega y tipoBodega
+insert into tipoBodega values ('Grande');
+insert into tipoBodega values ('mediana');
+insert into tipoBodega values ('pequeña');
 
+insert into estadoBodega values ('Excelente');
+insert into estadoBodega values ('Buena');
+insert into estadoBodega values ('Inaccesible');
