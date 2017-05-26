@@ -413,8 +413,9 @@ go
 drop table clienteCategoria
 
 go
--- Corrigiendo Tabla Sucursal
+-- Corrigiendo Tabla Sucursal y clasificacion cliente(no tiene relacion)
 drop table sucursal
+drop table ClasificacionCliente
 
 go
 --tabla sucursal

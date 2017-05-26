@@ -718,3 +718,75 @@ insert into bodega values ('Bodega 3',1,1);
 insert into bodega values ('Bodega 4',3,2);
 insert into bodega values ('Bodega 5',3,2);
 insert into bodega values ('Bodega 6',3,1);
+
+--insertando datos en acceso usuario
+insert into AccesoUsuario values('nivel_1'),
+								('nivel_2'),
+								('nivel_3'),
+								('nivel_4'),
+								('nivel_5')
+
+--insertando datos en rango consumo
+insert into Rango_Consumo values('alto'),
+								('semi alto'),
+								('mediano'),
+								('semi bajo'),
+								('bajo'),
+								('nada')
+
+--insertando datos en descuento 
+insert into Descuento values('2'),
+							('3'),
+							('5'),
+							('10'),
+							('20'),
+							('50')
+
+--insertando datos en promocionales
+insert into Promocionales values('oferta 2X1'),
+								('a mitad de precio'),
+								('el segundo a mitad de precio'),
+								('compras 2 y te llevas 3'),
+								('productos hasta 50%'),
+								('solo hoy 20% de descuento')
+
+--falta insercion de datos en tabla clasificacion
+
+--insertando datos en estado ususario
+insert into EstadoUsuario values ('activo'),
+									('inactivo')
+
+--insertando datos en tipo cliente
+insert into tipoCliente values('frecuente'),
+							('semifrecuente'),
+							('indeciso'),
+							('leal'),
+							('ocasional'),
+							('preferencial')
+
+--insertando datos en tipo proveedor
+insert into tipoProveedor values('frecuente'),
+							('semifrecuente'),
+							('indeciso'),
+							('leal'),
+							('ocasional'),
+							('preferencial')
+
+--insertando datos en tipo ususario
+insert into TipoUsuario values('manager'),
+								('administrador'),
+								('gerente'),
+								('cajero'),
+								('moderador'),
+								('bodegero'),
+								('usuario invitado')
+
+--insertando datos en usuarios
+insert into Usuarios values('juan','perez','juanp123','no olvidar',1,1,5),
+							('pedro','lopez','pedrol123','no olvidar',2,1,4),
+							('luis','mazariegos','luis123','no olvidar',3,1,3),
+							('eduardo','do santos','eduardo123','no olvidar',4,1,2),
+							('gabriel','riverio','gabo123','no olvidar',5,1,3),
+							('alex','solorzano','alex123','no olvidar',6,2,4),
+							('vitalino','gomez','vita123','no olvidar',7,1,1)
+
