@@ -1,4 +1,5 @@
-ï»¿use master;
+
+use master;
 
 -- first step
 use master;
@@ -18,7 +19,7 @@ use ComputerDB;
 
 -- five step, create tables
 go
--- creaciÃ³n de tablas independientes
+-- creación de tablas independientes
 
 -- Tabla Marca, la tabla productos depende de esta
 create table Marca(
@@ -35,7 +36,7 @@ nombreColor varchar(50)
 );
 go
 
--- Tabla DimensiÃ³n, la tabla productos depende de esta
+-- Tabla Dimensión, la tabla productos depende de esta
 create table Dimension(
 idDimension int primary key not null identity,
 nombreDimension varchar(50),
@@ -183,7 +184,7 @@ constraint fk_idtipoProveedor foreign key(idtipoProveedor) references tipoProvee
 );
 go
 
--- Tabla ClasificaciÃ³n de Cliente
+-- Tabla Clasificación de Cliente
 -- Se clasificacn los clientes segun las ventas A,B,C, etc
 create table ClasificacionCliente(
 idClasificacion int not null primary key identity,
@@ -356,7 +357,7 @@ idUsuario int not null identity primary key,
 nombreUsuario varchar(80),
 apellidoUsuario varchar(80),
 nickUsuario varchar(80),
-contraseÃ±a varchar(20),
+contraseña varchar(20),
 idTipoUsuario int,
 idEstado int,
 idAcceso int,
