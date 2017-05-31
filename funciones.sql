@@ -1,3 +1,5 @@
+
+
 -- =============================================
 --funcion para calcular el iva 
 create function IVA (@cantidad money)
