@@ -17,6 +17,7 @@ El proyecto contiene un script de la base de datos de un giro de negocio de vent
   3.Eddy Delgado
   4.Abel Hidalgo
   5.Zelik Ramirez
+  6.Julio Gil
   
 ### 3. Inventarios.
   1.
