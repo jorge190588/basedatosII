@@ -1,4 +1,5 @@
-ï»¿use master;
+
+use master;
 
 -- first step
 use master;
@@ -18,7 +19,7 @@ use ComputerDB;
 
 -- five step, create tables
 go
--- creaciÃ³n de tablas independientes
+-- creación de tablas independientes
 
 -- Tabla Marca, la tabla productos depende de esta
 create table Marca(
@@ -35,7 +36,7 @@ nombreColor varchar(50)
 );
 go
 
--- Tabla DimensiÃ³n, la tabla productos depende de esta
+-- Tabla Dimensión, la tabla productos depende de esta
 create table Dimension(
 idDimension int primary key not null identity,
 nombreDimension varchar(50),
@@ -152,6 +153,7 @@ idMunicipio int,
 telefono int,
 idtipoCliente int,
 idFormaPago int,
+Clasificacion_ID int,
 constraint fk_Municipio foreign key(idMunicipio)references Municipio(idMunicipio),
 constraint fk_idtipoCliente foreign key(idtipoCliente) references tipoCliente(idtipoCliente),
 constraint fk_formaPago foreign key(idFormaPago)references FormaDePago(idFormaPago)
@@ -182,7 +184,7 @@ constraint fk_idtipoProveedor foreign key(idtipoProveedor) references tipoProvee
 );
 go
 
--- Tabla ClasificaciÃ³n de Cliente
+-- Tabla Clasificación de Cliente
 -- Se clasificacn los clientes segun las ventas A,B,C, etc
 create table ClasificacionCliente(
 idClasificacion int not null primary key identity,
@@ -355,7 +357,7 @@ idUsuario int not null identity primary key,
 nombreUsuario varchar(80),
 apellidoUsuario varchar(80),
 nickUsuario varchar(80),
-contraseÃ±a varchar(20),
+contraseña varchar(20),
 idTipoUsuario int,
 idEstado int,
 idAcceso int,
@@ -364,3 +366,65 @@ constraint idEstado_fk foreign key(idEstado) references EstadoUsuario(idEstado),
 constraint idAcceso_fk foreign key(idAcceso) references AccesoUsuario(idAcceso)
 );
 go
+
+--se agregaron las 3 tablas solicitadas para salidas 
+create table Descuento
+(
+idDescuento int Identity(1,1) Primary Key,
+Descuento int
+)
+go
+
+create table Promocionales
+(
+idPromocional int identity(1,1) primary key,
+promocional varchar (40)
+)
+go
+
+create table Rango_Consumo
+(
+IdRango int identity(1,1) primary key,
+Rango varchar (30)
+)
+go
+
+--se modifico la tabla clasificacioncliente, se agregaron atributos para que los tipos dependiendo de su consumo 
+--puedan tomar una clasificacion como clientes VIP, PRIMIUM, ALTO, MEDIANO, BAJO 
+
+create table Clasificacion
+(
+IdClasificacion int identity(1,1) primary key,
+Clasificacion varchar (5),
+RangoConsumo_Id int,
+Descuento_Id int,
+Promocional_Id int,
+constraint RangoConsumo_Id foreign key(RangoConsumo_Id) references Rango_Consumo(IdRango),
+constraint Descuento_Id foreign key (Descuento_Id) references Descuento(idDescuento),
+constraint Promocional_Id foreign key (Promocional_Id) references Promocionales(idPromocional)
+)
+go
+
+--se altero la tabla clientes para relacinarla con Clasificacion
+alter table clientes add constraint Clasificacion_ID_fk foreign key (Clasificacion_ID) 
+references Clasificacion(IdClasificacion)
+
+go
+--se elimino cliente categoria ya que no estaba relacionada
+drop table clienteCategoria
+
+go
+-- Corrigiendo Tabla Sucursal y clasificacion cliente(no tiene relacion)
+drop table sucursal
+drop table ClasificacionCliente
+
+go
+--tabla sucursal
+create table sucursal(
+idSucursal int not null identity primary key,
+nombreSucursal varchar(80),
+idMunicipio int,
+idCliente int not null,
+constraint municipio_fk foreign key(idMunicipio) references Municipio(idMunicipio),
+constraint cliente_fk foreign key(idCliente) references Clientes(idCliente)
+);

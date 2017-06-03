@@ -1,6 +1,4 @@
 use ComputerDB
-
-
 ------------------1  Backup de Una base de datos completa 
 
 BACKUP DATABASE ComputerDB						--Se selecciona la bd a copiar

@@ -1,0 +1,103 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>MultidimensionalProject2</Database>
+    <Server>localhost</Server>
+    <ConnectionString>DataSource=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>Goufcv+XWR6ErpgJ5wYLh63ueIc=20/05/2017 13:53:4020/05/2017 13:53:40</TimeStamp>
+        <ID>
+          <String>Computer DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>F1JAwj6n7bREhkIAMilu0rYjlSw=20/05/2017 14:36:1020/05/2017 13:56:05</TimeStamp>
+        <ID>
+          <String>Computer DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>WwYyR9a+Xc03BHtlHDUxn70aE6g=20/05/2017 14:10:0820/05/2017 14:10:08</TimeStamp>
+        <ID>
+          <String>Productos</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>8C2rDWIlMzZKN7K/lfhNRtqh/LA=20/05/2017 14:13:5420/05/2017 14:13:54</TimeStamp>
+        <ID>
+          <String>Salida Detalle</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>jvYNK0AwKAhR6UXArRBI8XlGN78=20/05/2017 14:36:1020/05/2017 14:36:10</TimeStamp>
+        <ID>
+          <String>Tiempo</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>EhzNcij93OWanNaAO5HUvlM4F0Q=20/05/2017 14:36:5620/05/2017 14:36:55</TimeStamp>
+        <ID>
+          <String>Tipo Cliente</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>if4NSGk7SRMujfc+33hHfBA+4fs=20/05/2017 14:36:5620/05/2017 14:36:55</TimeStamp>
+        <ID>
+          <String>Pais</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>tV1zPrRLld3qE1WDUXdFStwA5fM=20/05/2017 14:36:5620/05/2017 14:36:55</TimeStamp>
+        <ID>
+          <String>Color</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>TkzfrqHu3V8dvUZzG0vVbra+csI=20/05/2017 14:36:5620/05/2017 14:36:56</TimeStamp>
+        <ID>
+          <String>Tiempo 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>kz05tJ0ySU5Mz83lgwKQaQJyN5E=20/05/2017 15:06:4320/05/2017 14:36:55ye0pwqgSH4QGRQ2H6QOvIOitWsA=20/05/2017 14:51:5920/05/2017 14:36:55</TimeStamp>
+        <ID>
+          <String>Computer DB</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>2XhWZEIiCMrfa/sgZ+H41EL210c=20/05/2017 13:33:2420/05/2017 13:33:03</TimeStamp>
+      <ID>
+        <String>MultidimensionalProject2</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2017-05-20T22:16:55.483333Z</LastDeployed>
+</DeploymentSnapshot>
