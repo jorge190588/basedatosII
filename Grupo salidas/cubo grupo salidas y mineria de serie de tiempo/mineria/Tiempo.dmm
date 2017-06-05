@@ -1,0 +1,215 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="cf4e21d7-8ec3-4b9c-abdf-f7bf93e78e02" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Tiempo</ID>
+  <Name>Tiempo</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>MDXFilterComponent</Name>
+      <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/SQLServer/reporting/QuerySpecification"&gt;&lt;FilterItems xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition" /&gt;&lt;/Filter&gt;</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="CubeDimensionBinding" dwd:design-time-name="b80e28be-11f1-4f2e-9639-3144e473f71f">
+    <DataSourceID>.</DataSourceID>
+    <CubeID>cubo1</CubeID>
+    <CubeDimensionID>Tiempo</CubeDimensionID>
+    <Filter></Filter>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f22fb6a7-f4db-4284-8bca-ea78650bebf8">
+      <ID>Id Salida</ID>
+      <Name>Id Salida</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="d1a326cb-a087-425d-9e88-cfed4b0f4c19">
+        <CubeID>cubo1</CubeID>
+        <CubeDimensionID>Tiempo</CubeDimensionID>
+        <AttributeID>Id Salida</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Key Time</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c0f02bda-3eb8-44a2-9c97-26bb69effb74">
+      <ID>Año</ID>
+      <Name>Año</Name>
+      <Type>Long</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="9340e183-8655-4412-9b91-80aaace007aa">
+        <CubeID>cubo1</CubeID>
+        <CubeDimensionID>Tiempo</CubeDimensionID>
+        <AttributeID>Año</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="df7d206f-731e-45d8-bcc9-2d3b44f35c28">
+      <ID>Cantidad</ID>
+      <Name>Cantidad</Name>
+      <Type>Long</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="6f3f04b8-d471-4d53-b197-9d44781ace83">
+        <CubeID>cubo1</CubeID>
+        <CubeDimensionID>Tiempo</CubeDimensionID>
+        <AttributeID>Cantidad</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="8062eae4-4b57-425e-8881-d605f1da8280">
+      <ID>Existencia</ID>
+      <Name>Existencia</Name>
+      <Type>Long</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="f7e3058b-1efa-4e00-92d4-27f208ba8f8e">
+        <CubeID>cubo1</CubeID>
+        <CubeDimensionID>Tiempo</CubeDimensionID>
+        <AttributeID>Existencia</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e24946e1-0b8c-4d2c-9f65-875bd49c0356">
+      <ID>Total Costo</ID>
+      <Name>Total Costo</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="6872e758-8006-476a-9b0a-9fe220c0c0eb">
+        <CubeID>cubo1</CubeID>
+        <CubeDimensionID>Tiempo</CubeDimensionID>
+        <AttributeID>Total Costo</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="8f850ea4-4031-443a-b73a-027c1f8974d1">
+      <ID>Total Venta</ID>
+      <Name>Total Venta</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="dceca28b-63da-454e-b2ef-bc9f561991d3">
+        <CubeID>cubo1</CubeID>
+        <CubeDimensionID>Tiempo</CubeDimensionID>
+        <AttributeID>Total Venta</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="5e1405bd-ce67-45e1-8afd-0ea66a449e94">
+      <ID>Utilidad Total</ID>
+      <Name>Utilidad Total</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="debaaa10-e590-4b1b-955b-96a551907b4f">
+        <CubeID>cubo1</CubeID>
+        <CubeDimensionID>Tiempo</CubeDimensionID>
+        <AttributeID>Utilidad Total</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="dab7308b-e487-4f72-992c-143b0964f0f9">
+      <ID>Tiempo</ID>
+      <Name>Tiempo</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Time_Series</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="44090063-3c29-444f-9477-e0cb2eec09e8">
+          <ID>Id Salida</ID>
+          <Name>Id Salida</Name>
+          <SourceColumnID>Id Salida</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="3d82be18-eed7-48fe-b72b-1501ce4f3734">
+          <ID>Año</ID>
+          <Name>Año</Name>
+          <SourceColumnID>Año</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="9ee68404-f406-4e7d-b007-69e9c62bfd53">
+          <ID>Cantidad</ID>
+          <Name>Cantidad</Name>
+          <SourceColumnID>Cantidad</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="1f62bfed-0dbb-4add-8439-62bda2e6f393">
+          <ID>Existencia</ID>
+          <Name>Existencia</Name>
+          <SourceColumnID>Existencia</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="68d113f4-6900-45b6-8126-e433dcdf1bb2">
+          <ID>Total Costo</ID>
+          <Name>Total Costo</Name>
+          <SourceColumnID>Total Costo</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="85f90a28-fb1d-45eb-940b-c3c1dcf50a74">
+          <ID>Total Venta</ID>
+          <Name>Total Venta</Name>
+          <SourceColumnID>Total Venta</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="e38253ac-a45c-4989-8d4b-83807d3e86b5">
+          <ID>Utilidad Total</ID>
+          <Name>Utilidad Total</Name>
+          <SourceColumnID>Utilidad Total</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+      </Columns>
+      <AllowDrillThrough>true</AllowDrillThrough>
+    </MiningModel>
+  </MiningModels>
+</MiningStructure>
