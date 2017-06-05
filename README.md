@@ -93,3 +93,4 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 14. [Arboles de desicion](https://www.youtube.com/watch?v=ss1_BehIU1g)
 12. [SQL Server y Amazon](https://www.youtube.com/watch?v=K8gSaS_E4JM)
 15. Compañeros aca esta el link de los temas de mineria de datos de Microsoft para que estudien  https://msdn.microsoft.com/es-es/library/ms175595.aspx
+16. Link de Video para crear un Arbol de decision  https://www.youtube.com/watch?v=aXY-T3ohrdE
