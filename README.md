@@ -92,3 +92,4 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 13. [Factores](https://miblogtecnico.wordpress.com/2014/03/18/mineria-de-datos-en-sql-server-2012/)  
 14. [Arboles de desicion](https://www.youtube.com/watch?v=ss1_BehIU1g)
 12. [SQL Server y Amazon](https://www.youtube.com/watch?v=K8gSaS_E4JM)
+15. Compañeros aca esta el link de los temas de mineria de datos de Microsoft para que estudien  https://msdn.microsoft.com/es-es/library/ms175595.aspx
