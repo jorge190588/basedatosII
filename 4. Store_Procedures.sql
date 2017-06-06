@@ -7,7 +7,7 @@ use ComputerDB
 
 
 -- PROCEDIMIENTO ALMACENADO PARA INSERTAR SALIDAS DE MANERA MASIVA
-
+go
 create procedure sp_InsertarSalidaMasivo 
 	@contador int
 	as
@@ -27,7 +27,7 @@ begin
 	values(@fecha,@contador,@Random)
 end
 -- FIN DEL PROCEDIMIENTO ALMACENADO PARA INSERTAR SALIDAS DE MANERA MASIVA
-
+go
 
 -- borrar el sp en caso de ser necesario
 -- drop proc sp_InsertarSalidaMasivo
@@ -62,7 +62,7 @@ begin
 	insert into SalidaDetalle(idSalida,idProducto,cantidad,precio,costoTotal)
 	values(@idSalida,@ProductoAzar,@CantidadAzar,@Precio,(@CantidadAzar*@Precio))
 end
-
+go
 
 ---------------------------------------------------------------------------------------------
 
@@ -88,7 +88,7 @@ begin
 	values(@fecha,@contador,@Random)
 end
 -- FIN DEL PROCEDIMIENTO ALMACENADO PARA INSERTAR ENTRADAS DE MANERA MASIVA
-
+go
 -- borrar el sp en caso de ser necesario
 --drop proc sp_InsertarEntradaMasivo
 
@@ -124,5 +124,5 @@ begin
 	insert into EntradaDetalle(idEntrada,idProducto,cantidad,precio,costoTotal)
 	values(@idEntrada,@ProductoAzar,@CantidadAzar,@Precio,(@CantidadAzar*@Precio))
 end
-
+go
 --------------------------------------------------------------------------------------------------

@@ -3,7 +3,15 @@
     <DataSources>
       <DataSource>
         <ID>Computer DB</ID>
-        <ConnectionString>Provider=SQLNCLI11.1;Data Source=JAVI\SQL12;Persist Security Info=True;Password=;User ID=;Initial Catalog=ComputerDB</ConnectionString>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=FRANK-PC;Integrated Security=SSPI;Initial Catalog=ComputerDB</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+      <DataSource>
+        <ID>FRANK-PC</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=FRANK-PC;Integrated Security=SSPI</ConnectionString>
         <ImpersonationInfo>
           <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
@@ -29,6 +37,15 @@
         <ID>Tiempos</ID>
       </Dimension>
       <Dimension>
+<<<<<<< HEAD
+        <ID>Salida Detalle</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Tiempo</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Productos</ID>
+=======
         <ID>Clientes 1</ID>
       </Dimension>
       <Dimension>
@@ -36,6 +53,7 @@
       </Dimension>
       <Dimension>
         <ID>Tiempos1</ID>
+>>>>>>> origin/master
       </Dimension>
     </Dimensions>
     <Cubes>
@@ -53,7 +71,11 @@
         </MeasureGroups>
       </Cube>
       <Cube>
+<<<<<<< HEAD
+        <ID>FRANK-PC</ID>
+=======
         <ID>Computer DB 1</ID>
+>>>>>>> origin/master
         <MeasureGroups>
           <MeasureGroup>
             <ID>Salida Detalle</ID>

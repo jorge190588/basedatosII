@@ -580,5 +580,227 @@ values('Cable','Usb Extension Cable',35,15,15,13,3,1),('Cable','Cable Usb 4 Pine
       ('Disco Duro Externo','2TB',1000,600,15,14,3,1),('Disco Duro Interno','1TB',850,500,25,14,1,3)
       go
       
+<<<<<<< HEAD
 =======
 >>>>>>> .merge_file_a05492
+=======
+use ComputerDB
+
+insert into Pais(nombrePais) values('Guatemala'),
+									('Mexico')
+go
+
+insert into Departamento(nombreDepartamento,idPais) values ('Retalhuleu',1),
+													('mazatenango',1),
+													('Quetzaltenango',1),
+													('Solola',1),
+													('San Marcos',1),
+													('Huehuetenango',1)
+go
+
+insert into Municipio(nombreMunicipio,idDepartamento,idPais) values('san felipe',1,1),
+															('san Carlos',1,1),
+															('san Martin',1,1),
+															('Mulua',1,1),
+															('Champerico',1,1)
+go
+
+--Esta insercion de sucursal ya no funciona
+--insert into sucursal(nombreSucursal,idMunicipio) values('la bendicion',1),
+--													('la pudricion',1),
+--													('las joyas',1),
+--													('las putas',1),
+--													('los sexy lady',1)
+--go
+
+--Esta insercion es la correcta para sucursal
+insert into sucursal values ('La Soledad',1,2);
+insert into sucursal values ('La Trinidad',1,1);
+insert into sucursal values ('La Esperanza',1,1);
+insert into sucursal values ('Matamoros',1,2);
+insert into sucursal values ('El centro',2,3);
+insert into sucursal values ('El universo',3,3);
+insert into sucursal values ('La Campana',4,3);
+insert into sucursal values ('El parque',5,3);
+insert into sucursal values ('Nueva Luna',6,3);
+insert into sucursal values ('Nueva Linda',7,3);
+insert into sucursal values ('El palmar',8,3);
+insert into sucursal values ('Florista',9,3);
+insert into sucursal values ('Loma linda',10,3);
+insert into sucursal values ('Intcomex',11,3);
+insert into sucursal values ('El punto',2,3);
+insert into sucursal values ('Bodeguitas',1,4);
+insert into sucursal values ('Las Palmas',1,4);
+insert into sucursal values ('San Carlos',1,4);
+insert into sucursal values ('Parcelas',1,4);
+insert into sucursal values ('Nuevo Amanecer',2,4);
+insert into sucursal values ('El Tunel',3,4);
+insert into sucursal values ('Sercom',4,4);
+insert into sucursal values ('Access',5,4);
+insert into sucursal values ('La sirena',6,4);
+insert into sucursal values ('La Patrona',7,4);
+insert into sucursal values ('El Gallo',8,4);
+insert into sucursal values ('La Blanca',9,4);
+insert into sucursal values ('Educom',10,4);
+insert into sucursal values ('Guateexx',11,4);
+insert into sucursal values ('Zona Verde',2,4);
+insert into sucursal values ('La Soledad II',1,5);
+insert into sucursal values ('La Trinidad II',1,5);
+insert into sucursal values ('La Esperanza II',1,5);
+insert into sucursal values ('Matamoros II',1,5);
+insert into sucursal values ('El centro II',2,5);
+insert into sucursal values ('El universo II',3,6);
+insert into sucursal values ('La Campana II',4,6);
+insert into sucursal values ('El parque II',5,6);
+insert into sucursal values ('Nueva Luna II',6,6);
+insert into sucursal values ('Nueva Linda II',7,6);
+insert into sucursal values ('El palmar II',8,6);
+insert into sucursal values ('Florista II',9,6);
+insert into sucursal values ('Loma linda II',10,7);
+insert into sucursal values ('Intcomex II',11,7);
+insert into sucursal values ('El punto II',2,7);
+insert into sucursal values ('Bodeguitas II',1,7);
+insert into sucursal values ('Las Palmas II',1,7);
+insert into sucursal values ('San Carlos II',1,7);
+insert into sucursal values ('Parcelas II',1,7);
+insert into sucursal values ('Nuevo Amanecer II',2,7);
+insert into sucursal values ('El Tunel II',3,7);
+insert into sucursal values ('Sercom II',4,8);
+insert into sucursal values ('Access II',5,8);
+insert into sucursal values ('La sirena II',6,8);
+insert into sucursal values ('La Patrona II',7,8);
+insert into sucursal values ('El Gallo II',8,8);
+insert into sucursal values ('La Blanca II',9,8);
+insert into sucursal values ('Educom II',10,8);
+insert into sucursal values ('Guateexx II',11,8);
+insert into sucursal values ('Zona Verde II',2,8);
+
+--Insertando datos a estadoBodega y tipoBodega
+insert into tipoBodega values ('Grande');
+insert into tipoBodega values ('mediana');
+insert into tipoBodega values ('pequeña');
+
+insert into estadoBodega values ('Excelente');
+insert into estadoBodega values ('Buena');
+insert into estadoBodega values ('Inaccesible');
+
+--INSERTANDO DATOS A BODEGA
+insert into bodega values ('Bodega 1',1,1);
+insert into bodega values ('Bodega 2',1,1);
+insert into bodega values ('Bodega 3',1,2);
+insert into bodega values ('Bodega 4',1,2);
+insert into bodega values ('Bodega 5',1,1);
+insert into bodega values ('Bodega 6',2,2);
+insert into bodega values ('Bodega 7',2,2);
+insert into bodega values ('Bodega 8',2,2);
+insert into bodega values ('Bodega 9',2,2);
+insert into bodega values ('Bodega 10',2,2);
+insert into bodega values ('Bodega 1',1,2);
+insert into bodega values ('Bodega 2',1,3);
+insert into bodega values ('Bodega 3',1,3);
+insert into bodega values ('Bodega 4',1,2);
+insert into bodega values ('Bodega 5',2,3);
+insert into bodega values ('Bodega 6',2,3);
+insert into bodega values ('Bodega 4',2,2);
+insert into bodega values ('Bodega 8',2,2);
+insert into bodega values ('Bodega 9',2,2);
+insert into bodega values ('Bodega 10',3,1);
+insert into bodega values ('Bodega 1',1,1);
+insert into bodega values ('Bodega 2',1,1);
+insert into bodega values ('Bodega 3',1,1);
+insert into bodega values ('Bodega 4',2,1);
+insert into bodega values ('Bodega 5',2,2);
+insert into bodega values ('Bodega 6',2,2);
+insert into bodega values ('Bodega 7',3,2);
+insert into bodega values ('Bodega 8',3,2);
+insert into bodega values ('Bodega 9',3,1);
+insert into bodega values ('Bodega 10',3,2);
+insert into bodega values ('Bodega 1',1,1);
+insert into bodega values ('Bodega 2',1,1);
+insert into bodega values ('Bodega 3',2,2);
+insert into bodega values ('Bodega 4',2,2);
+insert into bodega values ('Bodega 5',2,2);
+insert into bodega values ('Bodega 6',2,2);
+insert into bodega values ('Bodega 7',2,2);
+insert into bodega values ('Bodega 8',2,2);
+insert into bodega values ('Bodega 9',2,2);
+insert into bodega values ('Bodega 10',2,1);
+insert into bodega values ('Bodega 1',1,1);
+insert into bodega values ('Bodega 2',1,1);
+insert into bodega values ('Bodega 3',1,1);
+insert into bodega values ('Bodega 4',3,2);
+insert into bodega values ('Bodega 5',3,2);
+insert into bodega values ('Bodega 6',3,1);
+
+--insertando datos en acceso usuario
+insert into AccesoUsuario values('nivel_1'),
+								('nivel_2'),
+								('nivel_3'),
+								('nivel_4'),
+								('nivel_5')
+
+--insertando datos en rango consumo
+insert into Rango_Consumo values('alto'),
+								('semi alto'),
+								('mediano'),
+								('semi bajo'),
+								('bajo'),
+								('nada')
+
+--insertando datos en descuento 
+insert into Descuento values('2'),
+							('3'),
+							('5'),
+							('10'),
+							('20'),
+							('50')
+
+--insertando datos en promocionales
+insert into Promocionales values('oferta 2X1'),
+								('a mitad de precio'),
+								('el segundo a mitad de precio'),
+								('compras 2 y te llevas 3'),
+								('productos hasta 50%'),
+								('solo hoy 20% de descuento')
+
+--falta insercion de datos en tabla clasificacion
+
+--insertando datos en estado ususario
+insert into EstadoUsuario values ('activo'),
+									('inactivo')
+
+--insertando datos en tipo cliente
+insert into tipoCliente values('frecuente'),
+							('semifrecuente'),
+							('indeciso'),
+							('leal'),
+							('ocasional'),
+							('preferencial')
+
+--insertando datos en tipo proveedor
+insert into tipoProveedor values('frecuente'),
+							('semifrecuente'),
+							('indeciso'),
+							('leal'),
+							('ocasional'),
+							('preferencial')
+
+--insertando datos en tipo ususario
+insert into TipoUsuario values('manager'),
+								('administrador'),
+								('gerente'),
+								('cajero'),
+								('moderador'),
+								('bodegero'),
+								('usuario invitado')
+
+--insertando datos en usuarios
+insert into Usuarios values('juan','perez','juanp123','no olvidar',1,1,5),
+							('pedro','lopez','pedrol123','no olvidar',2,1,4),
+							('luis','mazariegos','luis123','no olvidar',3,1,3),
+							('eduardo','do santos','eduardo123','no olvidar',4,1,2),
+							('gabriel','riverio','gabo123','no olvidar',5,1,3),
+							('alex','solorzano','alex123','no olvidar',6,2,4),
+							('vitalino','gomez','vita123','no olvidar',7,1,1)
+
+>>>>>>> ff9b56af6b3af9f42c879128fdf9097dfd3f9737

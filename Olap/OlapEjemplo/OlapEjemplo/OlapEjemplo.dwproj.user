@@ -3,6 +3,9 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
+<<<<<<< HEAD
+        <TargetServer>FRANK-PC</TargetServer>
+=======
         <UserIDs>
           <ConfigurationSetting>
             <Id>Computer DB 1</Id>
@@ -28,6 +31,7 @@
           </ConfigurationSetting>
         </UserPasswords>
         <TargetServer>localhost</TargetServer>
+>>>>>>> origin/master
         <TargetDatabase>OlapEjemplo</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
