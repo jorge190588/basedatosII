@@ -92,3 +92,5 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 13. [Factores](https://miblogtecnico.wordpress.com/2014/03/18/mineria-de-datos-en-sql-server-2012/)  
 14. [Arboles de desicion](https://www.youtube.com/watch?v=ss1_BehIU1g)
 12. [SQL Server y Amazon](https://www.youtube.com/watch?v=K8gSaS_E4JM)
+13. [SERIE DE TIEMPO Y CUBO OLAP]===(https://www.youtube.com/watch?v=eVcJ6AKWsdM&t=33s)
+
