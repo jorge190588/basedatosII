@@ -1,4 +1,4 @@
-# basedatosII
+﻿# basedatosII
 El proyecto contiene un script de la base de datos de un giro de negocio de ventas.   Los movimientos registrados deben de ser sobre productos de computadoras
 
 ## Grupos
@@ -92,10 +92,6 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 13. [Factores](https://miblogtecnico.wordpress.com/2014/03/18/mineria-de-datos-en-sql-server-2012/)  
 14. [Arboles de desicion](https://www.youtube.com/watch?v=ss1_BehIU1g)
 12. [SQL Server y Amazon](https://www.youtube.com/watch?v=K8gSaS_E4JM)
-<<<<<<< HEAD
-13. [SERIE DE TIEMPO Y CUBO OLAP]===(https://www.youtube.com/watch?v=eVcJ6AKWsdM&t=33s)
-
-=======
 15. Compañeros aca esta el link de los temas de mineria de datos de Microsoft para que estudien  https://msdn.microsoft.com/es-es/library/ms175595.aspx
 16. Link de Video para crear un Arbol de decision  https://www.youtube.com/watch?v=aXY-T3ohrdE
->>>>>>> origin/master
+17. [SERIE DE TIEMPO Y CUBO OLAP]===(https://www.youtube.com/watch?v=eVcJ6AKWsdM&t=33s)
