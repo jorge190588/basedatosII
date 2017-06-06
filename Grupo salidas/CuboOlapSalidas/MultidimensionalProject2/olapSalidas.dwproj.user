@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Computer DB</Id>
+            <Name>Computer DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMgZHrXzwgk2XmAGTP47eAQAAAAAYAAAAQwBvAG0AcAB1AHQAZQByACAARABCAAAAEGYAAAABAAAgAAAA8hal1ZP0JVmx/WQ0tT/MRdSIvE7+u2eCYvMGE3WE+IoAAAAADoAAAAACAAAgAAAA6cgeqdg/zAgtuVKs0hA6PjT6lgpYEUERA+OeAko9KvwQAAAAd6k6f66Q0MeMw6x57vq83EAAAADP1vSZN88/Bnc6N7SdkSKHRBn6Y+2JrovDz2XmmgZbHBWawI5gi8Y+j+O8HBWI69+HZPwz6wQ30rELKWU4XUdn</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Computer DB</Id>
+            <Name>Computer DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMgZHrXzwgk2XmAGTP47eAQAAAAAYAAAAQwBvAG0AcAB1AHQAZQByACAARABCAAAAEGYAAAABAAAgAAAAQZy8IG5eKmdTjLoRlQUiacaKA7JNYVSTY/cu8rlQhFMAAAAADoAAAAACAAAgAAAAhLF1ZIifZDF4fHPlpCw2SlujqjSzceUMkzhKH+7itpYQAAAAswp/Q7KZRQtwM6kMaRfoZkAAAABpp5zTBQxZGF1jBzs8uIu5T21/GhsBj6/QlRC+0CN2y2O/JkDaSwiZpO2+o1NaVmGo3W758sKpGNPOz7GnSJmZ</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>localhost</TargetServer>
+        <TargetDatabase>MultidimensionalProject2</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>
