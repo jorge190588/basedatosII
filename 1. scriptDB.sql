@@ -212,8 +212,9 @@ idSalida int,
 idProducto int,
 cantidad int,
 precio float,
-costoTotal float
-constraint fk_idSalida foreign key(idSalida)references Salida(idSalida)
+costoTotal float,
+constraint fk_idSalida foreign key(idSalida)references Salida(idSalida),
+constraint fk_idProductoDetalleSalida foreign key(idProducto) references Productos(id)
 );
 go
 
@@ -234,8 +235,9 @@ idEntrada int,
 idProducto int,
 cantidad int,
 precio float,
-costoTotal float
-constraint fk_idEntrada foreign key(idEntrada)references Entrada(idEntrada)
+costoTotal float,
+constraint fk_idEntrada foreign key(idEntrada)references Entrada(idEntrada),
+constraint fk_idProductoEntradaDetalle foreign key(idProducto) references Productos(id)
 );
 go
 
