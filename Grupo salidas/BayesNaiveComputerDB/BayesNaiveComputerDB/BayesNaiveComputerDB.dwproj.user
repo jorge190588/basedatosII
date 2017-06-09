@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Computer DB</Id>
+            <Name>Computer DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAgCm7USD9yU+IUJw5WF/5HgAAAAAYAAAAQwBvAG0AcAB1AHQAZQByACAARABCAAAAEGYAAAABAAAgAAAAksYloeJbQXwjp91ySkmKfvZmoQLL9uC3CyCAyMb1oFgAAAAADoAAAAACAAAgAAAAlg7PNAL0PKY3EADZLTFn1FhT0VrMnKlcNEX8yh7QTqsQAAAA4fUedKhyW9P0va8lXfp1y0AAAAA74pnpSn2R1iDlEZBMOwSKM1dXUlwMAGS8fYXl+mQtYD4II21YgNXJ9MbEN4nIw3WJWz4+Xt/Jj3XaGBFOVA0r</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Computer DB</Id>
+            <Name>Computer DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAgCm7USD9yU+IUJw5WF/5HgAAAAAYAAAAQwBvAG0AcAB1AHQAZQByACAARABCAAAAEGYAAAABAAAgAAAAGJdlJmJzCgmi8lMyetgZva/jIZiBi1Ha8idjH4P16GMAAAAADoAAAAACAAAgAAAAqevPSi52vcgznkDv4sgtErSmgs3l8M1bO00w2TXrIcUQAAAAHJ5FpBrjdRlEx2U5DJsrbkAAAABnhadwHDaKDeRV0SdD5ze1gav56jhXGiD++49mvxtRv/bUm547NBSSr21GXYQzRK2KFYQVhqmoxAB7T+IioFsy</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>localhost</TargetServer>
+        <TargetDatabase>BayesNaiveComputerDB</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>
