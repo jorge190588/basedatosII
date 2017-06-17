@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>mineria</Database>
+    <Server>FRANK-PC</Server>
+    <ConnectionString>DataSource=FRANK-PC;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>bC68QeOVenB4yQzK6q/tT4O3Ra4=03/06/2017 12:54:1503/06/2017 12:54:14</TimeStamp>
+        <ID>
+          <String>Computer DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>8nGeq4KhwDRl3z5eyd4VOvC3FF8=05/06/2017 0:02:5203/06/2017 12:56:56</TimeStamp>
+        <ID>
+          <String>ComputerDB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>vJnpXo79Ylv6MaPVb+rhuD4oCPw=03/06/2017 15:01:1103/06/2017 15:01:10</TimeStamp>
+        <ID>
+          <String>Salida</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>r6ieud9oFrfl23oJm4T9YSNGias=03/06/2017 15:02:0703/06/2017 15:02:07</TimeStamp>
+        <ID>
+          <String>Productos</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>R3/jpmeGKNi18UCZr9xjT5Lc71g=03/06/2017 14:59:1103/06/2017 14:58:57</TimeStamp>
+        <ID>
+          <String>Salida Detalle</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>EfMteDrKRSEvWY6Gtua4N4AHF3g=04/06/2017 23:37:1104/06/2017 23:37:11</TimeStamp>
+        <ID>
+          <String>Tiempo</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>wd9leFS+OBs22pR9gd1Wu/Es7+s=04/06/2017 23:37:4104/06/2017 23:37:40o04OtJ9p2iyb6Atmhbl4MhFSJXk=04/06/2017 23:37:4104/06/2017 23:37:41</TimeStamp>
+        <ID>
+          <String>cubo1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>OwRBPsKYbi/Rh2JqKH7o4x1oCrI=05/06/2017 1:36:4805/06/2017 1:36:48</TimeStamp>
+        <ID>
+          <String>Tiempo</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>fFgb3m9yU1+R1ryv/hrWEFJc6Zc=03/06/2017 12:51:5903/06/2017 12:51:55</TimeStamp>
+      <ID>
+        <String>mineria</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2017-06-05T07:37:35.973333Z</LastDeployed>
+</DeploymentSnapshot>

@@ -1,0 +1,150 @@
+﻿<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <ProductVersion>11.0.2100.60</ProductVersion>
+  <SchemaVersion>9.0.2.10</SchemaVersion>
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+  <Database>
+    <Name>OlapEjemplo.database</Name>
+    <FullPath>OlapEjemplo.database</FullPath>
+  </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Computer DB.cube</Name>
+      <FullPath>Computer DB.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Computer DB.partitions</Name>
+          <FullPath>Computer DB.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+<<<<<<< HEAD
+      <Name>FRANK-PC.cube</Name>
+      <FullPath>FRANK-PC.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>FRANK-PC.partitions</Name>
+          <FullPath>FRANK-PC.partitions</FullPath>
+=======
+      <Name>Computer DB 1.cube</Name>
+      <FullPath>Computer DB 1.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Computer DB 1.partitions</Name>
+          <FullPath>Computer DB 1.partitions</FullPath>
+>>>>>>> origin/master
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Salidas.dim</Name>
+      <FullPath>Salidas.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Tiempos.dim</Name>
+      <FullPath>Tiempos.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+<<<<<<< HEAD
+      <Name>Productos.dim</Name>
+      <FullPath>Productos.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Salida Detalle.dim</Name>
+      <FullPath>Salida Detalle.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Tiempo.dim</Name>
+      <FullPath>Tiempo.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Clientes.dim</Name>
+      <FullPath>Clientes.dim</FullPath>
+=======
+      <Name>Salidas1.dim</Name>
+      <FullPath>Salidas1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Clientes 1.dim</Name>
+      <FullPath>Clientes 1.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Tiempos1.dim</Name>
+      <FullPath>Tiempos1.dim</FullPath>
+>>>>>>> origin/master
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Computer DB.ds</Name>
+      <FullPath>Computer DB.ds</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+<<<<<<< HEAD
+      <Name>FRANK-PC.ds</Name>
+      <FullPath>FRANK-PC.ds</FullPath>
+=======
+      <Name>Computer DB 1.ds</Name>
+      <FullPath>Computer DB 1.ds</FullPath>
+>>>>>>> origin/master
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Computer DB.dsv</Name>
+      <FullPath>Computer DB.dsv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+<<<<<<< HEAD
+      <Name>FRANK-PC.dsv</Name>
+      <FullPath>FRANK-PC.dsv</FullPath>
+=======
+      <Name>Computer DB 1.dsv</Name>
+      <FullPath>Computer DB 1.dsv</FullPath>
+>>>>>>> origin/master
+    </ProjectItem>
+  </DataSourceViews>
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Computer DB</Id>
+            <Name>Computer DB</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=FRANK-PC;Integrated Security=SSPI;Initial Catalog=ComputerDB</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>FRANK-PC</Id>
+            <Name>FRANK-PC</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=FRANK-PC;Integrated Security=SSPI</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Computer DB 1</Id>
+            <Name>Computer DB 1</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=ELVIN-PC;Persist Security Info=True;Password=;User ID=;Initial Catalog=ComputerDB</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Computer DB</Id>
+            <Name>Computer DB</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>FRANK-PC</Id>
+            <Name>FRANK-PC</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>Computer DB 1</Id>
+            <Name>Computer DB 1</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>
