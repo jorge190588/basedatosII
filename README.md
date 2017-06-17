@@ -71,10 +71,10 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 2. [Mineria de datos](https://www.youtube.com/watch?v=hbiRtv2WxDY)
   * Asociacion de patrones
   * Clustering
-  * Arboles de desicion.
+  * Arboles de desicion [Ejemplo 1](https://www.youtube.com/watch?v=ss1_BehIU1g),[Ejemplo 2](https://www.youtube.com/watch?v=aXY-T3ohrdE)
   * Regresion lineal
   * Regresion logistica
-  * Teorema de Bayes
+  * Teorema de Bayes [Ejemplo 1](https://youtu.be/Jsma-k6b2eM)
   * Reres neuronales.
   * Secuencia de clustering
   * Series de tiempo.
@@ -83,5 +83,4 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 5. [Arboles de desicion - ejemplo 1](https://www.youtube.com/watch?v=ss1_BehIU1g)
 6. [Arboles de desicion - ejemplo 2](https://www.youtube.com/watch?v=aXY-T3ohrdE)
 7. [Arboles de desicion - ejemplo 3](https://drive.google.com/drive/u/0/my-drive)
-8. [Arbol de decision - ejemplo](https://www.youtube.com/watch?v=aXY-T3ohrdE)
 9. [SERIE DE TIEMPO Y CUBO OLAP](https://www.youtube.com/watch?v=eVcJ6AKWsdM&t=33s)
