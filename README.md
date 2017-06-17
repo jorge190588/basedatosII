@@ -64,11 +64,18 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 7. Formatos de resultado (Tabla, Json y xml)
 8. Cursores.
 9. Pruebas unitarias.
-10. [Analisis multidimensional (cubos olap)](https://www.youtube.com/watch?v=PDqmZY1msZs)
+10. [SQL Server y Amazon](https://www.youtube.com/watch?v=K8gSaS_E4JM)
+
+
+### Analisis Multidimensional
+
+1. [Analisis multidimensional (cubos olap)](https://www.youtube.com/watch?v=PDqmZY1msZs)
+2. [Ejemplo de cubo de salidas](https://youtu.be/zlJNtwXBq4k)
 
 ### Mineria de datos
 1. [Documentacion de Microsoft sobre mineria de datos](https://msdn.microsoft.com/es-es/library/ms175595.aspx)
-2. [Mineria de datos](https://www.youtube.com/watch?v=hbiRtv2WxDY)
+2. [Factores](https://miblogtecnico.wordpress.com/2014/03/18/mineria-de-datos-en-sql-server-2012/)
+3. [Mineria de datos](https://www.youtube.com/watch?v=hbiRtv2WxDY)
   * Asociacion de patrones
   * Clustering
   * Arboles de desicion [Ejemplo 1](https://www.youtube.com/watch?v=ss1_BehIU1g),[Ejemplo 2](https://www.youtube.com/watch?v=aXY-T3ohrdE)
@@ -77,10 +84,7 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
   * Teorema de Bayes [Ejemplo 1](https://youtu.be/Jsma-k6b2eM)
   * Reres neuronales.
   * Secuencia de clustering
-  * Series de tiempo.
-3. [SQL Server y Amazon](https://www.youtube.com/watch?v=K8gSaS_E4JM)
-4. [Factores](https://miblogtecnico.wordpress.com/2014/03/18/mineria-de-datos-en-sql-server-2012/)
-5. [Arboles de desicion - ejemplo 1](https://www.youtube.com/watch?v=ss1_BehIU1g)
-6. [Arboles de desicion - ejemplo 2](https://www.youtube.com/watch?v=aXY-T3ohrdE)
-7. [Arboles de desicion - ejemplo 3](https://drive.google.com/drive/u/0/my-drive)
-9. [SERIE DE TIEMPO Y CUBO OLAP](https://www.youtube.com/watch?v=eVcJ6AKWsdM&t=33s)
+  * Series de tiempo [Ejemplo 1](https://www.youtube.com/watch?v=eVcJ6AKWsdM&t=33s)
+
+
+
