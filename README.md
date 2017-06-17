@@ -5,28 +5,13 @@ El proyecto contiene un script de la base de datos de un giro de negocio de vent
 
 ### 1. Salidas
 
-  1.Eduardo Barrios
-  2.Gabriel Rodriguez
-  3.Angel Gonzales
-  4.Denis Rosales
-  5.Luis Castillo	
+* Eduardo Barrios, Gabriel Rodriguez, Angel Gonzales, Denis Rosales y Luis Castillo
   
 ### 2. Entradas
-  1.Elvin Morales
-  2.Pedro Lol
-  3.Eddy Delgado
-  4.Abel Hidalgo
-  5.Zelik Ramirez
-  6.Julio Gil
+* Elvin Morales, Pedro Lol, Eddy Delgado, Abel Hidalgo, Zelik Ramirez y Julio Gil
   
 ### 3. Inventarios.
-  1.
-  2.
-  3.
-  4.
-  5.
   
-
 
 ## Alumnos
 Deben aportan en el proyecto por medio de commits, actualizando el script de la base de datos e ingresando como minimo 500,000 registros en las transacciones principales que son movimientos de compras y ventas.
@@ -66,10 +51,10 @@ Las herramientas utilizadas para hacer los ejercicios son>
 8. Gherkin (requerimientos)
 
 
-## Requerimientos (reportes)
+## Requerimientos 
 Utilizando Gherkin se describen los requermientos para la extraccion de informacion.  Se debe justificar con datos cuantificables cada respuesta, es decir debe realizar como minimo pruebas con diferente sintaxis sql (SQL,join y TransSQL)
 
-## Contenido tecnico.
+## Contenido
 1. Transacciones
 2. Prodecimientos almacenados (sin parametros, con parametros y con TVP)
 3. Try Catch 
@@ -80,21 +65,23 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 8. Cursores.
 9. Pruebas unitarias.
 10. [Analisis multidimensional (cubos olap)](https://www.youtube.com/watch?v=PDqmZY1msZs)
-11. [Mineria de datos](https://www.youtube.com/watch?v=hbiRtv2WxDY)
-  *. Asociacion de patrones
-  *. Clustering
-  *. Arboles de desicion.
-  *. Regresion lineal
-  *. Regresion logistica
-  *. Teorema de Bayes
-  *. Reres neuronales.
-  *. Secuencia de clustering
-  *. Series de tiempo.
-12. [SQL Server y Amazon](https://www.youtube.com/watch?v=K8gSaS_E4JM)
-13. [Factores](https://miblogtecnico.wordpress.com/2014/03/18/mineria-de-datos-en-sql-server-2012/)
-14. [Arboles de desicion](https://www.youtube.com/watch?v=ss1_BehIU1g)
-15. [Arboles de desicion - ejemplo](https://www.youtube.com/watch?v=aXY-T3ohrdE)
-16. [Arboles de desicion - ejemplo](https://drive.google.com/drive/u/0/my-drive)
-17. [Documentacion de Microsoft sobre mineria de datos](https://msdn.microsoft.com/es-es/library/ms175595.aspx)
-18. [Arbol de decision - ejemplo](https://www.youtube.com/watch?v=aXY-T3ohrdE)
-19. [SERIE DE TIEMPO Y CUBO OLAP](https://www.youtube.com/watch?v=eVcJ6AKWsdM&t=33s)
+
+### Mineria de datos
+1. [Documentacion de Microsoft sobre mineria de datos](https://msdn.microsoft.com/es-es/library/ms175595.aspx)
+2. [Mineria de datos](https://www.youtube.com/watch?v=hbiRtv2WxDY)
+  * Asociacion de patrones
+  * Clustering
+  * Arboles de desicion.
+  * Regresion lineal
+  * Regresion logistica
+  * Teorema de Bayes
+  * Reres neuronales.
+  * Secuencia de clustering
+  * Series de tiempo.
+3. [SQL Server y Amazon](https://www.youtube.com/watch?v=K8gSaS_E4JM)
+4. [Factores](https://miblogtecnico.wordpress.com/2014/03/18/mineria-de-datos-en-sql-server-2012/)
+5. [Arboles de desicion - ejemplo 1](https://www.youtube.com/watch?v=ss1_BehIU1g)
+6. [Arboles de desicion - ejemplo 2](https://www.youtube.com/watch?v=aXY-T3ohrdE)
+7. [Arboles de desicion - ejemplo 3](https://drive.google.com/drive/u/0/my-drive)
+8. [Arbol de decision - ejemplo](https://www.youtube.com/watch?v=aXY-T3ohrdE)
+9. [SERIE DE TIEMPO Y CUBO OLAP](https://www.youtube.com/watch?v=eVcJ6AKWsdM&t=33s)
