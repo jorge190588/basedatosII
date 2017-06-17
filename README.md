@@ -93,7 +93,8 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 12. [SQL Server y Amazon](https://www.youtube.com/watch?v=K8gSaS_E4JM)
 13. [Factores](https://miblogtecnico.wordpress.com/2014/03/18/mineria-de-datos-en-sql-server-2012/)
 14. [Arboles de desicion](https://www.youtube.com/watch?v=ss1_BehIU1g)
-14. [Arboles de desicion - ejemplo](https://www.youtube.com/watch?v=aXY-T3ohrdE)
-15. Compañeros aca esta el link de los temas de mineria de datos de Microsoft para que estudien  https://msdn.microsoft.com/es-es/library/ms175595.aspx
-16. Link de Video para crear un Arbol de decision  https://www.youtube.com/watch?v=aXY-T3ohrdE
-17. [SERIE DE TIEMPO Y CUBO OLAP]===(https://www.youtube.com/watch?v=eVcJ6AKWsdM&t=33s)
+15. [Arboles de desicion - ejemplo](https://www.youtube.com/watch?v=aXY-T3ohrdE)
+16. [Arboles de desicion - ejemplo](https://drive.google.com/drive/u/0/my-drive)
+17. [Documentacion de Microsoft sobre mineria de datos](https://msdn.microsoft.com/es-es/library/ms175595.aspx)
+18. [Arbol de decision - ejemplo](https://www.youtube.com/watch?v=aXY-T3ohrdE)
+19. [SERIE DE TIEMPO Y CUBO OLAP](https://www.youtube.com/watch?v=eVcJ6AKWsdM&t=33s)
