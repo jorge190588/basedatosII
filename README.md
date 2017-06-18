@@ -78,7 +78,7 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 3. [Mineria de datos](https://www.youtube.com/watch?v=hbiRtv2WxDY)
   * Asociacion de patrones
   * Clustering
-  * Arboles de desicion [Ejemplo 1](https://www.youtube.com/watch?v=ss1_BehIU1g),[Ejemplo 2](https://www.youtube.com/watch?v=aXY-T3ohrdE)
+  * Arboles de desicion [Ejemplo 1](https://www.youtube.com/watch?v=ss1_BehIU1g),[Ejemplo 2](https://www.youtube.com/watch?v=aXY-T3ohrdE), [Ejemplo 3](https://www.youtube.com/watch?v=WO8Vi-s92FM)
   * Regresion lineal
   * Regresion logistica
   * Teorema de Bayes [Ejemplo 1](https://youtu.be/Jsma-k6b2eM)
