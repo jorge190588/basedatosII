@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Mineria_Bayes", "Mineria_Bayes\Mineria_Bayes.dwproj", "{D44F22C1-2319-4F3A-9AB6-1715AE7AF011}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D44F22C1-2319-4F3A-9AB6-1715AE7AF011}.Development|Default.ActiveCfg = Development
+		{D44F22C1-2319-4F3A-9AB6-1715AE7AF011}.Development|Default.Build.0 = Development
+		{D44F22C1-2319-4F3A-9AB6-1715AE7AF011}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

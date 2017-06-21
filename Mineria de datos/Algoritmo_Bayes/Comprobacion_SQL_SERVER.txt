@@ -1,0 +1,4 @@
+
+select direccion, nombreProveedor,telefono
+from Proveedor
+group by direccion, nombreProveedor,telefono

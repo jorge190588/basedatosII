@@ -1,0 +1,177 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4df8a3c9-eb46-4be5-9bdc-a3baf8cdc6b6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Proveedor_Bayes</ID>
+  <Name>Proveedor_Bayes</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_Proveedor</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c574dd9a-7bba-4404-9715-cba1cf54fa4d">
+    <DataSourceViewID>vista_Bayes</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="13fee1cc-0d5a-49f6-a863-4b9a12ddcc94">
+      <ID>Direccion</ID>
+      <Name>Direccion</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1c62b698-e950-4fdb-b9e3-b427d3e88dc2">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1ffcaf68-1b6a-4849-86dd-de11a81aed36">
+            <TableID>dbo_Proveedor</TableID>
+            <ColumnID>direccion</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="6e13c4ad-3e1e-4f41-8f23-0ff9981293e2">
+      <ID>Id Forma Pago</ID>
+      <Name>Id Forma Pago</Name>
+      <Type>Long</Type>
+      <Content>Discretized</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1b7dd008-4e47-4f55-a5a2-f077bb1e8076">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bfdf82dc-5d22-46c6-ba65-b01e9c0c1440">
+            <TableID>dbo_Proveedor</TableID>
+            <ColumnID>idFormaPago</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="929f7294-59ef-43ef-b22d-b0232908b148">
+      <ID>Id Municipio</ID>
+      <Name>Id Municipio</Name>
+      <Type>Long</Type>
+      <Content>Discretized</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="839d041d-674f-4ab6-8ba9-d25c543188d6">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="556d0c48-6150-4788-a15a-939ea33ee783">
+            <TableID>dbo_Proveedor</TableID>
+            <ColumnID>idMunicipio</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="5e0e1e36-0736-4ac6-bf2e-2ec28ab70b0b">
+      <ID>Id Proveedor</ID>
+      <Name>Id Proveedor</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="18c18d1b-b299-4ed2-a781-4f1541d3e161">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ffe9c714-f753-41ac-9325-64c1a903c624">
+            <TableID>dbo_Proveedor</TableID>
+            <ColumnID>idProveedor</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9a1e43ee-f76b-4df5-8e3b-06f03a2d124a">
+      <ID>Nombre Proveedor</ID>
+      <Name>Nombre Proveedor</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="89bd5616-6e27-4f23-975a-67a03e245acb">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7bca3c55-b5a0-4534-9fbb-59f99aa1301b">
+            <TableID>dbo_Proveedor</TableID>
+            <ColumnID>nombreProveedor</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="f386ae89-4ed3-4e85-afdb-2f70720db46c">
+      <ID>Proveedor</ID>
+      <Name>Proveedor</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="ddd64ec2-0103-4136-9dd1-a397e5ff4870">
+          <ID>Direccion</ID>
+          <Name>Direccion</Name>
+          <SourceColumnID>Direccion</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="380e9fc4-dd85-4bcb-9389-2772caa1d89a">
+          <ID>Id Forma Pago</ID>
+          <Name>Id Forma Pago</Name>
+          <SourceColumnID>Id Forma Pago</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ff330fd7-8024-4f84-aebb-c545809f4b9b">
+          <ID>Id Municipio</ID>
+          <Name>Id Municipio</Name>
+          <SourceColumnID>Id Municipio</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="3ff4e83c-ff5d-4151-913b-de388bff0ede">
+          <ID>Id Proveedor</ID>
+          <Name>Id Proveedor</Name>
+          <SourceColumnID>Id Proveedor</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="99b68cdc-b5b1-432a-b23e-1f34f6327624">
+          <ID>Nombre Proveedor</ID>
+          <Name>Nombre Proveedor</Name>
+          <SourceColumnID>Nombre Proveedor</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>
