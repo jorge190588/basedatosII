@@ -73,7 +73,7 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 2. [Ejemplo de cubo de salidas](https://youtu.be/zlJNtwXBq4k)
 
 ### Mineria de datos
-1. [Documentacion de Microsoft sobre mineria de datos](https://msdn.microsoft.com/es-es/library/ms175595.aspx)
+1. [Documentacion de Microsoft sobre mineria de datos](https://msdn.microsoft.com/es-es/library/ms175595(v=sql.120).aspx)
 2. [Factores](https://miblogtecnico.wordpress.com/2014/03/18/mineria-de-datos-en-sql-server-2012/)
 3. [Mineria de datos](https://www.youtube.com/watch?v=hbiRtv2WxDY)
   * Asociacion de patrones
