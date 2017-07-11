@@ -10,9 +10,6 @@ El proyecto contiene un script de la base de datos de un giro de negocio de vent
 ### 2. Entradas
 * Elvin Morales, Pedro Lol, Eddy Delgado, Abel Hidalgo, Zelik Ramirez y Julio Gil
   
-### 3. Inventarios.
-  
-
 ## Alumnos
 Deben aportan en el proyecto por medio de commits, actualizando el script de la base de datos e ingresando como minimo 500,000 registros en las transacciones principales que son movimientos de compras y ventas.
 
@@ -49,7 +46,7 @@ Las herramientas utilizadas para hacer los ejercicios son>
 6. Jennkins (backup y recuperacion)
 7. Docker (microservicios)
 8. Gherkin (requerimientos)
-
+9. [Generar valores aleatorios](https://github.com/marak/Faker.js/) 
 
 ## Requerimientos 
 Utilizando Gherkin se describen los requermientos para la extraccion de informacion.  Se debe justificar con datos cuantificables cada respuesta, es decir debe realizar como minimo pruebas con diferente sintaxis sql (SQL,join y TransSQL)
