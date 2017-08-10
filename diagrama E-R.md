@@ -46,3 +46,8 @@ Cuáles son los dos niveles de independencia de los datos?
 2. Local y web.
 3. Interno y externo.
 4. Falso y verdadero. 
+
+Qué es necesario para evitar la redundancia de los datos, problemas de actualización de los datos en las tablas y proteger la integridad de los datos?
+1. Normalización (*)
+2. Estructurar los datos.
+3. Realizar jerarquías. 
