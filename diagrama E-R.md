@@ -1,5 +1,18 @@
 # Diagrama Entidad-Relacion
 
+++ para que se utiliza la conectividad en BD?        (*) respuesta correcta
+A) para describir la clasificacion de relaciones (*) 
+B) para corregir errores en la BD.(x)
+C)  para definir una caracteristica que una relacion debe cumplir.
+
+++ en ella se incluye la creacion de tablas y el establecimiento de relacion+
+A) formas normales.(x)
+B) normalizacion.(*)
+c) diagrama E-R.(x)
+
+
+
+
 ## Conceptos basicos
 * Entidad
 * Relacion
