@@ -3,7 +3,7 @@
 1. Es el proceso de organizar los datos de una base de datos.
  * (x) Abstracción
  * (ok) Normalización
- * (x) DCL
+ * (x) Transitividad
 
 2. Se realiza el proceso de normalización para:
  * (ok) Proteger la integridad de datos, evitar redundancia y problemas de actualización en las tablas. 
