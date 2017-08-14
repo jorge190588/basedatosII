@@ -8,7 +8,7 @@
 2. Se realiza el proceso de normalización para:
  * (ok) Proteger la integridad de datos, evitar redundancia y problemas de actualización en las tablas. 
  * (x) Cifrar los datos en una tabla protegiendo la seguridad de ellos.
- * (x) Mejorar la vista de los datos y así todos tengan la misma tipografía. 
+ * (x) Mejorar la vista de los datos. 
 
 # FORMAS NORMALES
 
@@ -21,3 +21,8 @@
  * (x) todos los atributos tienen la misma tipografía
  * (ok) todos los atributos son atómicos
  * (x) todos los atributos dependen de una llave primaria
+
+5. Para que una relación esté en FN2 debe cumplir con lo siguiente:
+ * (x) Estar en FN1 y los datos deben estar ordenados alfabéticamente.
+ * (x) Estar en FNBC y los atributos deben estar ordenados alfabéticamente.
+ * (ok) Estar en FN1 y todos los atributos depender totalmente de la llave primaria.
