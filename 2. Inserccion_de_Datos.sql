@@ -304,7 +304,6 @@ insert into Clientes(nombreCliente,nit,direccion,idMunicipio,telefono,idFormaPag
 		  ('Miguel Quintanilla','1223436-3','Frente al Cementerio Zona 3',44,77713245,5),
 		  ('Jose Luis López','2133879-1','Zona 4',42,77719452,3),
 		  ('Canario Ortíz','8754332-8','Colonia Mendizabal Zona 2',35,41793176,6),
-<<<<<<< .merge_file_a04796
 		  ('Elvin Morales','278638-8','Ciudad',1,34064744,1),
 		  ('Zelik Ramirez','912201-3','8va avenida calle 4-05 Zona 1',2,49500324,1),
 		  ('Hamilton Lopez','57768-2','7ma avenida Zona 1',1,52534588,2),
@@ -453,11 +452,8 @@ insert into Clientes(nombreCliente,nit,direccion,idMunicipio,telefono,idFormaPag
 		  ('Emerson Quiej','96462-2','las delicias',35,77714252,1),
 		  ('Jaqueline Guadarrama','74853-1','texococo',35,77714242,1),
 		  ('Jennifer Arellano','83462-9','5ta avenida 1ra. calle zona 1',35,77714232,1),
-		  ('Gaby Graciel','34701-5','canton peru',35,77714222,1)
-      
-=======
+		  ('Gaby Graciel','34701-5','canton peru',35,77714222,1),
 		  ('Elvin Morales','278638-8','Ciudad',1,34064744,1)
->>>>>>> .merge_file_a05492
 go		 
 
 
@@ -477,7 +473,6 @@ insert into Proveedor(nombreProveedor,nit,direccion,idMunicipio,telefono,idForma
 		  ('Karla Arenas','5643243-7','Hacienda San Joaquín Zona 4',30,56753476,2),
 		  ('Dina Arroyo','1223436-3','Frente al Cementerio Zona 3',44,77713245,5),
 		  ('Marlon Mejía','2133879-1','Zona 4',42,77719452,3),
-<<<<<<< .merge_file_a04796
 		  ('Freddy Herrera','8754332-8','Colonia Mendizabal Zona 2',35,41793176,6),
 		  ('David Espinoza','1416539-2','7ma avenida calle 6-05 Zona 2',9,59793176,1),
 		  ('Selvin Gudiel','543667-7','2da avenida calle 7-09 Zona 10',3,44194562,2),
@@ -493,10 +488,8 @@ insert into Proveedor(nombreProveedor,nit,direccion,idMunicipio,telefono,idForma
 		  ('Dayana Morales','5643243-7','5ta avenida calle 7-05 Zona 2',20,50753476,2),
 		  ('Jorge Ortiz','1223436-3','5ta avenida calle 7-05 Zona 5',4,37713245,5),
 		  ('Marlon Negrete','2133879-1','4ta avenida calle 4-05 Zona 6',2,41194562,3),
-		  ('Fredy Orellana','8754332-8','8va avenida calle 4-05 Zona 1',15,42793176,6)
-=======
+		  ('Fredy Orellana','8754332-8','8va avenida calle 4-05 Zona 1',15,42793176,6),
 		  ('Freddy Herrera','8754332-8','Colonia Mendizabal Zona 2',35,41793176,6)
->>>>>>> .merge_file_a05492
 go		 
 
 -- Volcado de Datos Tabla Proveedor
@@ -541,7 +534,7 @@ insert into Marca(nombreMarca) values('Epson'),('Canon'),('Xtech'),('Kingston'),
 				     ('Aoc'),('Ubiquiti'),('SanDisk'),('Forza'),('Microsoft'),
 				     ('APC'),('Aorus'),('HyperX'),('seagate'),('Wacom')
 				      go
-<<<<<<< .merge_file_a04796
+
 
 -- Agregando mas datos Tabla Productos
 
@@ -580,11 +573,6 @@ values('Cable','Usb Extension Cable',35,15,15,13,3,1),('Cable','Cable Usb 4 Pine
       ('Disco Duro Externo','2TB',1000,600,15,14,3,1),('Disco Duro Interno','1TB',850,500,25,14,1,3)
       go
       
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_a05492
-=======
-use ComputerDB
 
 insert into Pais(nombrePais) values('Guatemala'),
 									('Mexico')
@@ -685,7 +673,7 @@ insert into estadoBodega values ('Buena');
 insert into estadoBodega values ('Inaccesible');
 
 --INSERTANDO DATOS A BODEGA
-insert into bodega values ('Bodega 1',1,1);
+insert into bodega values ('Bodega 1',1,1),('Bodega 2',1,1)
 insert into bodega values ('Bodega 2',1,1);
 insert into bodega values ('Bodega 3',1,2);
 insert into bodega values ('Bodega 4',1,2);
@@ -803,4 +791,4 @@ insert into Usuarios values('juan','perez','juanp123','no olvidar',1,1,5),
 							('alex','solorzano','alex123','no olvidar',6,2,4),
 							('vitalino','gomez','vita123','no olvidar',7,1,1)
 
->>>>>>> ff9b56af6b3af9f42c879128fdf9097dfd3f9737
+
