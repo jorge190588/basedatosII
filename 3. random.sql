@@ -1,10 +1,13 @@
+-- step 1
 use ComputerDB
 
+-- step 2
 CREATE VIEW seeder
 AS
     SELECT RAND(CONVERT(VARBINARY, NEWID())) seed
 GO
 
+-- step 3
 CREATE FUNCTION [dbo].[getRandomDate]
 (
 	@lower DATE,
