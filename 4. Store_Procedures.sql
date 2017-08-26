@@ -14,15 +14,15 @@ create procedure sp_InsertarSalidaMasivo
 begin
 	---- Creacion de la variables para definir un rango en base a los ids existentes de clientes
 	declare @Random int;
-	declare @maximo int;
 	declare @minimo int;
-
+	declare @maximo int;
+	
 	SET @minimo = 1
-	SET @maximo = 15 
+	select @maximo=max(idcliente)  from Clientes
 	SELECT @Random = ROUND(((@maximo - @minimo -1) * RAND() + @minimo), 0)
+
 	declare @fecha datetime
 	select @fecha=dbo.getRandomDate('01/01/2013','10/04/2017')
-
 	insert into dbo.Salida(fecha,documento,idCliente)
 	values(@fecha,@contador,@Random)
 end
