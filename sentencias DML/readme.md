@@ -4,7 +4,7 @@
 
 # Uso de Strings
 
-#Estadística Descriptiva
+## Estadística Descriptiva
 create database peliculas;
 
 use peliculas
