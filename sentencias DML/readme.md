@@ -217,3 +217,13 @@ En los ejemplos siguientes se usan las seis funciones del sistema de SQL Server 
 
 # Estadística Descriptiva
 # Conversión de Datos a Json
+JSON es un popular formato de datos textuales utilizado para intercambiar datos en aplicaciones web y móviles modernas. JSON también se utiliza para almacenar datos no estructurados en archivos de registro o bases de datos NoSQL como Microsoft Azure DocumentDB. 
+
+SQL Server proporciona funciones integradas y operadores que le permiten hacer lo siguiente con el texto de JSON.
+* Analizar texto JSON y leer o modificar valores.
+* Transformar matrices de objetos JSON en formato de tabla.
+* Ejecute cualquier consulta Transact-SQL en los objetos JSON convertidos.
+* Formatee los resultados de las consultas Transact-SQL en formato JSON.
+
+###### Ejemplos
+* La siguiente instrucción devuelve 30. Este número corresponde al día.
