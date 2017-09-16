@@ -249,3 +249,7 @@ De forma predeterminada, los valores nulos no se incluyen en la salida. Se puede
 
 Cuando se está trabajando sin una sintaxis de punto, trabaja de manera similar al modo AUTO en que generará una salida JSON basada en el orden de las columnas en su sentencia SELECT. 
 En el modo PATH, puedes usar la sintaxis de punto, por ejemplo, ‘Item.Price’ para dar formato a la salida anidada.
+
+##### link para ver mas informacion y algunos ejemplos
+https://www.sqlshack.com/es/convertir-resultados-de-sql-server-json/
+https://docs.microsoft.com/es-es/sql/relational-databases/json/json-data-sql-server
