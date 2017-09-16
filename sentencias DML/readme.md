@@ -232,3 +232,19 @@ Si tiene texto JSON almacenado en tablas de bases de datos, puede utilizar funci
 * Utilice JSON_QUERY para extraer un objeto o una matriz de una cadena JSON.
 * Utilice la función ISJSON para comprobar si una cadena contiene JSON válido.
 * Utilice la función JSON_MODIFY para cambiar un valor en una cadena JSON.
+
+###### CONTROL DE OTRAS OPCIONES DE SALIDA JSON 
+* ROOT . Para agregar un solo elemento de nivel superior a la salida JSON.
+* INCLUDE_NULL_VALUES . Para incluir valores nulos en la salida JSON.
+* SIN_ARRAY_WRAPPER . Para eliminar los corchetes que rodean la salida JSON de la cláusula FOR JSON de forma predeterminada.
+
+###### Convertir los Resultados Usando el Modo AUTO
+Esta es la manera más simple de convertir datos relacionales a formato JSON, ya que todo lo que tiene que hacer es añadir la cláusula FOR JSON AUTO al final de su sentencia SELECT. En este modo, la estructura de la salida JSON es determinada por una combinación del orden de las columnas en su sentencia SELECT, así como las tablas que son referenciadas por la sentencia SELECT
+De forma predeterminada, los valores nulos no se incluyen en la salida. Se puede trabajar INCLUDE_NULL_VALUES para cambiar este comportamiento
+
+###### Convertir Resultados Usando el Modo Path
+* El modo PATH puede ser usado en dos maneras:
+* Sin una sintaxis de punto 
+* Con una sintaxis de punto 
+Cuando se está trabajando sin una sintaxis de punto, trabaja de manera similar al modo AUTO en que generará una salida JSON basada en el orden de las columnas en su sentencia SELECT. 
+En el modo PATH, puedes usar la sintaxis de punto, por ejemplo, ‘Item.Price’ para dar formato a la salida anidada.
