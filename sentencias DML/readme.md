@@ -216,3 +216,4 @@ En los ejemplos siguientes se usan las seis funciones del sistema de SQL Server 
 # Uso de Strings
 
 # Estadística Descriptiva
+# Conversión de Datos a Json
