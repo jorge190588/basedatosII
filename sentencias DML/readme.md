@@ -225,5 +225,9 @@ SQL Server proporciona funciones integradas y operadores que le permiten hacer l
 * Ejecute cualquier consulta Transact-SQL en los objetos JSON convertidos.
 * Formatee los resultados de las consultas Transact-SQL en formato JSON.
 
+######                     Funciones clave de JSON de SQL Server
+###### Extraer valores del texto JSON y utilizarlos en consultas
+Si tiene texto JSON almacenado en tablas de bases de datos, puede utilizar funciones integradas para leer o modificar valores en el texto JSON.
+
 ###### Ejemplos
 * La siguiente instrucción devuelve 30. Este número corresponde al día.
