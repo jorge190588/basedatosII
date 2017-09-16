@@ -252,4 +252,5 @@ En el modo PATH, puedes usar la sintaxis de punto, por ejemplo, ‘Item.Price’
 
 ##### link para ver mas informacion y algunos ejemplos
 https://www.sqlshack.com/es/convertir-resultados-de-sql-server-json/
+
 https://docs.microsoft.com/es-es/sql/relational-databases/json/json-data-sql-server
