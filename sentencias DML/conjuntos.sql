@@ -1,3 +1,5 @@
+---Eloina Carrillo
+---Brenda de León
 use ComputerDB
 
 ----tablas a utilizar para el join, right join, left join, all join 
