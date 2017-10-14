@@ -45,7 +45,7 @@ begin
 	declare @minimo int;
 
 	set @minimo = 1    -- solo tengo 7 productos por eso es el maximo 7
-	set @maximo = 7 
+	select @maximo = max(id) from Productos
 	select @ProductoAzar = ROUND(((@maximo - @minimo -1) * RAND() + @minimo), 0)
 
 	declare @CantidadAzar int;
@@ -53,7 +53,7 @@ begin
 	declare @CantidadMinima int;
 
 	set @CantidadMinima = 1  -- quiero que solo se venda de 1 a 5 productos
-	set @CantidadMaxima = 5
+	set @CantidadMaxima = 10
 	select @CantidadAzar = ROUND(((@CantidadMaxima - @CantidadMinima -1) * RAND() + @CantidadMinima), 0)
 
 	declare @Precio float;

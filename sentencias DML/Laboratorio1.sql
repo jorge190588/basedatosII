@@ -26,7 +26,7 @@ Then: debería mostrar el código, nombre, precio, costo, existencia, marca, total
 And: debe estar ordenado por marca y nombre de artículo
 */
 
-select  codigo,nombre,d.precio, d.costoTotal costo, existencia, m.nombreMarca marca,
+select  codigo,nombre,d.precio,d.cantidad, d.costoTotal costo, existencia, m.nombreMarca marca,
 d.cantidad*d.precio totalVenta, d.costoTotal*d.cantidad totalCosto,
 (d.precio-d.costoTotal)*d.cantidad totalUtilidad
 from Productos p
@@ -34,4 +34,16 @@ inner join marca m on p.idmarca=m.idmarca
 inner join SalidaDetalle d on p.id=d.idproducto
 order by m.nombreMarca,p.nombre
 
+select p.codigo,p.nombre,p.descripcion,
+avg(d.cantidad) cantidadPromedio,
+sum(d.cantidad) cantidadSuma,
+min(d.cantidad) cantidadMinima,
+max(d.cantidad) cantidadMaximo,
+sum(d.cantidad*d.precio) totalVenta, sum(d.costoTotal*d.cantidad) totalCosto,
+sum((d.precio-d.costoTotal)*d.cantidad) totalUtilidad
+from Productos p
+inner join SalidaDetalle d on p.id=d.idproducto
+group by  p.codigo,p.nombre,p.descripcion
+
 update SalidaDetalle set costoTotal=(precio*0.6)
+
