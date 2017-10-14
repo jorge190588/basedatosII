@@ -296,14 +296,17 @@ Con las variantes INNER, LEFT, RIGHT y FULL de consults multi.tabla somos capace
 ### Ejemplos de INNER JOIN, CROSS JOIN, LEFT, RIGHT UNION ALL Y FULL
 
 ----join (right, left full outer)-----
+
 select bodega.nombreBodega as bodega, Productos.nombre as nombre
 from Productos	full outer join bodega on Productos.idBodega=bodega.idBodega
 group by bodega.nombreBodega, Productos.nombre
 
 ---cross join----
+
 select * from Productos cross join bodega
 
 ------uso de union all-------
+
 select nombreCliente, direccion,telefono 
 from Clientes
 union all
