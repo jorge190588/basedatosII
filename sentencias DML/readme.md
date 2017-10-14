@@ -254,3 +254,58 @@ En el modo PATH, puedes usar la sintaxis de punto, por ejemplo, ‘Item.Price’
 https://www.sqlshack.com/es/convertir-resultados-de-sql-server-json/
 
 https://docs.microsoft.com/es-es/sql/relational-databases/json/json-data-sql-server
+
+
+# TEORIA DE CONJUNTOS
+
+
+## Union
+La cláusula UNION de SQL permite unir las filas devueltas por dos instrucciones SELECT. Para ello se debe cumplir que las columnas devueltas en ambas instrucciones coincidan en número y en tipo de datos de cada una de ellas, ya que en caso contrario dará un error al ejecutarse.
+
+### Ejemplo
+select nombreCliente, direccion,telefono 
+from Clientes
+union
+select nombreProveedor, direccion,telefono 
+from Proveedor
+
+
+## Interseccion
+Devuelve la intersección entre dos o más conjuntos de resultados en uno. El conjunto obtenido como resultado de INTERSECTtiene la misma estructura que los conjuntos originales.
+
+### Ejemplo
+select nombreCliente,telefono 
+from Clientes
+intersect 
+select nombreProveedor,telefono 
+from Proveedor
+
+## Except
+EXCEPT devuelve la diferencia (resta) de dos o más conjuntos de resultados. El conjunto obtenido como resultado de EXCEPTtiene la misma estructura que los conjuntos originales.
+
+### Ejemplo
+select nombreCliente,nit, direccion, idMunicipio,telefono 
+from Clientes
+except
+select nombreProveedor,nit, direccion, idMunicipio,telefono 
+from Proveedor
+
+## combinación multi tablas
+Con las variantes INNER, LEFT, RIGHT y FULL de consults multi.tabla somos capaces de obtener registros relacionados y los registros relacionados + los registros no relacionados en uno de los dos lados o en ambos, básicamente estas combinaciones de los datos de dos tablas:
+
+### Ejemplos de INNER JOIN, CROSS JOIN, LEFT, RIGHT UNION ALL Y FULL
+
+----join (right, left full outer)-----
+select bodega.nombreBodega as bodega, Productos.nombre as nombre
+from Productos	full outer join bodega on Productos.idBodega=bodega.idBodega
+group by bodega.nombreBodega, Productos.nombre
+
+---cross join----
+select * from Productos cross join bodega
+
+------uso de union all-------
+select nombreCliente, direccion,telefono 
+from Clientes
+union all
+select nombreProveedor, direccion,telefono 
+from Proveedor
