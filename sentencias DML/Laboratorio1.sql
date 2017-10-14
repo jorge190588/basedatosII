@@ -1,3 +1,13 @@
+/*
+1.	Scenario: Reporte de clientes
+Given: El dueño del negocio requiere conocer a sus clientes
+When: requiera la información
+Then: un reporte debería mostrar el nombre, dirección, teléfono y nit
+And: debe estar ordenado por nombre 
+And: debe estar filtrado por las ventas del primer semestre de cada año.
+And: debe estar filtrado por el día lunes de las ventas.
+*/
+
 select nombreCliente nombre, direccion,telefono,nit,
 s.fecha,datename(dw,s.fecha) nombreDia,day(s.fecha) dia, 
 datepart(qq,s.fecha) trimestre, datename(mm,s.fecha) nombreMes
@@ -24,3 +34,4 @@ inner join marca m on p.idmarca=m.idmarca
 inner join SalidaDetalle d on p.id=d.idproducto
 order by m.nombreMarca,p.nombre
 
+update SalidaDetalle set costoTotal=(precio*0.6)
