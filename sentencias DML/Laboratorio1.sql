@@ -47,3 +47,19 @@ group by  p.codigo,p.nombre,p.descripcion
 
 update SalidaDetalle set costoTotal=(precio*0.6)
 
+
+select p.codigo,p.nombre,s.fecha,
+sum((d.precio-d.costoTotal)*d.cantidad) totalUtilidad
+from Productos p
+inner join SalidaDetalle d on p.id=d.idproducto
+inner join Salida as s on d.idsalida=s.idsalida
+where s.fecha between dateadd(MONTH,-7,getdate()) and GETDATE()
+group by  p.codigo,p.nombre,s.fecha
+order by p.nombre
+
+
+select fecha from salida
+order by fecha desc
+
+
+
