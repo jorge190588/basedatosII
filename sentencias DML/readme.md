@@ -244,6 +244,10 @@ Para definir las condiciones en la cláusula WHERE, se pueden utilizar los sigui
 |------------|------------|
 |=           | igual      |
 |<           | menor      |
+|>           | mayor      |
+|<=          | menor o igual      |
+|>=          | mayor o igual      |
+|<>          | diferente      |
 
 
 
