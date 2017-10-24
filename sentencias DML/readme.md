@@ -249,6 +249,7 @@ WHERE condiciones
 |>=          | mayor o igual      |
 |<>          | diferente      |
 
+
 |Operadores lógicos| Descripción|
 |------------|------------|
 |NOT           |Para la negación de condiciones|
@@ -269,7 +270,8 @@ Son funciones para efectuar operaciones sobre los datos de una base de datos. La
 * **AVG**
      Calcula el valor medio de una columna
 
-
+> Nota:
+  En general, las funciones de agregación se aplican a una columna, excepto la función de agregación COUNT. 
 
 
 # Conversión de Datos a Json
