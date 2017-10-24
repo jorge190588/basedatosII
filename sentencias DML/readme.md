@@ -278,6 +278,11 @@ Son funciones para efectuar operaciones sobre los datos de una base de datos. La
 > Nota: 
   &nbsp;
   En general, las funciones de agregación se aplican a una columna, excepto la función de agregación COUNT. 
+  ``` 
+  COUNT(*) contará todas las filas de la tabla que cumplan las condiciones
+  COUNT (DISTINCT columna) contaría los valores que no fuesen nulos ni repetidos
+  COUNT (columna) contaria los valores que no fuesen nulos
+  ```
 
 
 
