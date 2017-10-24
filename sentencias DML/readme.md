@@ -255,19 +255,19 @@ WHERE condiciones
 |AND         |Para la conjunción de condiciones|
 |OR         |Para la disyunción de condiciones|
 
-*** Funciones de agregación
+### Funciones de agregación
 Son funciones para efectuar operaciones sobre los datos de una base de datos. Las principales funciones de agregación son:
 
 * COUNT 
-     * Obtiene el número total de filas seleccionadas
+     - Obtiene el número total de filas seleccionadas
 * SUM
-     * Suma los valores de una columna
+     - Suma los valores de una columna
 * MIN
-     * Obtiene el valor mínimo de una columna
+     - Obtiene el valor mínimo de una columna
 * MAX
-     * Obtiene el valor máximo de una columna
+     - Obtiene el valor máximo de una columna
 * AVG
-     * Calcula el valor medio de una columna
+     - Calcula el valor medio de una columna
 
 
 
