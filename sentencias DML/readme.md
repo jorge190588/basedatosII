@@ -240,6 +240,7 @@ WHERE condiciones
 
 
 &nbsp;
+
 **Para definir las condiciones en la cláusula WHERE, se pueden utilizar los siguientes operadores:**
 
 |Operadores de comparación| Descripción|
@@ -274,7 +275,8 @@ Son funciones para efectuar operaciones sobre los datos de una base de datos. La
 * **AVG**
      Calcula el valor medio de una columna
 
-> Nota: &nbsp;
+> Nota: 
+  &nbsp;
   En general, las funciones de agregación se aplican a una columna, excepto la función de agregación COUNT. 
 
 
