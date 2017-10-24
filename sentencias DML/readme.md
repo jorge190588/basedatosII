@@ -270,8 +270,13 @@ Son funciones para efectuar operaciones sobre los datos de una base de datos. La
 * **AVG**
      Calcula el valor medio de una columna
 
-> Nota: <br>
+> Nota: 
+
+&nbsp;
   En general, las funciones de agregación se aplican a una columna, excepto la función de agregación COUNT. 
+
+&nbsp;
+
 
 
 # Conversión de Datos a Json
