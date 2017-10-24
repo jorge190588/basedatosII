@@ -243,7 +243,7 @@ Para definir las condiciones en la cláusula WHERE, se pueden utilizar los sigui
 |Operadores de comparación
 |-------------------------|
 |=           | igual      |
-|-------------------------|
+
 
 
 
