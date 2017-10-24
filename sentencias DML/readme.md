@@ -279,19 +279,45 @@ Son funciones para efectuar operaciones sobre los datos de una base de datos. La
   En general, las funciones de agregación se aplican a una columna, excepto la función de agregación COUNT. 
   
   ``` 
-  COUNT(*) FROM nombre_tabla                  //contará todas las filas de la tabla que cumplan las condiciones
+  SELECT COUNT(*) FROM nombre_tabla                  //contará todas las filas de la tabla que cumplan las condiciones
   ```
   ```
-  COUNT (DISTINCT columna) FROM nombre_tabla  //contaría los valores que no fuesen nulos ni repetidos
+  SELECT COUNT (DISTINCT columna) FROM nombre_tabla  //contaría los valores que no fuesen nulos ni repetidos
   ```
   ```
-  COUNT (columna) FROM nombre_tabla           //contaria los valores que no fuesen nulos
+  SELECT COUNT (columna) FROM nombre_tabla           //contaria los valores que no fuesen nulos
   ```
 
 
+&nbsp;
+### Uso de predicados
 
+#### BETWEEN
+Se utiliza para expresar una condición que quiere encontrar un valor entre unos límites concretos.
 
+```
+SELECT columna
+FROM tabla
+WHERE columna BETWEEN limite1 AND limite2
+```
 
+#### IN
+Para comprobar si un valor coincide con los elementos de una lista utilizaremos IN, y para ver si no coincide, NOT IN:
+
+```
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
+WHERE columna [NOT] IN (valor1, ..., valorN);
+```
+
+#### LIKE
+Se utiliza para comprobar si una columna de tipo carácter cumple alguna propiedad determinada.
+
+```
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
+WHERE columna LIKE característica;
+```
 
 # Conversión de Datos a Json
 JSON es un popular formato de datos textuales utilizado para intercambiar datos en aplicaciones web y móviles modernas. JSON también se utiliza para almacenar datos no estructurados en archivos de registro o bases de datos NoSQL como Microsoft Azure DocumentDB. 
