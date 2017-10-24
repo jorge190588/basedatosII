@@ -219,15 +219,15 @@ En los ejemplos siguientes se usan las seis funciones del sistema de SQL Server 
 # Estadística Descriptiva
 Las estadísticas de SQL son información sobre la distribución de los datos existentes en las columnas de las tablas de nuestra base de datos. 
 
-En el archivo de Estadística Descriptiva se manipularán los datos para obtener información útil, precisa y concisa, la cual, servirá en casos de organización, análisis, toma de decisiones, etc. Como objetivo principal se explicarán los siguientes temas:
+En el archivo de Estadística Descriptiva mojombo/github-flavored-markdown#1 se manipularán los datos para obtener información útil, precisa y concisa, la cual, servirá en casos de organización, análisis, toma de decisiones, etc. Como objetivo principal se explicarán los siguientes temas:
 
-* selección de datos
-* ordenamiento
-* conteo de datos
-* funciones de agregación
-* agrupación de filas
+* Selección de datos
+* Ordenamiento
+* Funciones de agregación
+* Agrupación de filas
 
 
+## Selección de datos
 La clave para obtener datos es la declaración **SELECT**, que en su forma básica es muy simple y fácil de usar. Sin embargo, se detallarán muchas opciones adicionales que hacen que la declaración SELECT sea muy poderosa.
 
 La sintaxis básica es la siguiente:
@@ -270,7 +270,60 @@ WHERE condiciones
 
 
 &nbsp;
-### Funciones de agregación
+### Uso de predicados
+
+##### BETWEEN
+Se utiliza para expresar una condición que quiere encontrar un valor entre unos límites concretos.
+
+```
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
+WHERE columna BETWEEN limite1 AND limite2
+```
+
+##### IN
+Para comprobar si un valor coincide con los elementos de una lista utilizaremos IN, y para ver si no coincide, NOT IN:
+
+```
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
+WHERE columna [NOT] IN (valor1, ..., valorN);
+```
+
+##### LIKE
+Se utiliza para comprobar si una columna de tipo carácter cumple alguna propiedad determinada.
+
+```
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
+WHERE columna LIKE característica;
+```
+
+##### IS NULL
+Para comprobar si un valor es nulo utilizaremos IS NULL, y para averiguar si no lo es, IS NOT NULL. 
+
+```
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
+WHERE columna IS [NOT] NULL;
+```
+
+## Orden de datos
+Para la ordenar los datos obtenidos en respuestas a consultas se utiliza la cláusula **ORDER BY** en la sentencia SELECT. 
+
+**DESC:** ordena los datos en forma descendente.
+
+$nbsp;
+**ASC:** ordena los datos en forma ascendente.
+
+```
+SELECT nombre_columnas_a seleccionar
+FROM tabla_a_consultar
+[WHERE condiciones]
+ORDER BY columna [DESC] | [ASC]
+```
+
+## Funciones de agregación
 Son funciones para efectuar operaciones sobre los datos de una base de datos. Las principales funciones de agregación son:
 
 * **COUNT**
@@ -296,70 +349,17 @@ Son funciones para efectuar operaciones sobre los datos de una base de datos. La
   ```
   SELECT COUNT (columna) FROM nombre_tabla   //contaria los valores que no fuesen nulos
   ```
-
-
-&nbsp;
-### Uso de predicados
-
-#### BETWEEN
-Se utiliza para expresar una condición que quiere encontrar un valor entre unos límites concretos.
-
-```
-SELECT nombre_columnas_a_seleccionar
-FROM tabla_a_consultar
-WHERE columna BETWEEN limite1 AND limite2
-```
-
-#### IN
-Para comprobar si un valor coincide con los elementos de una lista utilizaremos IN, y para ver si no coincide, NOT IN:
-
-```
-SELECT nombre_columnas_a_seleccionar
-FROM tabla_a_consultar
-WHERE columna [NOT] IN (valor1, ..., valorN);
-```
-
-#### LIKE
-Se utiliza para comprobar si una columna de tipo carácter cumple alguna propiedad determinada.
-
-```
-SELECT nombre_columnas_a_seleccionar
-FROM tabla_a_consultar
-WHERE columna LIKE característica;
-```
-
-#### IS NULL
-Para comprobar si un valor es nulo utilizaremos IS NULL, y para averiguar si no lo es, IS NOT NULL. 
-
-```
-SELECT nombre_columnas_a_seleccionar
-FROM tabla_a_consultar
-WHERE columna IS [NOT] NULL;
-```
-
-### Orden de datos
-Para la ordenar los datos obtenidos en respuestas a consultas se utiliza la cláusula **ORDER BY** en la sentencia SELECT. 
-
-**DESC:** ordena los datos en forma descendente.
-
-$nbsp;
-**ASC:** ordena los datos en forma ascendente.
-
-```
-SELECT nombre_columnas_a seleccionar
-FROM tabla_a_consultar
-[WHERE condiciones]
-ORDER BY columna [DESC] | [ASC]
-```
-
-### Consultas con agrupación de filas 
+  
+### Agrupación de filas 
 Las cláusulas siguientes permiten organizar las filas por grupos:
 
-a. GROUP BY       
+**a. GROUP BY**
+
      Se utiliza para agrupar filas según las columnas que indique esta cláusula.
      
  $nbsp;
-b. HAVING 
+**b. HAVING**
+
      Especifica condiciones de búsqueda para grupos de filas; lleva a cabo la misma función que antes cumplía la cláusula WHERE para
 las filas de toda la tabla, pero ahora las condiciones se aplican a los grupos obtenidos.
 
