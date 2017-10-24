@@ -219,6 +219,15 @@ En los ejemplos siguientes se usan las seis funciones del sistema de SQL Server 
 # Estadística Descriptiva
 Las estadísticas de SQL son información sobre la distribución de los datos existentes en las columnas de las tablas de nuestra base de datos. 
 
+En el archivo de Estadística Descriptiva se manipularán los datos para obtener información útil, precisa y concisa, la cual, servirá en casos de organización, análisis, toma de decisiones, etc. Como objetivo principal se explicarán los siguientes temas:
+
+* selección de datos
+* ordenamiento
+* conteo de datos
+* funciones de agregación
+* agrupación de filas
+
+
 La clave para obtener datos es la declaración **SELECT**, que en su forma básica es muy simple y fácil de usar. Sin embargo, se detallarán muchas opciones adicionales que hacen que la declaración SELECT sea muy poderosa.
 
 La sintaxis básica es la siguiente:
@@ -332,6 +341,8 @@ WHERE columna IS [NOT] NULL;
 Para la ordenar los datos obtenidos en respuestas a consultas se utiliza la cláusula **ORDER BY** en la sentencia SELECT. 
 
 **DESC:** ordena los datos en forma descendente.
+
+$nbsp;
 **ASC:** ordena los datos en forma ascendente.
 
 ```
@@ -346,6 +357,8 @@ Las cláusulas siguientes permiten organizar las filas por grupos:
 
 a. GROUP BY       
      Se utiliza para agrupar filas según las columnas que indique esta cláusula.
+     
+ $nbsp;
 b. HAVING 
      Especifica condiciones de búsqueda para grupos de filas; lleva a cabo la misma función que antes cumplía la cláusula WHERE para
 las filas de toda la tabla, pero ahora las condiciones se aplican a los grupos obtenidos.
