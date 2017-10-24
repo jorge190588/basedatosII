@@ -313,7 +313,7 @@ Para la ordenar los datos obtenidos en respuestas a consultas se utiliza la clá
 
 **DESC:** ordena los datos en forma descendente.
 
-$nbsp;
+
 **ASC:** ordena los datos en forma ascendente.
 
 ```
@@ -355,12 +355,12 @@ Las cláusulas siguientes permiten organizar las filas por grupos:
 
 **a. GROUP BY**
 
-     Se utiliza para agrupar filas según las columnas que indique esta cláusula.
+Se utiliza para agrupar filas según las columnas que indique esta cláusula.
      
- $nbsp;
+
 **b. HAVING**
 
-     Especifica condiciones de búsqueda para grupos de filas; lleva a cabo la misma función que antes cumplía la cláusula WHERE para
+Especifica condiciones de búsqueda para grupos de filas; lleva a cabo la misma función que antes cumplía la cláusula WHERE para
 las filas de toda la tabla, pero ahora las condiciones se aplican a los grupos obtenidos.
 
 ```
