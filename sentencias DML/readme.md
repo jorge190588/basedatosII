@@ -219,7 +219,7 @@ En los ejemplos siguientes se usan las seis funciones del sistema de SQL Server 
 # Estadística Descriptiva
 Las estadísticas de SQL son información sobre la distribución de los datos existentes en las columnas de las tablas de nuestra base de datos. 
 
-En el archivo de Estadística Descriptiva se manipularán los datos para obtener información útil, precisa y concisa, la cual, servirá en casos de organización, análisis, toma de decisiones, etc. Como objetivo principal se explicarán los siguientes temas:
+En el archivo de EstadísticaDescriptiva.sql se manipularán los datos para obtener información útil, precisa y concisa, la cual, servirá en casos de organización, análisis, toma de decisiones, etc. Como objetivo principal se explicarán los siguientes temas:
 
 * [Selección de datos](#selección-de-datos)
 * [Ordenamiento](#orden-de-datos)
@@ -373,6 +373,9 @@ GROUP BY columnas_según_las_cuales_se_quiere_agrupar
 [ORDER BY columna_ordenación [DESC] [, columna [DESC]...]];
 ```
 
+
+
+&nbsp;
 # Conversión de Datos a Json
 JSON es un popular formato de datos textuales utilizado para intercambiar datos en aplicaciones web y móviles modernas. JSON también se utiliza para almacenar datos no estructurados en archivos de registro o bases de datos NoSQL como Microsoft Azure DocumentDB. 
 
