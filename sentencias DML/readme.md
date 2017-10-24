@@ -279,13 +279,13 @@ Son funciones para efectuar operaciones sobre los datos de una base de datos. La
   En general, las funciones de agregación se aplican a una columna, excepto la función de agregación COUNT. 
   
   ``` 
-  SELECT COUNT(*) FROM nombre_tabla                  //contará todas las filas de la tabla que cumplan las condiciones
+  SELECT COUNT(*) FROM nombre_tabla    //contará todas las filas de la tabla que cumplan las condiciones
   ```
   ```
   SELECT COUNT (DISTINCT columna) FROM nombre_tabla  //contaría los valores que no fuesen nulos ni repetidos
   ```
   ```
-  SELECT COUNT (columna) FROM nombre_tabla           //contaria los valores que no fuesen nulos
+  SELECT COUNT (columna) FROM nombre_tabla   //contaria los valores que no fuesen nulos
   ```
 
 
@@ -296,8 +296,8 @@ Son funciones para efectuar operaciones sobre los datos de una base de datos. La
 Se utiliza para expresar una condición que quiere encontrar un valor entre unos límites concretos.
 
 ```
-SELECT columna
-FROM tabla
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
 WHERE columna BETWEEN limite1 AND limite2
 ```
 
@@ -317,6 +317,46 @@ Se utiliza para comprobar si una columna de tipo carácter cumple alguna propied
 SELECT nombre_columnas_a_seleccionar
 FROM tabla_a_consultar
 WHERE columna LIKE característica;
+```
+
+#### IS NULL
+Para comprobar si un valor es nulo utilizaremos IS NULL, y para averiguar si no lo es, IS NOT NULL. 
+
+```
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
+WHERE columna IS [NOT] NULL;
+```
+
+### Orden de datos
+Para la ordenar los datos obtenidos en respuestas a consultas se utiliza la cláusula **ORDER BY** en la sentencia SELECT. 
+
+**DESC:** ordena los datos en forma descendente.
+**ASC:** ordena los datos en forma ascendente.
+
+```
+SELECT nombre_columnas_a seleccionar
+FROM tabla_a_consultar
+[WHERE condiciones]
+ORDER BY columna [DESC] | [ASC]
+```
+
+### Consultas con agrupación de filas 
+Las cláusulas siguientes permiten organizar las filas por grupos:
+
+a. GROUP BY       
+     Se utiliza para agrupar filas según las columnas que indique esta cláusula.
+b. HAVING 
+     Especifica condiciones de búsqueda para grupos de filas; lleva a cabo la misma función que antes cumplía la cláusula WHERE para
+las filas de toda la tabla, pero ahora las condiciones se aplican a los grupos obtenidos.
+
+```
+SELECT nombre_columnas_a seleccionar
+FROM tabla_a_consultar
+[WHERE condiciones]
+GROUP BY columnas_según_las_cuales_se_quiere_agrupar
+[HAVING condiciones_por_grupos]
+[ORDER BY columna_ordenación [DESC] [, columna [DESC]...]];
 ```
 
 # Conversión de Datos a Json
