@@ -280,7 +280,11 @@ Son funciones para efectuar operaciones sobre los datos de una base de datos. La
   
   ``` 
   COUNT(*) FROM nombre_tabla                  //contará todas las filas de la tabla que cumplan las condiciones
+  ```
+  ```
   COUNT (DISTINCT columna) FROM nombre_tabla  //contaría los valores que no fuesen nulos ni repetidos
+  ```
+  ```
   COUNT (columna) FROM nombre_tabla           //contaria los valores que no fuesen nulos
   ```
 
