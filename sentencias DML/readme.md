@@ -215,16 +215,36 @@ En los ejemplos siguientes se usan las seis funciones del sistema de SQL Server 
 
 # Uso de Strings
 
+
 # Estadística Descriptiva
 Las estadísticas de SQL son información sobre la distribución de los datos existentes en las columnas de las tablas de nuestra base de datos. 
 
-La clave para sacar datos es la declaración **SELECT**, que en su forma básica es muy simple y fácil de usar. Sin embargo, se detallarán muchas opciones adicionales que hacen que la declaración SELECT sea muy poderosa.
+La clave para obtener datos es la declaración **SELECT**, que en su forma básica es muy simple y fácil de usar. Sin embargo, se detallarán muchas opciones adicionales que hacen que la declaración SELECT sea muy poderosa.
 
 La sintaxis básica es la siguiente:
 
 ```
-SELECT columna1, columna2, ..., columnaX FROM nombre_talba
+SELECT columna1, columna2, ..., columnaX FROM nombre_tabla
 ```
+Para obtener todos los valores únicos en un registro, se debe utilizar la palabra clave **DISTINCT**. Se agrega a la lista de columnas de la instrucción SELECT, directamente después de la palabra clave SELECT.
+
+```
+SELECT DISTINCT columna FROM nombre_tabla
+```
+Filtra los resultados con la cláusula **WHERE**
+
+```
+SELECT columnas FROM nombre_tabla
+WHERE condiciones
+```
+
+Para definir las condiciones en la cláusula WHERE, se pueden utilizar los siguientes operadores:
+
+|Operadores de comparación
+|-------------------------|
+|= | igual|
+|-------------------------|
+
 
 
 # Conversión de Datos a Json
