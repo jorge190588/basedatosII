@@ -276,13 +276,14 @@ Son funciones para efectuar operaciones sobre los datos de una base de datos. La
      Calcula el valor medio de una columna
 
 > Nota: 
-  &nbsp;
   En general, las funciones de agregación se aplican a una columna, excepto la función de agregación COUNT. 
+  
   ``` 
-  COUNT(*) contará todas las filas de la tabla que cumplan las condiciones
-  COUNT (DISTINCT columna) contaría los valores que no fuesen nulos ni repetidos
-  COUNT (columna) contaria los valores que no fuesen nulos
+  COUNT(*) FROM nombre_tabla                  //contará todas las filas de la tabla que cumplan las condiciones
+  COUNT (DISTINCT columna) FROM nombre_tabla  //contaría los valores que no fuesen nulos ni repetidos
+  COUNT (columna) FROM nombre_tabla           //contaria los valores que no fuesen nulos
   ```
+
 
 
 
