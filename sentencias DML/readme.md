@@ -372,6 +372,9 @@ GROUP BY columnas_según_las_cuales_se_quiere_agrupar
 [HAVING condiciones_por_grupos]
 [ORDER BY columna_ordenación [DESC] [, columna [DESC]...]];
 ```
+> Puedes aprender más en los siguientes enlaces:
+  [Bases de Datos - Formación de Postgrado UOC](http://www.uoc.edu/masters/oficiales/img/913.pdf)
+  [Beginning SQL - Paul Wilton, John Colby](https://books.google.com.gt/books?id=9eqbXSnji84C&lpg=PP1&dq=sql&hl=es&pg=PA59#v=onepage&q=sql&f=false)
 
 
 
