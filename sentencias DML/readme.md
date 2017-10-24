@@ -238,7 +238,7 @@ SELECT columnas FROM nombre_tabla
 WHERE condiciones
 ```
 
-Para definir las condiciones en la cláusula WHERE, se pueden utilizar los siguientes operadores:
+**Para definir las condiciones en la cláusula WHERE, se pueden utilizar los siguientes operadores:**
 
 |Operadores de comparación| Descripción|
 |------------|------------|
@@ -255,7 +255,19 @@ Para definir las condiciones en la cláusula WHERE, se pueden utilizar los sigui
 |AND         |Para la conjunción de condiciones|
 |OR         |Para la disyunción de condiciones|
 
+*** Funciones de agregación
+Son funciones para efectuar operaciones sobre los datos de una base de datos. Las principales funciones de agregación son:
 
+* COUNT 
+     * Obtiene el número total de filas seleccionadas
+* SUM
+     * Suma los valores de una columna
+* MIN
+     * Obtiene el valor mínimo de una columna
+* MAX
+     * Obtiene el valor máximo de una columna
+* AVG
+     * Calcula el valor medio de una columna
 
 
 
