@@ -372,7 +372,7 @@ GROUP BY columnas_según_las_cuales_se_quiere_agrupar
 [HAVING condiciones_por_grupos]
 [ORDER BY columna_ordenación [DESC] [, columna [DESC]...]];
 ```
-> Puedes aprender más en los siguientes enlaces:
+> Puedes aprender más acerca de Sentencias DML en los siguientes enlaces:
 
   [Bases de Datos - Formación de Postgrado UOC](http://www.uoc.edu/masters/oficiales/img/913.pdf)
   
