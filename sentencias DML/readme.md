@@ -219,12 +219,12 @@ En los ejemplos siguientes se usan las seis funciones del sistema de SQL Server 
 # Estadística Descriptiva
 Las estadísticas de SQL son información sobre la distribución de los datos existentes en las columnas de las tablas de nuestra base de datos. 
 
-En el archivo de Estadística Descriptiva mojombo/github-flavored-markdown#1 se manipularán los datos para obtener información útil, precisa y concisa, la cual, servirá en casos de organización, análisis, toma de decisiones, etc. Como objetivo principal se explicarán los siguientes temas:
+En el archivo de [Estadística Descriptiva](https://github.com/jorge190588/basedatosII) se manipularán los datos para obtener información útil, precisa y concisa, la cual, servirá en casos de organización, análisis, toma de decisiones, etc. Como objetivo principal se explicarán los siguientes temas:
 
-* [Selección de datos](selección-de-datos)
-* [Ordenamiento](ordenamiento)
-* [Funciones de agregación](funciones-de-agregación)
-* [Agrupación de filas](agrupación-de-filas)
+* [Selección de datos](#selección-de-datos)
+* [Ordenamiento](#ordenamiento)
+* [Funciones de agregación](#funciones-de-agregación)
+* [Agrupación de filas](#agrupación-de-filas)
 
 
 ## Selección de datos
