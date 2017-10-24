@@ -240,9 +240,10 @@ WHERE condiciones
 
 Para definir las condiciones en la cláusula WHERE, se pueden utilizar los siguientes operadores:
 
-|Operadores de comparación| 
-|------------|-------------|
+|Operadores de comparación| |
+|------------|------------|
 |=           | igual      |
+|<           | menor      |
 
 
 
