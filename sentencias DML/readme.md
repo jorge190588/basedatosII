@@ -478,7 +478,7 @@ union all
 select nombreProveedor, direccion,telefono 
 from Proveedor
 
-#Diccionario de Datos
+# Diccionario de Datos
 
 ## Concepto
 Un diccionario de datos es un conjunto de metadatos que contiene las características lógicas y puntuales de los datos que se van a utilizar en el sistema que se programa, incluyendo nombre, descripción, alias, contenido y organización.
