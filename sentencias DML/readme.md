@@ -538,3 +538,5 @@ from sys.tables a
 WHERE a.name <> 'sysdiagrams' 
 ORDER BY a.name,b.column_Id
 
+##Link del video tutorial
+https://www.youtube.com/watch?v=KrX724peCfc&t=48s
