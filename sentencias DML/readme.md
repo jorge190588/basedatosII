@@ -480,7 +480,7 @@ from Proveedor
 
 #Diccionario de Datos
 
-##Concepto
+## Concepto
 Un diccionario de datos es un conjunto de metadatos que contiene las características lógicas y puntuales de los datos que se van a utilizar en el sistema que se programa, incluyendo nombre, descripción, alias, contenido y organización.
 
 Las entradas del diccionario de datos se podría crear después de completar el diagrama de flujo de datos.
@@ -491,10 +491,10 @@ Ejemplo: el analista podrá crear un flujo de datos de un diagrama 0 después de
 
 Típicamente estas entradas consisten en los nombres de los flujos de datos encontrados en el diagrama de flujo de datos y sus estructuras de datos correspondientes.
 
-###Ejemplo
+### Ejemplo
 Orden-de compra = nombre-cliente + dirección-de-envío + 1{artículo}10 significa que una orden de compra siempre debe contener un nombre de cliente, una dirección de envío y de 1 a 10 artículos
 
-##Práctica
+## Práctica
 use ComputerDB
 
 select 
