@@ -1,11 +1,11 @@
-use XtremeWorld
+use XtremeWorld;
 
 /*
 1.	Scenario: Reporte de Empleados
-Given: El dueÒo del negocio requiere conocer a sus empleados
-When: requiera la informaciÛn
-Then: el reporte deberÌa mostrar el Documento de Identificacion (DPI), nombre completo, puesto, ubicaciÛn, salario y la forma de pago del salario
-And: debe estar ordenado alfabeticamente ascendente por puesto, ubicaciÛn y apellido respectivamente
+Given: El due√±o del negocio requiere conocer a sus empleados
+When: requiera la informaci√≥n
+Then: el reporte deber√≠a mostrar el Documento de Identificacion (DPI), nombre completo, puesto, ubicaci√≥n, salario y la forma de pago del salario
+And: debe estar ordenado alfabeticamente ascendente por puesto, ubicaci√≥n y apellido respectivamente
 */
 
 select p.id_personal as DPI , 
@@ -25,14 +25,14 @@ inner join Planilla as pl on pl.id_empleado = e.id
 inner join TipoSalario as ts on ts.id = pl.tipo_salario
 order by Puesto, Ubicacion, Empleado
 
-select * from Kiosko
+
 
 /*
 2.	Scenario: Reporte de Horarios Laborales
-Given: El dueÒo del negocio requiere conocer a el horario laboral de cada puesto
-When: requiera la informaciÛn
-Then: el reporte deberÌa mostrar el nombre del dÌa de la semana, puesto, hora de entrada y hora de salida
-And: debe estar ordenado ascendentemente por dÌa y puesto 
+Given: El due√±o del negocio requiere conocer a el horario laboral de cada puesto
+When: requiera la informaci√≥n
+Then: el reporte deber√≠a mostrar el nombre del d√≠a de la semana, puesto, hora de entrada y hora de salida
+And: debe estar ordenado ascendentemente por d√≠a y puesto 
 */
 select sb.Dia as Dia, sb.Puesto as Puesto, sb.Entrada as Entrada, sb.Salida as Salida
 from (
@@ -57,11 +57,11 @@ from (
 
 /*
 3.	Scenario: Reporte de los registros de entrada y salida de los empleados
-Given: El dueÒo del negocio requiere conocer el registro de entrada y salida de los empleados
-When: requiera la informaciÛn
-Then: el reporte deberÌa mostrar la fecha, cargo, nombre completo del empleado, horario formal de entrada, registro de entrada, 
+Given: El due√±o del negocio requiere conocer el registro de entrada y salida de los empleados
+When: requiera la informaci√≥n
+Then: el reporte deber√≠a mostrar la fecha, cargo, nombre completo del empleado, horario formal de entrada, registro de entrada, 
       registro de puntualidad (en minutos), horario formal de salida, registro de salida, registro de minutos extras
-And: debe estar ordenado por fecha la fecha m·s reciente, y ascendentemente por hora de entrada formal, cargo y registro de entrada
+And: debe estar ordenado por fecha la fecha m√°s reciente, y ascendentemente por hora de entrada formal, cargo y registro de entrada
 */
 select convert(varchar, sb.Fecha,103) as Fecha, 
 
@@ -117,11 +117,11 @@ order by sb.Fecha desc, Horario_Formal_Entrada, Cargo, Entrada
 		
 /*
 4.	Scenario: Reporte de las calificaciones acerca de los servicios
-Given: El dueÒo del negocio requiere las calificaciones que los clientes tienen acerca de los servicios
-When: requiera la informaciÛn
-Then: el reporte deberÌa mostrar el aÒo, mes, servicio, promedio de estrellas recibidas en el mes y la suma de todas las estrellas
+Given: El due√±o del negocio requiere las calificaciones que los clientes tienen acerca de los servicios
+When: requiera la informaci√≥n
+Then: el reporte deber√≠a mostrar el a√±o, mes, servicio, promedio de estrellas recibidas en el mes y la suma de todas las estrellas
 	  obtenidas por servicio 
-And: debe estar ordenado por fecha la fecha m·s reciente, y por promedio y suma de estrellas m·s alto respectivamente
+And: debe estar ordenado por fecha la fecha m√°s reciente, y por promedio y suma de estrellas m√°s alto respectivamente
 */
 select sub.Anho, sub.Mes, sub.Servicio, sub.Promedio_Estrellas, sub.Total_Estrellas 
 from (
@@ -191,19 +191,15 @@ order by sub.Anho desc, sub.Id_mes desc, sub.Promedio_Estrellas desc, sub.Total_
 
 
 
-
-
-
-
 /*
 5.	Scenario: Reporte del total recaudado por factura
-Given: El dueÒo del negocio requiere la informacion de lo recaudado por factura
-When: requiera la informaciÛn
-Then: el reporte deberÌa mostrar la fecha, el nit del cliente, nombre del cliente, ubicacion en donde se despachÛ la factura,
-      la forma en que se pagÛ la factura y la cantidad monetaria total recaudada
+Given: El due√±o del negocio requiere la informacion de lo recaudado por factura
+When: requiera la informaci√≥n
+Then: el reporte deber√≠a mostrar la fecha, el nit del cliente, nombre del cliente, ubicacion en donde se despach√≥ la factura,
+      la forma en que se pag√≥ la factura y la cantidad monetaria total recaudada
 	  obtenidas por servicio 
-And: debe estar ordenado por fecha la fecha m·s reciente
-And: por la cantidad monetaria m·s alta en la factura
+And: debe estar ordenado por fecha la fecha m√°s reciente
+And: por la cantidad monetaria m√°s alta en la factura
 And: por la forma de pago
 */
 select convert(varchar, f.fecha, 103) as Fecha,
@@ -220,12 +216,14 @@ where f.fecha between convert(date, dateadd(WEEK, -1, GETDATE()), 111) and  conv
 order by f.fecha desc, (select sum(subtotal) from VentaProducto where id_factura = f.id) desc, fp.id
 
 
+
+
 /*
 6.	Scenario: Reporte de la venta de productos por dia
-Given: El dueÒo del negocio requiere la informacion del promedio en ventas de los productos por dia
-When: requiera la informaciÛn
-Then: el reporte deberÌa mostrar la fecha, producto, promedio de venta por dÌa y el monto total recaudado del producto por dÌa
-And: debe estar ordenado por fecha la fecha m·s reciente, por el mayor monto total recaudado y por el promedio en ventas del producto
+Given: El due√±o del negocio requiere la informacion del promedio en ventas de los productos por dia
+When: requiera la informaci√≥n
+Then: el reporte deber√≠a mostrar la fecha, producto, promedio de venta por d√≠a y el monto total recaudado del producto por d√≠a
+And: debe estar ordenado por fecha la fecha m√°s reciente, por el mayor monto total recaudado y por el promedio en ventas del producto
 */
 select convert(varchar, f.fecha, 103) as Fecha,
         vp.id_producto as Id_Producto,
@@ -242,11 +240,11 @@ order by f.fecha desc, sum(vp.subtotal) desc, Promedio_Venta desc
 
 
 /*
-7.	Scenario: Reporte de funciones por dÌa
-Given: El dueÒo del negocio requiere la informacion de las funciones por dÌa que se han hecho
-When: requiera la informaciÛn
-Then: el reporte deberÌa mostrar el nombre de funciÛn, artista, categoria, precio, fecha, hora de inicio, hora de finalizaciÛn y la ubicaciÛn
-And: debe estar ordenado por fecha la fecha m·s reciente y por el lugar de la funciÛn
+7.	Scenario: Reporte de funciones por d√≠a
+Given: El due√±o del negocio requiere la informacion de las funciones por d√≠a que se han hecho
+When: requiera la informaci√≥n
+Then: el reporte deber√≠a mostrar el nombre de funci√≥n, artista, categoria, precio, fecha, hora de inicio, hora de finalizaci√≥n y la ubicaci√≥n
+And: debe estar ordenado por fecha la fecha m√°s reciente y por el lugar de la funci√≥n
 */
 select f.descripcion as Funcion,
         a.nombre as Artista,
@@ -270,11 +268,11 @@ order by f.fecha_funcion desc, f.id_ubicacion
 
 
 /*
-8.	Scenario: Reporte de los productos y servicios ofrecidos por dÌa
-Given: El dueÒo del negocio requiere la informacion de los productos y servicios que se han ofrecido en el dÌa
-When: requiera la informaciÛn
-Then: el reporte deberÌa mostrar el nombre del producto, servicio, cantidad de veces recaudadas y la fecha
-And: debe estar ordenado por fecha la fecha m·s reciente, por la m·xima cantidad recaudada y por el nombre
+8.	Scenario: Reporte de los productos y servicios ofrecidos por d√≠a
+Given: El due√±o del negocio requiere la informacion de los productos y servicios que se han ofrecido en el d√≠a
+When: requiera la informaci√≥n
+Then: el reporte deber√≠a mostrar el nombre del producto, servicio, cantidad de veces recaudadas y la fecha
+And: debe estar ordenado por fecha la fecha m√°s reciente, por la m√°xima cantidad recaudada y por el nombre
 */
 select p.descripcion as Producto,
         s.descripcion as Servicio,
@@ -291,11 +289,11 @@ order by r.fecha desc, Cantidad_Recaudada desc, r.id_servicioProducto
 
 
 /*
-9.	Scenario: Reporte de la informaciÛn de todas las personas que entran al parque
-Given: El dueÒo del negocio requiere la informacion de todas las personas que entran al parque
-When: requiera la informaciÛn
-Then: el reporte deberÌa mostrar la fecha, tipo de persona, formato de identificacion, identificaciÛn personal, nombre completo, gÈnero y edad
-And: debe estar ordenado por fecha la fecha m·s reciente y por el tipo de persona
+9.	Scenario: Reporte de la informaci√≥n de todas las personas que entran al parque
+Given: El due√±o del negocio requiere la informacion de todas las personas que entran al parque
+When: requiera la informaci√≥n
+Then: el reporte deber√≠a mostrar la fecha, tipo de persona, formato de identificacion, identificaci√≥n personal, nombre completo, g√©nero y edad
+And: debe estar ordenado por fecha la fecha m√°s reciente y por el tipo de persona
 */
 select convert(varchar,sb.Fecha,103) as Fecha, 
         sb.Tipo_Persona, 
@@ -337,11 +335,11 @@ order by sb.Fecha desc, sb.Tipo_Persona desc
 
 
 /*
-10.	Scenario: Reporte de la cantidad promedio de personas que entran al dÌa al parque (no empleados)
-Given: El dueÒo del negocio requiere la informacion de la cantidad promedio de las personas que entran al parque por dÌa
-When: requiera la informaciÛn
-Then: el reporte deberÌa mostrar la fecha, cantidad promedio de adultos, de niÒos y en general
-And: debe estar ordenado por fecha la fecha m·s reciente
+10.	Scenario: Reporte de la cantidad promedio de personas que entran al d√≠a al parque (no empleados)
+Given: El due√±o del negocio requiere la informacion de la cantidad promedio de las personas que entran al parque por d√≠a
+When: requiera la informaci√≥n
+Then: el reporte deber√≠a mostrar la fecha, cantidad promedio de adultos, de ni√±os y en general
+And: debe estar ordenado por fecha la fecha m√°s reciente
 */
 
 select convert(varchar,sb.Fecha,103) as Fecha, avg(sb.Adultos) as Promedio_Adultos, avg(sb.Ninhos) as Promedio_Ninhos, avg(sb.General) as Promedio_General
