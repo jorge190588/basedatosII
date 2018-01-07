@@ -3,7 +3,7 @@
 Este proyecto tiene como finalidad, representar un parque de 
 diversiones dedicado a prestar servicios de juegos electrónicos y más servicios.
 
-Para parecerlo un poco más realista, el día jueves es descanso en el parque de 
+Para hacerlo un poco más realista, el día jueves es descanso en el parque de 
 diversiones, por lo que no aparecerá ningún registro tal día.
 
 Para este proyecto se ha utilizado el sistema gestor SQL Server 2014 con
