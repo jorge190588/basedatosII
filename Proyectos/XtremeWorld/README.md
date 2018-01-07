@@ -11,3 +11,5 @@ un formato de fecha year-month-day.
 
 El lenguaje utilizado para la conección a la BD se utilizó PHP 7.1.12
 y como servidor web Apache.
+
+Para el diseño de la página web se ha utilizado Materialize.
