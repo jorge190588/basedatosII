@@ -1,5 +1,168 @@
 use XtremeWorld;
 
+-- PROCEDIMIENTO ALMACENADO PARA REGISTRAR FACTURAS EN BD 
+create procedure sp_registroFactura
+	@cliente int,
+	@fecha date
+	as
+begin
+	declare @id_factura int
+	declare @id_kiosko int 
+
+	declare @n_personas int
+	declare @n_formasPago int
+
+	declare @random_formaPago int
+	declare @random_persona int
+
+	set @id_kiosko = 1
+	select @n_personas = count(*) from Persona
+	select @n_formasPago = count(*) from FormaPago
+
+	select @random_formaPago = ROUND(((@n_formasPago - 1) * RAND() + 1), 0)
+
+	insert into dbo.Factura (id_cliente, id_kiosko, id_formaPago, fecha)
+	values (@cliente, @id_kiosko, @random_formaPago, @fecha)
+
+
+	-- vincula la persona con la factura
+	select @id_factura = max(id) from Factura
+	select @random_persona = ROUND(((@n_personas - 35) * RAND() + 35), 0) -- en el id 35 empiezan las personas civiles registradas
+
+	insert into Ingreso (id_persona, id_factura)
+	values (@random_persona, @id_factura)
+end
+
+
+-- PROCEDIMIENTO ALMACENADO PARA REGISTRAR TICKETS
+create procedure sp_registrarTickets
+	@fecha date
+	as
+begin
+	declare @id_ticketAdulto int
+	declare @id_ticketPeque int
+
+	declare @random_tickets int
+	
+	declare @precio_producto float
+	declare @subtotal float
+	declare @id_factura int
+	
+	declare @n_ticketsMaxPorProducto int
+	
+	set @n_ticketsMaxPorProducto = 30
+	
+	set @id_ticketAdulto = 1
+	set @id_ticketPeque = 2
+	
+	select @id_factura = max(id) from Factura
+
+	-- insercion aleatoria de tickets para adultos
+	select @random_tickets = ROUND(((@n_ticketsMaxPorProducto - 1) * RAND() + 1), 0)
+	select @precio_producto = precio from Producto where Producto.id = @id_ticketAdulto
+	set @subtotal = @precio_producto * @random_tickets
+			
+	insert into dbo.VentaProducto (id_factura, id_producto, precio, cantidad, subtotal)
+	values (@id_factura, @id_ticketAdulto, @precio_producto, @random_tickets, @subtotal)
+				
+			-- hacer el apunte de lo recaudado en tickets
+			execute sp_InsertarRecaudacion @id_ticketAdulto, @random_tickets, @fecha
+
+	-- insercion aleatoria de tickets para niños
+	select @random_tickets = ROUND(((@n_ticketsMaxPorProducto - 0) * RAND() + 0), 0)
+
+	if(@random_tickets > 0)
+	begin
+		select @precio_producto = precio from Producto where Producto.id = @id_ticketPeque
+		set @subtotal = @precio_producto * @random_tickets
+
+		insert into dbo.VentaProducto (id_factura, id_producto, precio, cantidad, subtotal)
+		values (@id_factura, @id_ticketPeque, @precio_producto, @random_tickets, @subtotal)
+
+				-- hacer el apunte de lo recaudado en tickets
+				execute sp_InsertarRecaudacion @id_ticketPeque, @random_tickets, @fecha 
+	end
+end
+
+
+
+-- PROCEDIMIENTO ALMACENADO PARA REGISTRAR COMPRAS
+create procedure sp_registrarCompras
+	@cliente int,
+	@fecha date
+	as
+begin
+	declare @i int
+	declare @k int
+
+	declare @id_factura int
+	
+	declare @precio_producto float
+	declare @subtotal float
+
+	declare @n_productosPorCompra int
+	declare @n_cantidadPorProducto int
+	declare @n_productos int
+	declare @n_kioskos int
+	declare @n_formasPago int
+	declare @n_comprasPorCliente int
+
+	declare @random_nComprasPorCliente int
+	declare @random_kiosko int
+	declare @random_formaPago int
+	declare @random_nProductosPorCompra int
+	declare @random_cantidadPorProducto int
+	declare @random_producto int
+
+	select @n_productos = count(*) from Producto
+	select @n_kioskos = count(*) from Kiosko
+	select @n_formasPago = count(*) from FormaPago
+	
+	set @n_productosPorCompra = 4
+	set @n_cantidadPorProducto = 4
+
+	set @n_comprasPorCliente = 5	
+	select @random_nComprasPorCliente = ROUND(((@n_comprasPorCliente - 0) * RAND() + 0), 0)
+
+	set @i = 0
+
+	while(@i < @random_nComprasPorCliente)
+	begin
+		select @random_formaPago = ROUND(((@n_formasPago - 1) * RAND() + 1), 0)
+		select @random_kiosko = ROUND(((@n_kioskos - 2) * RAND() + 2), 0)
+
+		insert into dbo.Factura (id_cliente, id_kiosko, id_formaPago, fecha)
+		values (@cliente, @random_kiosko, @random_formaPago, @fecha)
+
+		-- ..........
+		select @id_factura = max(id) from Factura
+
+		select @random_nProductosPorCompra = ROUND(((@n_productosPorCompra - 1) * RAND() + 1), 0)
+		set @k = 0
+
+		while(@k < @random_nProductosPorCompra)
+		begin
+			-- id de productos que no sean entradas porque el cliente ya ha ingresado
+			select @random_producto = ROUND(((@n_productos - 3) * RAND() + 3), 0)
+			select @random_cantidadPorProducto = ROUND(((@n_cantidadPorProducto - 1) * RAND() + 1), 0)
+			select @precio_producto = precio from Producto where Producto.id = @random_producto
+			set @subtotal = @precio_producto * @random_cantidadPorProducto
+
+			insert into dbo.VentaProducto (id_factura, id_producto, precio, cantidad, subtotal)
+			values (@id_factura, @random_producto, @precio_producto, @random_cantidadPorProducto, @subtotal)
+						
+			-- insertar lo recaudado
+			execute sp_InsertarRecaudacion @random_producto, @random_cantidadPorProducto, @fecha
+						
+			set @k = @k + 1
+		end
+
+		set @i = @i + 1
+	end
+
+end
+
+
 -- PROCEDIMIENTO ALMACENADO PARA REGISTRAR RECAUDACIONES
 go
 create procedure sp_InsertarRecaudacion
@@ -53,7 +216,7 @@ begin
 	
 	if(@n_funciones < 1)
 	begin 
-		set @fecha_inicial = '2017-01-01'
+		set @fecha_inicial = '2018-01-01'
 	end
 	
 	if(@n_funciones > 0)
@@ -108,7 +271,7 @@ begin
 
 	if(@n_registros < 1)
 	begin 
-		set @fecha_inicial = '2017-01-01'
+		set @fecha_inicial = '2018-01-01'
 	end
 	if(@n_registros > 0)
 	begin
@@ -135,7 +298,7 @@ begin
 														  where id_persona = @id_empleado)
 										and @n_diaSemanal = hl.id_dia
 										and hl.id_tipoRegistro = 1
-			    
+			    	-- minutos de anticipacion o de retraso
 				select @minutos = ROUND(((20 - (-20)) * RAND() + (-20)), 0)
 
 				select @hora_IO = DATEADD(minute, @minutos, @hora_IO)
@@ -150,7 +313,7 @@ begin
 														  where id_persona = @id_empleado)
 										and @n_diaSemanal = hl.id_dia
 										and hl.id_tipoRegistro = 2
-			
+				-- minutos de anticipacion a salida o extra
 				select @minutos = ROUND(((20 - (-20)) * RAND() + (-20)), 0)
 
 				select @hora_IO = DATEADD(minute, @minutos, @hora_IO)
@@ -178,68 +341,26 @@ begin
 	declare @n_facturaMaxAlDia int
 	declare @n_facturaMinAlDia int
 
-	declare @i int
 	declare @j int 
-	declare @k int
-	declare @x int
-
-	declare @id_factura int
 
 	declare @n_facturas int 
 	declare @n_clientes int
-	declare @n_personas int
-	declare @n_ticketsMaxPorProducto int
-	declare @n_comprasPorCliente int
-	declare @n_productosPorCompra int
-	declare @n_cantidadPorProducto int
-	declare @n_formasPago int
-	declare @n_productos int
-	declare @n_kioskos int
-
-	declare @id_ticketAdulto int
-	declare @id_ticketPeque int
-	declare @id_kiosko int 
-	declare @id_servicioProducto int
 
 	declare @random_nFactura int
 	declare @random_cliente int 
-	declare @random_persona int
-	declare @random_tickets int
-	declare @random_formaPago int
-	declare @random_nComprasPorCliente int
-	declare @random_nProductosPorCompra int
-	declare @random_cantidadPorProducto int
-	declare @random_kiosko int
-	declare @random_producto int
 
 	declare @f_inicial date
 	declare @f_hoy date
 
-	declare @precio_producto float
-	declare @subtotal float
-
 	select @n_facturas = count(*) from Factura
 	select @n_clientes = count(*) from Cliente
-	select @n_personas = count(*) from Persona
-	select @n_formasPago = count(*) from FormaPago
-	select @n_productos = count(*) from Producto
-	select @n_kioskos = count(*) from Kiosko
-
+	
 	set @n_facturaMaxAlDia = 100
 	set @n_facturaMinAlDia = 30
-	set @n_ticketsMaxPorProducto = 30
-	set @n_comprasPorCliente = 5
-	set @n_productosPorCompra = 4
-	set @n_cantidadPorProducto = 4
-
-	set @id_ticketAdulto = 1
-	set @id_ticketPeque = 2
-	set @id_kiosko = 1
-
-
+	
 	if(@n_facturas < 1)
 	begin 
-		set @f_inicial = '2017-01-01'
+		set @f_inicial = '2018-01-01'
 	end
 	if(@n_facturas > 0)
 	begin
@@ -258,83 +379,16 @@ begin
 
 			while(@j <= @random_nFactura)
 			begin 
-				-- se realiza la factura de la venta de entradas
-
 				select @random_cliente = ROUND(((@n_clientes - 1) * RAND() + 1), 0)
-				select @random_formaPago = ROUND(((@n_formasPago - 1) * RAND() + 1), 0)
 
-				insert into dbo.Factura (id_cliente, id_kiosko, id_formaPago, fecha)
-				values (@random_cliente, @id_kiosko, @random_formaPago, @f_inicial)
-				
-				-- vincula la persona con la factura
-				select @id_factura = max(id) from Factura
-				select @random_persona = ROUND(((@n_personas - 35) * RAND() + 35), 0)
+				-- se realiza la factura de la venta de entradas
+				execute sp_registroFactura @random_cliente, @f_inicial
 
-				insert into Ingreso (id_persona, id_factura)
-				values (@random_persona, @id_factura)
+				-- insercion aleatoria de tickets 
+				execute sp_registrarTickets @f_inicial
 
-				-- insercion aleatoria de tickets para adultos
-				select @random_tickets = ROUND(((@n_ticketsMaxPorProducto - 1) * RAND() + 1), 0)
-				select @precio_producto = precio from Producto where Producto.id = @id_ticketAdulto
-				set @subtotal = @precio_producto * @random_tickets
-			
-				insert into dbo.VentaProducto (id_factura, id_producto, precio, cantidad, subtotal)
-				values (@id_factura, @id_ticketAdulto, @precio_producto, @random_tickets, @subtotal)
-				
-						-- hacer el apunte de lo recaudado en tickets
-						execute sp_InsertarRecaudacion @id_ticketAdulto, @random_tickets, @f_inicial 
-
-				-- insercion aleatoria de tickets para niños
-				select @random_tickets = ROUND(((@n_ticketsMaxPorProducto - 0) * RAND() + 0), 0)
-
-				if(@random_tickets > 0)
-				begin
-					select @precio_producto = precio from Producto where Producto.id = @id_ticketPeque
-					set @subtotal = @precio_producto * @random_tickets
-
-					insert into dbo.VentaProducto (id_factura, id_producto, precio, cantidad, subtotal)
-					values (@id_factura, @id_ticketPeque, @precio_producto, @random_tickets, @subtotal)
-
-							-- hacer el apunte de lo recaudado en tickets
-							execute sp_InsertarRecaudacion @id_ticketPeque, @random_tickets, @f_inicial 
-				end
-				
 				-- INSERTAR COMPRAS DEL CLIENTE
-				select @random_nComprasPorCliente = ROUND(((@n_comprasPorCliente - 0) * RAND() + 0), 0)
-				set @i = 0
-
-				while(@i < @random_nComprasPorCliente)
-				begin
-					select @random_formaPago = ROUND(((@n_formasPago - 1) * RAND() + 1), 0)
-					select @random_kiosko = ROUND(((@n_kioskos - 2) * RAND() + 2), 0)
-
-					insert into dbo.Factura (id_cliente, id_kiosko, id_formaPago, fecha)
-					values (@random_cliente, @random_kiosko, @random_formaPago, @f_inicial)
-
-					-- ..........
-					select @id_factura = max(id) from Factura
-
-					select @random_nProductosPorCompra = ROUND(((@n_productosPorCompra - 1) * RAND() + 1), 0)
-					set @k = 0
-
-					while(@k < @random_nProductosPorCompra)
-					begin
-						select @random_producto = ROUND(((@n_productos - 3) * RAND() + 3), 0)
-						select @random_cantidadPorProducto = ROUND(((@n_cantidadPorProducto - 1) * RAND() + 1), 0)
-						select @precio_producto = precio from Producto where Producto.id = @random_producto
-						set @subtotal = @precio_producto * @random_cantidadPorProducto
-
-						insert into dbo.VentaProducto (id_factura, id_producto, precio, cantidad, subtotal)
-						values (@id_factura, @random_producto, @precio_producto, @random_cantidadPorProducto, @subtotal)
-						
-						-- insertar lo recaudado
-						execute sp_InsertarRecaudacion @random_producto, @random_cantidadPorProducto, @f_inicial
-						
-						set @k = @k + 1
-					end
-
-					set @i = @i + 1
-				end
+				execute sp_registrarCompras @random_cliente, @f_inicial
 
 				set @j = @j + 1
 			end 
@@ -344,9 +398,7 @@ begin
 end
 
 
------------------------------------------------------------------------------
-
-
+----------------------------------------------------------------------------- 
 
 go
 create procedure sp_InsertarCalificacionesMasivo 
@@ -369,7 +421,7 @@ begin
 
 	if(@n_calificaciones < 1)
 	begin
-		set @f_inicial = '2017-01-01'
+		set @f_inicial = '2018-01-01'
 	end
 	if(@n_calificaciones > 0)
 	begin
@@ -398,3 +450,5 @@ begin
 		set @f_inicial = dateadd(day, 1, @f_inicial)
 	end
 end
+
+
