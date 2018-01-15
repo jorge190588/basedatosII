@@ -235,7 +235,7 @@ create table Empleado (
 
 create table RegistroEntradaSalida (
 	id_empleado int not null,
-	fecha date default getDate() not null,
+	fecha date default getDate(),
 	hora time not null,
 	id_tiporegistro int not null,
 	constraint fk_empleadoRegistro foreign key (id_empleado) references Empleado(id),
