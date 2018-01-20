@@ -57,7 +57,7 @@ from (
 
 /*
 3.	Scenario: Reporte de los registros de entrada y salida de los empleados
-Given: El dueño del negocio requiere conocer el registro de entrada y salida de los empleados
+Given: El dueño del negocio requiere conocer el registro de entrada y salida de los empleados en fecha actual
 When: requiera la información
 Then: el reporte debería mostrar la fecha, cargo, nombre completo del empleado, horario formal de entrada, registro de entrada, 
       registro de puntualidad (en minutos), horario formal de salida, registro de salida, registro de minutos extras
@@ -122,6 +122,7 @@ When: requiera la información
 Then: el reporte debería mostrar el año, mes, servicio, promedio de estrellas recibidas en el mes y la suma de todas las estrellas
 	  obtenidas por servicio 
 And: debe estar ordenado por fecha la fecha más reciente, y por promedio y suma de estrellas más alto respectivamente
+And: solamente debe mostrar las calificaciones hasta dos meses anteriores
 */
 select sub.Anho, sub.Mes, sub.Servicio, sub.Promedio_Estrellas, sub.Total_Estrellas 
 from (
@@ -132,18 +133,22 @@ from (
             avg(sb.N_Estrellas) as Promedio_Estrellas,
             sum(sb.N_Estrellas) as Total_Estrellas
     from (
-        select (case when month(c.fecha) = 1 then 'Enero' else 
-                case when month(c.fecha) = 2 then 'Febrero' else 
-                    case when month(c.fecha) = 3 then 'Marzo' else 
-                        case when month(c.fecha) = 4 then 'Abril' else 
-                            case when month(c.fecha) = 5 then 'Mayo' else 
-                                case when month(c.fecha) = 6 then 'Junio' 
-                                END 
-                            END 
-                        END 
-                    END 
-                END 
-                END) as Mes,
+        select (
+		case 
+		    when month(c.fecha) = 1 then 'Enero' 
+		    when month(c.fecha) = 2 then 'Febrero'  
+                    when month(c.fecha) = 3 then 'Marzo'  
+                    when month(c.fecha) = 4 then 'Abril'  
+                    when month(c.fecha) = 5 then 'Mayo' 
+                    when month(c.fecha) = 6 then 'Junio' 
+		    when month(c.fecha) = 7 then 'Julio' 
+                    when month(c.fecha) = 8 then 'Agosto'  
+                    when month(c.fecha) = 9 then 'Septiembre'  
+                    when month(c.fecha) = 10 then 'Octubre'  
+                    when month(c.fecha) = 11 then 'Noviembre'  
+                    when month(c.fecha) = 12 then 'Diciembre'              
+                end
+                ) as Mes,
                 month(c.fecha) as Id_mes,
                 year(c.fecha) as Anho,
                 (s.descripcion) as Servicio,
@@ -151,39 +156,6 @@ from (
         from Servicio as s
         left join Calificacion as c on s.id = c.id_servicio
         where c.fecha between convert(date, dateadd(MONTH, -2, GETDATE()), 111) and  convert(date, getDate(), 111)
-        and datepart(qq, c.fecha) in (1, 2)
-        ) as sb
-    group by sb.Mes, sb.Id_mes, sb.Anho, sb.Servicio
-
-    union all
-
-    select sb.Anho as Anho,
-            sb.Id_mes as Id_Mes,
-            sb.Mes as Mes,
-            sb.Servicio as Servicio,
-            avg(sb.N_Estrellas) as Promedio_Estrellas,
-            sum(sb.N_Estrellas) as Total_Estrellas
-    from (
-        select (case when month(c.fecha) = 7 then 'Julio' else 
-                case when month(c.fecha) = 8 then 'Agosto' else 
-                    case when month(c.fecha) = 9 then 'Septiembre' else 
-                        case when month(c.fecha) = 10 then 'Octubre' else 
-                            case when month(c.fecha) = 11 then 'Noviembre' else 
-                                case when month(c.fecha) = 12 then 'Diciembre' 
-                                END 
-                            END 
-                        END 
-                    END 
-                END 
-                END) as Mes,
-                month(c.fecha) as Id_mes,
-                year(c.fecha) as Anho,
-                (s.descripcion) as Servicio,
-                c.n_estrellas as N_Estrellas
-        from Servicio as s
-        left join Calificacion as c on s.id = c.id_servicio
-        where c.fecha between convert(date, dateadd(MONTH, -2, GETDATE()), 111) and  convert(date, getDate(), 111)
-        and datepart(qq, c.fecha) in (3, 4)
         ) as sb
     group by sb.Mes, sb.Id_mes, sb.Anho, sb.Servicio
 ) as sub
@@ -192,7 +164,7 @@ order by sub.Anho desc, sub.Id_mes desc, sub.Promedio_Estrellas desc, sub.Total_
 
 
 /*
-5.	Scenario: Reporte del total recaudado por factura
+5.	Scenario: Reporte del total recaudado por factura hasta una semana anterior
 Given: El dueño del negocio requiere la informacion de lo recaudado por factura
 When: requiera la información
 Then: el reporte debería mostrar la fecha, el nit del cliente, nombre del cliente, ubicacion en donde se despachó la factura,
@@ -219,7 +191,7 @@ order by f.fecha desc, (select sum(subtotal) from VentaProducto where id_factura
 
 
 /*
-6.	Scenario: Reporte de la venta de productos por dia
+6.	Scenario: Reporte de la venta de productos por dia hasta un mes antes
 Given: El dueño del negocio requiere la informacion del promedio en ventas de los productos por dia
 When: requiera la información
 Then: el reporte debería mostrar la fecha, producto, promedio de venta por día y el monto total recaudado del producto por día
@@ -240,7 +212,7 @@ order by f.fecha desc, sum(vp.subtotal) desc, Promedio_Venta desc
 
 
 /*
-7.	Scenario: Reporte de funciones por día
+7.	Scenario: Reporte de funciones por día en la semana actual
 Given: El dueño del negocio requiere la informacion de las funciones por día que se han hecho
 When: requiera la información
 Then: el reporte debería mostrar el nombre de función, artista, categoria, precio, fecha, hora de inicio, hora de finalización y la ubicación
@@ -268,7 +240,7 @@ order by f.fecha_funcion desc, f.id_ubicacion
 
 
 /*
-8.	Scenario: Reporte de los productos y servicios ofrecidos por día
+8.	Scenario: Reporte de los productos y servicios ofrecidos por día hasta un mes atras
 Given: El dueño del negocio requiere la informacion de los productos y servicios que se han ofrecido en el día
 When: requiera la información
 Then: el reporte debería mostrar el nombre del producto, servicio, cantidad de veces recaudadas y la fecha
@@ -289,7 +261,7 @@ order by r.fecha desc, Cantidad_Recaudada desc, r.id_servicioProducto
 
 
 /*
-9.	Scenario: Reporte de la información de todas las personas que entran al parque
+9.	Scenario: Reporte de la información de todas las personas que entran al parque en fecha presente
 Given: El dueño del negocio requiere la informacion de todas las personas que entran al parque
 When: requiera la información
 Then: el reporte debería mostrar la fecha, tipo de persona, formato de identificacion, identificación personal, nombre completo, género y edad
