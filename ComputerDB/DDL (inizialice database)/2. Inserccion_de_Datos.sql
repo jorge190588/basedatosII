@@ -1,4 +1,4 @@
-use ComputerDB
+use ComputerDB;
 
 -- Volcado de datos Tabla Marca
 insert into Marca(nombreMarca) values('Dell'),('Toshiba'),('Compaq'),('Acer'),('Logitech'),

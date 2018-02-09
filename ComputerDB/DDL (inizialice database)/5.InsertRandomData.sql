@@ -1,26 +1,28 @@
 use ComputerDB;
 
+declare @totalDeSalidas int,@totalDeEntradas int
+select @totalDeSalidas=10000000,@totalDeEntradas=10000000
+
 -- INSERTAR ENCABEZADO DE SALIDAS
-declare @documento int
-set @documento=1
+declare @idsalida int
+set @idsalida=1
 --select @variable as [Variable]
-while(@documento <= 10000000)
+while(@idsalida <= @totalDeSalidas)
 begin
-	execute sp_InsertarSalidaMasivo @documento 
-	set @documento = @documento+1
+	execute sp_InsertarSalidaMasivo @idsalida 
+	set @idsalida= @idsalida+1
 end
 
 ------------------------------------------------------------------------------------------
 -- INSERTAR DETALLE DE PRODUCTOS
 
-declare @IdSalida int
-set @IdSalida=1 --id de salida inicial
+set @idsalida=1 --id de salida inicial
 --select @IdSalida as [IDsalida]
 
-while(@IdSalida <= 10000000) --id de salida maximo
+while(@idsalida<= @totalDeSalidas) --id de salida maximo
 begin
-	execute sp_InsertarSalidaDetalleMasivo @IdSalida
-	set @IdSalida = @IdSalida+1
+	execute sp_InsertarSalidaDetalleMasivo @idsalida
+	set @idsalida= @idsalida+1
 end
 
 
@@ -28,22 +30,20 @@ end
 --------------------------------------------------------------------------------------------
 
 -- INSERTAR ENCABEZADO DE ENTRADAS
-declare @documento int
-set @documento=1
+declare @idEntrada int
+set @idEntrada=1
 --select @variable as [Variable]
-while(@documento <= 1000000)
+while(@idEntrada <= @totalDeEntradas)
 begin
-	execute sp_InsertarEntradaMasivo '2017-10-10',@documento 
-	set @documento = @documento+1
+	execute sp_InsertarEntradaMasivo '2017-10-10',@idEntrada
+	set @idEntrada = @idEntrada+1
 end
 
 --------------------------------------------------------------------------------------------
 
 -- INSERTAR DETALLE DE ENTRADAS
-declare @IdEntrada int
 set @idEntrada=1
-
-while(@IdEntrada <= 1000000)
+while(@IdEntrada <= @totalDeEntradas)
 begin
 	execute sp_InsertarEntradaDetalleMasivo @IdEntrada
 	set @IdEntrada = @IdEntrada+1

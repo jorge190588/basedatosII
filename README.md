@@ -1,16 +1,8 @@
 # basedatosII
 El proyecto contiene un script de la base de datos de un giro de negocio de ventas.   Los movimientos registrados deben de ser sobre productos de computadoras
 
-## Grupos
-
-### 1. Salidas
-
-* Eduardo Barrios, Gabriel Rodriguez, Angel Gonzales, Denis Rosales y Luis Castillo
-  
-### 2. Entradas
-* Elvin Morales, Pedro Lol, Eddy Delgado, Abel Hidalgo, Zelik Ramirez y Julio Gil
-  
 ## Alumnos
+
 Deben aportan en el proyecto por medio de commits, actualizando el script de la base de datos e ingresando como minimo 500,000 registros en las transacciones principales que son movimientos de compras y ventas.
 
 ## Tablas de la base de datos y sus atributos

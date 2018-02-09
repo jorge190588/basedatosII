@@ -1,6 +1,3 @@
-
-use master;
-
 -- first step
 use master;
 
@@ -14,12 +11,12 @@ end
 -- Third step
 create database ComputerDB;
 go
---four step
+
+-- four step
 use ComputerDB;
 
 -- five step, create tables
-go
--- creación de tablas independientes
+
 
 -- Tabla Marca, la tabla productos depende de esta
 create table Marca(
