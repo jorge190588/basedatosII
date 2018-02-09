@@ -215,7 +215,172 @@ En los ejemplos siguientes se usan las seis funciones del sistema de SQL Server 
 
 # Uso de Strings
 
+
 # Estadística Descriptiva
+Las estadísticas de SQL son información sobre la distribución de los datos existentes en las columnas de las tablas de nuestra base de datos. 
+
+En el archivo de [EstadísticaDescriptiva.sql](https://github.com/jorge190588/basedatosII/blob/master/sentencias%20DML/Estadistica_Descriptiva.sql) se manipularán los datos para obtener información útil, precisa y concisa, la cual, servirá en casos de organización, análisis, toma de decisiones, etc. Como objetivo principal se explicarán los siguientes temas:
+
+* [Selección de datos](#selección-de-datos)
+* [Ordenamiento](#orden-de-datos)
+* [Funciones de agregación](#funciones-de-agregación)
+* [Agrupación de filas](#agrupación-de-filas)
+
+
+## Selección de datos
+La clave para obtener datos es la declaración **SELECT**, que en su forma básica es muy simple y fácil de usar. Sin embargo, se detallarán muchas opciones adicionales que hacen que la declaración SELECT sea muy poderosa.
+
+La sintaxis básica es la siguiente:
+
+```
+SELECT columna1, columna2, ..., columnaX FROM nombre_tabla
+```
+Para obtener todos los valores únicos en un registro, se debe utilizar la palabra clave **DISTINCT**. Se agrega a la lista de columnas de la instrucción SELECT, directamente después de la palabra clave SELECT.
+
+```
+SELECT DISTINCT columna FROM nombre_tabla
+```
+Filtra los resultados con la cláusula **WHERE**
+
+```
+SELECT columnas FROM nombre_tabla
+WHERE condiciones
+```
+
+
+&nbsp;
+
+**Para definir las condiciones en la cláusula WHERE, se pueden utilizar los siguientes operadores:**
+
+|Operadores de comparación| Descripción|
+|------------|------------|
+|=           | igual      |
+|<           | menor      |
+|>           | mayor      |
+|<=          | menor o igual      |
+|>=          | mayor o igual      |
+|<>          | diferente      |
+
+
+|Operadores lógicos| Descripción|
+|------------|------------|
+|NOT           |Para la negación de condiciones|
+|AND         |Para la conjunción de condiciones|
+|OR         |Para la disyunción de condiciones|
+
+
+&nbsp;
+### Uso de predicados
+
+##### BETWEEN
+Se utiliza para expresar una condición que quiere encontrar un valor entre unos límites concretos.
+
+```
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
+WHERE columna BETWEEN limite1 AND limite2
+```
+
+##### IN
+Para comprobar si un valor coincide con los elementos de una lista utilizaremos IN, y para ver si no coincide, NOT IN:
+
+```
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
+WHERE columna [NOT] IN (valor1, ..., valorN);
+```
+
+##### LIKE
+Se utiliza para comprobar si una columna de tipo carácter cumple alguna propiedad determinada.
+
+```
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
+WHERE columna LIKE característica;
+```
+
+##### IS NULL
+Para comprobar si un valor es nulo utilizaremos IS NULL, y para averiguar si no lo es, IS NOT NULL. 
+
+```
+SELECT nombre_columnas_a_seleccionar
+FROM tabla_a_consultar
+WHERE columna IS [NOT] NULL;
+```
+
+## Orden de datos
+Para la ordenar los datos obtenidos en respuestas a consultas se utiliza la cláusula **ORDER BY** en la sentencia SELECT. 
+
+**DESC:** ordena los datos en forma descendente.
+
+
+**ASC:** ordena los datos en forma ascendente.
+
+```
+SELECT nombre_columnas_a seleccionar
+FROM tabla_a_consultar
+[WHERE condiciones]
+ORDER BY columna [DESC] | [ASC]
+```
+
+
+## Funciones de agregación
+Son funciones para efectuar operaciones sobre los datos de una base de datos. Las principales funciones de agregación son:
+
+* **COUNT**
+     Obtiene el número total de filas seleccionadas
+* **SUM**
+     Suma los valores de una columna
+* **MIN**
+     Obtiene el valor mínimo de una columna
+* **MAX**
+     Obtiene el valor máximo de una columna
+* **AVG**
+     Calcula el valor medio de una columna
+
+> Nota: 
+  En general, las funciones de agregación se aplican a una columna, excepto la función de agregación COUNT. 
+  
+  ``` 
+  SELECT COUNT(*) FROM nombre_tabla    //contará todas las filas de la tabla que cumplan las condiciones
+  ```
+  ```
+  SELECT COUNT (DISTINCT columna) FROM nombre_tabla  //contaría los valores que no fuesen nulos ni repetidos
+  ```
+  ```
+  SELECT COUNT (columna) FROM nombre_tabla   //contaria los valores que no fuesen nulos
+  ```
+  
+## Agrupación de filas 
+Las cláusulas siguientes permiten organizar las filas por grupos:
+
+**a. GROUP BY**
+
+Se utiliza para agrupar filas según las columnas que indique esta cláusula.
+     
+
+**b. HAVING**
+
+Especifica condiciones de búsqueda para grupos de filas; lleva a cabo la misma función que antes cumplía la cláusula WHERE para
+las filas de toda la tabla, pero ahora las condiciones se aplican a los grupos obtenidos.
+
+```
+SELECT nombre_columnas_a seleccionar
+FROM tabla_a_consultar
+[WHERE condiciones]
+GROUP BY columnas_según_las_cuales_se_quiere_agrupar
+[HAVING condiciones_por_grupos]
+[ORDER BY columna_ordenación [DESC] [, columna [DESC]...]];
+```
+> Puedes aprender más acerca de Sentencias DML en los siguientes enlaces:
+
+  [Bases de Datos - Formación de Postgrado UOC](http://www.uoc.edu/masters/oficiales/img/913.pdf)
+  
+  [Beginning SQL - Paul Wilton, John Colby](https://books.google.com.gt/books?id=9eqbXSnji84C&lpg=PP1&dq=sql&hl=es&pg=PA59#v=onepage&q=sql&f=false)
+
+
+
+&nbsp;
 # Conversión de Datos a Json
 JSON es un popular formato de datos textuales utilizado para intercambiar datos en aplicaciones web y móviles modernas. JSON también se utiliza para almacenar datos no estructurados en archivos de registro o bases de datos NoSQL como Microsoft Azure DocumentDB. 
 
@@ -312,3 +477,66 @@ from Clientes
 union all
 select nombreProveedor, direccion,telefono 
 from Proveedor
+
+# Diccionario de Datos
+
+## Concepto
+Un diccionario de datos es un conjunto de metadatos que contiene las características lógicas y puntuales de los datos que se van a utilizar en el sistema que se programa, incluyendo nombre, descripción, alias, contenido y organización.
+
+Las entradas del diccionario de datos se podría crear después de completar el diagrama de flujo de datos.
+
+El uso de notación algebraica y registros estructurales permite al analista desarrollar el diccionario de datos y los diagramas de flujo de datos mediante un enfoque jerárquico de arriba hacia abajo.
+
+Ejemplo: el analista podrá crear un flujo de datos de un diagrama 0 después de las primeras entrevistas y al mismo tiempo hacer las entradas preliminares del diccionario de datos.
+
+Típicamente estas entradas consisten en los nombres de los flujos de datos encontrados en el diagrama de flujo de datos y sus estructuras de datos correspondientes.
+
+### Ejemplo
+Orden-de compra = nombre-cliente + dirección-de-envío + 1{artículo}10 significa que una orden de compra siempre debe contener un nombre de cliente, una dirección de envío y de 1 a 10 artículos
+
+## Práctica
+use ComputerDB
+
+select 
+	d.object_id,
+	a.name [table], -- identificara la Tabla
+	b.name [column], -- identificara la columna
+	c.name [type], -- identificara el Tipo
+	CASE-- recibe el tipo de columna
+	  --cuando c es   numerico  o   c es     decimal   o  c es      Float   entonces se precisa el numero
+		WHEN c.name = 'numeric' OR  c.name = 'decimal' OR c.name = 'float'  THEN b.precision
+		ELSE null
+	END [Precision], 
+--  recibe maximo tamaño de b
+	b.max_length, 
+	CASE -- recibe si la columna acepta nulos
+		WHEN b.is_nullable = 0 THEN 'NO'
+		ELSE 'SI'
+	END [Permite Nulls],
+	CASE -- recibe si la columna es identity (autoincrementable)
+		WHEN b.is_identity = 0 THEN 'NO'
+		ELSE 'SI'
+	END [Es Autonumerico],	
+	ep.value [Descripcion],-- recibe la descripcion de la columna(si la hay)
+	f.ForeignKey, -- recibe si es llave foranea
+	f.ReferenceTableName, -- recibe la referencia de la tabla
+	f.ReferenceColumnName -- recibe la referencia de la columna
+from sys.tables a   
+      --          //    Seleciona y muestra toda la informacion   \\          --
+	inner join sys.columns b on a.object_id= b.object_id 
+	inner join sys.systypes c on b.system_type_id= c.xtype 
+	inner join sys.objects d on a.object_id= d.object_id 
+	LEFT JOIN sys.extended_properties ep ON d.object_id = ep.major_id AND b.column_Id = ep.minor_id
+	LEFT JOIN (SELECT 
+				f.name AS ForeignKey,
+				OBJECT_NAME(f.parent_object_id) AS TableName,
+				COL_NAME(fc.parent_object_id,fc.parent_column_id) AS ColumnName,
+				OBJECT_NAME (f.referenced_object_id) AS ReferenceTableName,
+				COL_NAME(fc.referenced_object_id,fc.referenced_column_id) AS ReferenceColumnName
+				FROM sys.foreign_keys AS f
+				INNER JOIN sys.foreign_key_columns AS fc ON f.OBJECT_ID = fc.constraint_object_id) 	f ON f.TableName =a.name AND f.ColumnName =b.name
+WHERE a.name <> 'sysdiagrams' 
+ORDER BY a.name,b.column_Id
+
+##Link del video tutorial
+https://www.youtube.com/watch?v=KrX724peCfc&t=48s

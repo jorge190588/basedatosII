@@ -13,9 +13,9 @@
 # FORMAS NORMALES
 
 3. Regla que define una característica que una relación debe cumplir.
- * (x) Transitividad
- * (x) Abstracción
- * (ok) Forma normal
+ - [ ] Transitividad
+ - [ ] Abstracción
+ - [x] Forma normal
  
 4. Una relación esta en FN1 si y solo si:
  * (x) todos los atributos tienen la misma tipografía
