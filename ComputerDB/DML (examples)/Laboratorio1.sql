@@ -202,7 +202,8 @@ min (fecha) as fechaminima, max (fecha) as fechamaxima
 
 a.	Given: El dueño del negocio requiere conocer a sus proveedores
 b.	When: requiera la información
-c.	Then: un reporte debería mostrar el nombre del proveedor, dirección, teléfono, nit, fecha de primera compra, fecha de última compra, frecuencia de compra promedio 
+c.	Then: un reporte debería mostrar el nombre del proveedor, dirección, teléfono, nit, 
+fecha de primera compra, fecha de última compra, frecuencia de compra promedio 
 d.	And: debe estar ordenado por nombre
 e.	And: debe estar filtrado por uno o varios meses y uno o varios años
 */
@@ -210,8 +211,8 @@ declare @consulta varchar(max)
 declare @años varchar(40)
 declare @meses varchar(40)
 
-select @años = '2013, 2017'
-select @meses = '2, 3'
+select @años = '2016,2017'
+select @meses = '10'
 
 set @consulta = 'select pr.idProveedor, pr.nombreProveedor, pr.direccion, pr.telefono, pr.nit,
 			(select min(entrada.fecha) from entrada)primera_compra, 
@@ -224,8 +225,6 @@ set @consulta = 'select pr.idProveedor, pr.nombreProveedor, pr.direccion, pr.tel
 				and (year(fecha) in (' + @años + ')) 
 				and month(fecha) in (' + @meses + ')
 
- -- where (month(en.fecha)=3) and (year(en.fecha) = 2017)
-
 			group by pr.idProveedor, pr.nombreProveedor, pr.direccion, pr.telefono, pr.nit, en.fecha
 			order by pr.nombreProveedor asc '
 
@@ -234,7 +233,8 @@ set @consulta = 'select pr.idProveedor, pr.nombreProveedor, pr.direccion, pr.tel
 
 
 
-
+select * from entradadetalle
+select * from entrada
 
 
 
