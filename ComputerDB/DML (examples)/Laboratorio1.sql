@@ -73,11 +73,12 @@ And: debe estar ordenado por año y mes
 And: debe ser posible filtrar por ninguno o varios años y por ninguno o varios meses
 */
 
+use ComputerDB;
 declare @consulta varchar(max)
 declare @anhos varchar(50)
 declare @meses varchar(50)
 
-select @anhos = '2016'
+select @anhos = '2016,2017'
 select @meses = '2'
 
 set @consulta = 'select year(fecha) as Año,
@@ -88,10 +89,13 @@ set @consulta = 'select year(fecha) as Año,
 				from Salida s
 				inner join SalidaDetalle sd on sd.idSalida = s.idSalida
 				inner join Productos p on p.id = sd.idProducto
-				where (len('+ @anhos + ') > 0) 
-				and (len(' + @meses + ') > 0)
+				where (len('''+ @anhos + ''') > 0) 
+				and (len(''' + @meses + ''') > 0)
 				and (year(fecha) in (' + @anhos + ')) 
 				and month(fecha) in (' + @meses + ')
 				group by year(fecha), datename(month, fecha), month(fecha)
 				order by Año desc, month(fecha) asc'
+print(@consulta)
 exec(@consulta)
+
+select * from salidadetalle
