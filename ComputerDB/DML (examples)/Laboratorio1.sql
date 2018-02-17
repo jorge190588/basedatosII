@@ -1,4 +1,32 @@
 /*
+--ESCENARIO 3
+--3.	Scenario: Reporte de ventas (Allan y David)
+--a.	Given: el dueño de un negocio requiere información de las ventas
+--b.	When: requiera la información
+--c.	Then: debería mostrar la fecha, nit, cliente, total de venta, numero de productos vendidos y fecha de ultima venta del último trimestre por cliente
+--d.	And: debe estar ordenado por Año, mes y día.
+*/
+select s.fecha, s.documento, nit, nombreCliente Cliente, costoTotal Total_Venta,cantidad NumProdVendidos, max(s.fecha) from salida s
+inner join Clientes c on c.idCliente = s.idCliente
+inner join SalidaDetalle sd on sd.idSalida = s.idSalida
+group by s.fecha, s.documento, nit, nombreCliente, costoTotal,cantidad
+order by s.fecha asc
+
+/*
+--escenario 4
+--4.	Scenario: Reporte detallado de utilidad por productos (David Vazquez)
+--a.	Given: el dueño de un negocio requiere conocer la utilidad bruta. 
+--b.	When: requiera la información
+--c.	Then: debería mostrar el nombre del producto, utilidad bruta.
+--d.	And: debe estar ordenado por nombre de producto.
+*/
+select p.nombre, sum((sd.cantidad * p.precio)-(sd.cantidad * p.costo)) Utilidad_Bruta from Productos p
+inner join SalidaDetalle sd on sd.idProducto = p.id
+group by p.nombre
+order by p.nombre asc
+
+
+/*
 5.  Scenario: Reporte detallado de utilidad por marca (Eloina Carrillo)
 Given: el due�o de un negocio requiere conocer la utilidad bruta  por marca
 When: requiera la informaci�n
