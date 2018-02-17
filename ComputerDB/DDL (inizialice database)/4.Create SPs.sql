@@ -1,4 +1,4 @@
-use ComputerDB
+use ComputerDB;
 -- =============================================
 -- Author:		Eduardo Barrios
 -- Create date: 06/04/2017
@@ -57,10 +57,14 @@ begin
 	select @CantidadAzar = ROUND(((@CantidadMaxima - @CantidadMinima -1) * RAND() + @CantidadMinima), 0)
 
 	declare @Precio float;
-	select @Precio = precio from Productos where id = @ProductoAzar
+	declare @Costo float;
 
-	insert into SalidaDetalle(idSalida,idProducto,cantidad,precio,costoTotal)
-	values(@idSalida,@ProductoAzar,@CantidadAzar,@Precio,(@CantidadAzar*@Precio))
+	select @Precio = precio from Productos where id = @ProductoAzar
+	select @Costo = costo from Productos where id = @ProductoAzar
+	
+
+	insert into SalidaDetalle(idSalida,idProducto,cantidad,precio,costo)
+	values(@idSalida,@ProductoAzar,@CantidadAzar,@Precio,@costo)
 end
 go
 
@@ -135,9 +139,9 @@ AS
 BEGIN
 select year(s.fecha) año,month(s.fecha) mes,d.nombreDepartamento departamento, m.nombreMunicipio municipio,
 c.nombreCliente cliente,p.nombre producto, count(sd.idProducto)as recuento_producto,
-sum(sd.cantidad * sd.costoTotal)as total_costo,
+sum(sd.cantidad * sd.costo)as total_costo,
 sum(sd.cantidad * sd.precio) as total_venta,
-sum((sd.cantidad * sd.precio)-(sd.cantidad * sd.costoTotal)) as utilidad_total
+sum((sd.cantidad * sd.precio)-(sd.cantidad * sd.costo)) as utilidad_total
  from Salida s, SalidaDetalle sd, clientes c, Municipio m, Departamento d, productos p 
 where s.idSalida=sd.idSalida and c.idCliente=s.idCliente
 and c.idMunicipio=m.idMunicipio and m.idDepartamento=d.idDepartamento
@@ -154,9 +158,9 @@ BEGIN
 SELECT t.fecha, t.Año, t.semestre, t.trimestre, t.mes, t.semana, t.dia, t.diaNombre, p.nombre,
 t.mesNombre1 + t.mesNombre2 AS mesNombre, s.idSalida,
 count(sd.idProducto)as recuento_producto,
-sum(sd.cantidad * sd.costoTotal)as total_costo,
+sum(sd.cantidad * sd.costo)as total_costo,
 sum(sd.cantidad * sd.precio) as total_venta,
-sum((sd.cantidad * sd.precio)-(sd.cantidad * sd.costoTotal)) as utilidad_total
+sum((sd.cantidad * sd.precio)-(sd.cantidad * sd.costo)) as utilidad_total
 FROM     (SELECT        fecha, YEAR(fecha) AS Año, CASE WHEN MONTH(fecha) BETWEEN 1 AND 6 THEN 1 ELSE 2 END AS semestre, DATEPART(qq, fecha) AS trimestre, 
                                                     MONTH(fecha) AS mes, DATEPART(wk, fecha) AS semana, DAY(fecha) AS dia, DATENAME(dw, fecha) AS diaNombre, CASE WHEN MONTH(fecha) 
                                                     = 1 THEN 'Enero' ELSE CASE WHEN MONTH(fecha) = 2 THEN 'Febrero' ELSE CASE WHEN MONTH(fecha) 

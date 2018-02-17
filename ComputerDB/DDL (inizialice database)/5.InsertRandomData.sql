@@ -1,7 +1,7 @@
 use ComputerDB;
 
 declare @totalDeSalidas int,@totalDeEntradas int
-select @totalDeSalidas=10000000,@totalDeEntradas=10000000
+select @totalDeSalidas=10000,@totalDeEntradas=10000
 
 -- INSERTAR ENCABEZADO DE SALIDAS
 declare @idsalida int

@@ -6,7 +6,7 @@ if db_id('ComputerDB') is not null begin
    print 'db exists'
    alter database ComputerDB set single_user with rollback immediate
    drop database ComputerDB;
-end
+end;
 
 -- Third step
 create database ComputerDB;
@@ -209,7 +209,7 @@ idSalida int,
 idProducto int,
 cantidad int,
 precio float,
-costoTotal float,
+costo float,
 constraint fk_idSalida foreign key(idSalida)references Salida(idSalida),
 constraint fk_idProductoDetalleSalida foreign key(idProducto) references Productos(id)
 );

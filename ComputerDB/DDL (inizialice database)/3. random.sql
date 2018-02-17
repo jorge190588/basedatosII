@@ -1,8 +1,5 @@
 -- step 1
-use ComputerDB;
-
--- step 2
-USE [ComputerDB]
+USE [ComputerDB];
 GO
 
 /****** Object:  View [dbo].[seeder]    Script Date: 08/02/2018 7:12:10 p. m. ******/
