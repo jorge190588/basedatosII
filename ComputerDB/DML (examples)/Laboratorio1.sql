@@ -20,10 +20,12 @@ order by s.fecha asc
 --c.	Then: deberÃ­a mostrar el nombre del producto, utilidad bruta.
 --d.	And: debe estar ordenado por nombre de producto.
 */
-select p.nombre, sum((sd.cantidad * p.precio)-(sd.cantidad * p.costo)) Utilidad_Bruta from Productos p
-inner join SalidaDetalle sd on sd.idProducto = p.id
-group by p.nombre
+select p.id, p.nombre, sum((sd.cantidad * sd.precio)-(sd.cantidad * sd.costo)) Utilidad_Bruta 
+from Productos p
+left join SalidaDetalle sd on sd.idProducto = p.id
+group by p.id,p.nombre
 order by p.nombre asc
+
 
 
 /*
@@ -34,16 +36,20 @@ Then: debería mostrar el año, el nombre la marca, utilidad bruta.
 And: debe estar ordenado por año en forma descendente y por nombre de marca en forma ascendente.
 And: debe estar agrupado por año y nombre de marca.
 */
-select year(s.fecha) as Año,
-       m.nombreMarca as Marca,
-       sum(isnull(costoTotal, 0) - isnull(cantidad, 0) * p.costo) as Utilidad_Bruta
-from Marca m
-inner join Productos p on p.idMarca = m.idMarca
-left join SalidaDetalle sd on sd.idProducto = p.id 
-inner join Salida s on s.idSalida = sd.idSalida
-group by m.nombreMarca, year(s.fecha)
-order by year(s.fecha) desc, Marca asc
 
+select marca from (
+	select year(s.fecha) as Año,
+		   m.nombreMarca as Marca,
+		   sum((isnull(sd.precio, 0)-isnull(sd.costo,0)) * isnull(sd.cantidad, 0) ) as Utilidad_Bruta
+	from Marca m
+	inner join Productos p on p.idMarca = m.idMarca
+	left join SalidaDetalle sd on sd.idProducto = p.id 
+	inner join Salida s on s.idSalida = sd.idSalida
+	group by m.nombreMarca, year(s.fecha)
+	-- order by year(s.fecha) desc, Marca asc
+) as resultado
+group by resultado.Marca
+order by resultado.Marca
 
 /*6.Scenario: Frecuencia de ventas por cliente. (Guillermo Pisqui)
 a.	Given: el dueño de un negocio requiere la frecuencia de ventas por cliente
@@ -51,8 +57,7 @@ b.	When: requiera la información
 c.	Then: debe mostrar el nombre del cliente y la frecuencia de ventas según la fecha.
 d.	And: debe estar ordenado por la frecuencia de menor a mayor.
 */
---MUESTRA LA FRECUENCIA DE COMPRA POR CADA CLIENTE, segun una fecha determinada
-use ComputerDB
+use ComputerDB;
 select c.idCliente, c.nombreCliente, COUNT(s.idSalida)as frecuencia from clientes c
 inner join Salida s on s.idCliente = c.idCliente where s.fecha ='2013-02-12'
 group by c.nombreCliente,c.idCliente
@@ -166,19 +171,13 @@ exec(@consulta)
 
 
 -----------------------------------------------------------------------------
-no.#8
-
-select *from salida              select fecha from salida
-select *from SalidaDetalle
-select *from Departamento
-select *from Municipio
-select *from Productos
 
 select cantidad from salidadetalle
  select  sum (cantidad) from salidadetalle 
  select sum (existencia) from Productos
 
-select d.nombredepartamento as [nombre] , m.nombremunicipio, salida.idproducto, salida.cantidad , salida.costototal, sa.fecha
+select d.nombredepartamento as [nombre] , m.nombremunicipio, salida.idproducto, 
+salida.cantidad , salida.costo, sa.fecha
   
 from Departamento d inner join Municipio m
 on d.idDepartamento = m.idMunicipio 
