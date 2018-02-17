@@ -63,3 +63,35 @@ order by fecha desc
 
 
 
+
+/*
+9.  Scenario: Reporte de utilidad bruta (Daniel Estupe)
+Given: el dueño de un negocio requiere información de las ventas
+When: requiera la información
+Then: debería mostrar el año, mes, ingresos, egresos y utilidad bruta 
+And: debe estar ordenado por año y mes
+And: debe ser posible filtrar por ninguno o varios años y por ninguno o varios meses
+*/
+
+declare @consulta varchar(max)
+declare @anhos varchar(50)
+declare @meses varchar(50)
+
+select @anhos = '2016'
+select @meses = '2'
+
+set @consulta = 'select year(fecha) as Año,
+					   datename(month, fecha) as Mes,
+					   sum(sd.costoTotal) as Ingresos,
+					   sum(sd.cantidad * p.costo) as Egresos,
+					   sum(costoTotal - cantidad * p.costo) as Utilidad_Bruta
+				from Salida s
+				inner join SalidaDetalle sd on sd.idSalida = s.idSalida
+				inner join Productos p on p.id = sd.idProducto
+				where (len('+ @anhos + ') > 0) 
+				and (len(' + @meses + ') > 0)
+				and (year(fecha) in (' + @anhos + ')) 
+				and month(fecha) in (' + @meses + ')
+				group by year(fecha), datename(month, fecha), month(fecha)
+				order by Año desc, month(fecha) asc'
+exec(@consulta)
