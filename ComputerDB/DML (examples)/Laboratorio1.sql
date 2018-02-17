@@ -1,3 +1,22 @@
+/*
+5.  Scenario: Reporte detallado de utilidad por marca (Eloina Carrillo)
+Given: el dueño de un negocio requiere conocer la utilidad bruta  por marca
+When: requiera la información
+Then: debería mostrar el año, el nombre la marca, utilidad bruta.
+And: debe estar ordenado por año en forma descendente y por nombre de marca en forma ascendente.
+And: debe estar agrupado por año y nombre de marca.
+*/
+select year(s.fecha) as Año,
+       m.nombreMarca as Marca,
+       sum(isnull(costoTotal, 0) - isnull(cantidad, 0) * p.costo) as Utilidad_Bruta
+from Marca m
+inner join Productos p on p.idMarca = m.idMarca
+left join SalidaDetalle sd on sd.idProducto = p.id 
+inner join Salida s on s.idSalida = sd.idSalida
+group by m.nombreMarca, year(s.fecha)
+order by year(s.fecha) desc, Marca asc
+
+
 /*6.Scenario: Frecuencia de ventas por cliente. (Guillermo Pisqui)
 a.	Given: el dueño de un negocio requiere la frecuencia de ventas por cliente
 b.	When: requiera la información
