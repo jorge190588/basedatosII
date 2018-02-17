@@ -129,3 +129,41 @@ set @consulta = 'select year(fecha) as Año,
 				group by year(fecha), datename(month, fecha), month(fecha)
 				order by Año desc, month(fecha) asc'
 exec(@consulta)
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+no.#8
+
+select *from salida              select fecha from salida
+select *from SalidaDetalle
+select *from Departamento
+select *from Municipio
+select *from Productos
+
+select cantidad from salidadetalle
+ select  sum (cantidad) from salidadetalle 
+ select sum (existencia) from Productos
+
+select d.nombredepartamento as [nombre] , m.nombremunicipio, salida.idproducto, salida.cantidad , salida.costototal, sa.fecha
+  
+from Departamento d inner join Municipio m
+on d.idDepartamento = m.idMunicipio 
+inner join SalidaDetalle salida
+on d.idDepartamento = salida.idSalidaDetalle
+inner join salida sa
+on d.iddepartamento = sa.idsalida
+
+go
+
+-----------------------------------------------------------------------------------
+select fecha from Salida
+min (fecha) as fechaminima, max (fecha) as fechamaxima
+------------------------------------------------------------------------------------
+
+
+
+
