@@ -27,7 +27,6 @@ group by p.id,p.nombre
 order by p.nombre asc
 
 
-
 /*
 5.  Scenario: Reporte detallado de utilidad por marca (Eloina Carrillo)
 Given: el dueño de un negocio requiere conocer la utilidad bruta  por marca
@@ -36,20 +35,16 @@ Then: debería mostrar el año, el nombre la marca, utilidad bruta.
 And: debe estar ordenado por año en forma descendente y por nombre de marca en forma ascendente.
 And: debe estar agrupado por año y nombre de marca.
 */
+select year(s.fecha) as Año,
+       m.nombreMarca as Marca,
+       sum(isnull(costoTotal, 0) - isnull(cantidad, 0) * p.costo) as Utilidad_Bruta
+from Marca m
+inner join Productos p on p.idMarca = m.idMarca
+left join SalidaDetalle sd on sd.idProducto = p.id 
+inner join Salida s on s.idSalida = sd.idSalida
+group by m.nombreMarca, year(s.fecha)
+order by year(s.fecha) desc, Marca asc
 
-select marca from (
-	select year(s.fecha) as Año,
-		   m.nombreMarca as Marca,
-		   sum((isnull(sd.precio, 0)-isnull(sd.costo,0)) * isnull(sd.cantidad, 0) ) as Utilidad_Bruta
-	from Marca m
-	inner join Productos p on p.idMarca = m.idMarca
-	left join SalidaDetalle sd on sd.idProducto = p.id 
-	inner join Salida s on s.idSalida = sd.idSalida
-	group by m.nombreMarca, year(s.fecha)
-	-- order by year(s.fecha) desc, Marca asc
-) as resultado
-group by resultado.Marca
-order by resultado.Marca
 
 /*6.Scenario: Frecuencia de ventas por cliente. (Guillermo Pisqui)
 a.	Given: el dueño de un negocio requiere la frecuencia de ventas por cliente
@@ -57,7 +52,8 @@ b.	When: requiera la información
 c.	Then: debe mostrar el nombre del cliente y la frecuencia de ventas según la fecha.
 d.	And: debe estar ordenado por la frecuencia de menor a mayor.
 */
-use ComputerDB;
+--MUESTRA LA FRECUENCIA DE COMPRA POR CADA CLIENTE, segun una fecha determinada
+use ComputerDB
 select c.idCliente, c.nombreCliente, COUNT(s.idSalida)as frecuencia from clientes c
 inner join Salida s on s.idCliente = c.idCliente where s.fecha ='2013-02-12'
 group by c.nombreCliente,c.idCliente
@@ -171,13 +167,19 @@ exec(@consulta)
 
 
 -----------------------------------------------------------------------------
+no.#8
+
+select *from salida              select fecha from salida
+select *from SalidaDetalle
+select *from Departamento
+select *from Municipio
+select *from Productos
 
 select cantidad from salidadetalle
  select  sum (cantidad) from salidadetalle 
  select sum (existencia) from Productos
 
-select d.nombredepartamento as [nombre] , m.nombremunicipio, salida.idproducto, 
-salida.cantidad , salida.costo, sa.fecha
+select d.nombredepartamento as [nombre] , m.nombremunicipio, salida.idproducto, salida.cantidad , salida.costototal, sa.fecha
   
 from Departamento d inner join Municipio m
 on d.idDepartamento = m.idMunicipio 
@@ -192,6 +194,46 @@ go
 select fecha from Salida
 min (fecha) as fechaminima, max (fecha) as fechamaxima
 ------------------------------------------------------------------------------------
+
+
+
+/*
+11.	Scenario: Reporte de proveedores (Francisco Ramirez)
+
+a.	Given: El dueño del negocio requiere conocer a sus proveedores
+b.	When: requiera la información
+c.	Then: un reporte debería mostrar el nombre del proveedor, dirección, teléfono, nit, fecha de primera compra, fecha de última compra, frecuencia de compra promedio 
+d.	And: debe estar ordenado por nombre
+e.	And: debe estar filtrado por uno o varios meses y uno o varios años
+*/
+declare @consulta varchar(max)
+declare @años varchar(40)
+declare @meses varchar(40)
+
+select @años = '2013, 2017'
+select @meses = '2, 3'
+
+set @consulta = 'select pr.idProveedor, pr.nombreProveedor, pr.direccion, pr.telefono, pr.nit,
+			(select min(entrada.fecha) from entrada)primera_compra, 
+				(select max(entrada.fecha) from Entrada )ultima_compra, count(en.idEntrada)promedio, en.fecha
+													            from proveedor pr
+
+				inner join Entrada en on en.idProveedor = pr.idProveedor
+		where	(len('''+ @años + ''') > 0) 
+				and (len(''' + @meses + ''') > 0)
+				and (year(fecha) in (' + @años + ')) 
+				and month(fecha) in (' + @meses + ')
+
+ -- where (month(en.fecha)=3) and (year(en.fecha) = 2017)
+
+			group by pr.idProveedor, pr.nombreProveedor, pr.direccion, pr.telefono, pr.nit, en.fecha
+			order by pr.nombreProveedor asc '
+
+ exec(@consulta)
+
+
+
+
 
 
 
