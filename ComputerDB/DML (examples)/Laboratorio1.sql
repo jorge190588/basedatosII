@@ -1,11 +1,26 @@
+/*6.Scenario: Frecuencia de ventas por cliente. (Guillermo Pisqui)
+a.	Given: el dueño de un negocio requiere la frecuencia de ventas por cliente
+b.	When: requiera la información
+c.	Then: debe mostrar el nombre del cliente y la frecuencia de ventas según la fecha.
+d.	And: debe estar ordenado por la frecuencia de menor a mayor.
+*/
+--MUESTRA LA FRECUENCIA DE COMPRA POR CADA CLIENTE, segun una fecha determinada
+use ComputerDB
+select c.idCliente, c.nombreCliente, COUNT(s.idSalida)as frecuencia from clientes c
+inner join Salida s on s.idCliente = c.idCliente where s.fecha ='2013-02-12'
+group by c.nombreCliente,c.idCliente
+order by frecuencia asc
+
+
+
 /*
 1.	Scenario: Reporte de clientes
-Given: El due�o del negocio requiere conocer a sus clientes
-When: requiera la informaci�n
-Then: un reporte deber�a mostrar el nombre, direcci�n, tel�fono y nit
+Given: El dueño del negocio requiere conocer a sus clientes
+When: requiera la información
+Then: un reporte debería mostrar el nombre, dirección, teléfono y nit
 And: debe estar ordenado por nombre 
-And: debe estar filtrado por las ventas del primer semestre de cada a�o.
-And: debe estar filtrado por el d�a lunes de las ventas.
+And: debe estar filtrado por las ventas del primer semestre de cada año.
+And: debe estar filtrado por el día lunes de las ventas.
 */
 
 select nombreCliente nombre, direccion,telefono,nit,
@@ -19,11 +34,11 @@ and datename(dw,s.fecha)='Lunes'
 order by nombreCliente
 
 /*
-2.	Scenario: Reporte de art�culos
-Given: El due�o del negocio requiere un listado de productos
-When: requiera la informaci�n
-Then: deber�a mostrar el c�digo, nombre, precio, costo, existencia, marca, total en ventas, total en costos y total en utilidad 
-And: debe estar ordenado por marca y nombre de art�culo
+2.	Scenario: Reporte de artículos
+Given: El dueño del negocio requiere un listado de productos
+When: requiera la información
+Then: debería mostrar el código, nombre, precio, costo, existencia, marca, total en ventas, total en costos y total en utilidad 
+And: debe estar ordenado por marca y nombre de artículo
 */
 
 select  codigo,nombre,d.precio,d.cantidad, d.costoTotal costo, existencia, m.nombreMarca marca,
@@ -66,11 +81,11 @@ order by fecha desc
 
 /*
 9.  Scenario: Reporte de utilidad bruta (Daniel Estupe)
-Given: el due�o de un negocio requiere informaci�n de las ventas
-When: requiera la informaci�n
-Then: deber�a mostrar el a�o, mes, ingresos, egresos y utilidad bruta 
-And: debe estar ordenado por a�o y mes
-And: debe ser posible filtrar por ninguno o varios a�os y por ninguno o varios meses
+Given: el dueño de un negocio requiere información de las ventas
+When: requiera la información
+Then: debería mostrar el año, mes, ingresos, egresos y utilidad bruta 
+And: debe estar ordenado por año y mes
+And: debe ser posible filtrar por ninguno o varios años y por ninguno o varios meses
 */
 
 declare @consulta varchar(max)
@@ -80,7 +95,7 @@ declare @meses varchar(50)
 select @anhos = '2016'
 select @meses = '2'
 
-set @consulta = 'select year(fecha) as A�o,
+set @consulta = 'select year(fecha) as Año,
 					   datename(month, fecha) as Mes,
 					   sum(sd.costoTotal) as Ingresos,
 					   sum(sd.cantidad * p.costo) as Egresos,
@@ -93,5 +108,5 @@ set @consulta = 'select year(fecha) as A�o,
 				and (year(fecha) in (' + @anhos + ')) 
 				and month(fecha) in (' + @meses + ')
 				group by year(fecha), datename(month, fecha), month(fecha)
-				order by A�o desc, month(fecha) asc'
+				order by Año desc, month(fecha) asc'
 exec(@consulta)
