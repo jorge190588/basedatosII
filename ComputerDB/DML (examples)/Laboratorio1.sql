@@ -1,4 +1,4 @@
-
+EJERCICIO 2 DAVID FERNANDEZ
 select 
 	id codigo,
 	nombre,
