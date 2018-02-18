@@ -1,3 +1,20 @@
+EJERCICIO 2 DAVID FERNANDEZ
+select 
+	id codigo,
+	nombre,
+	p.precio,
+	costo,
+	existencia,
+	m.nombreMarca, 
+	count(sd.cantidad) as [recuento de ventas] 
+	from 
+	Productos p
+	inner join Marca m on p.idMarca = m.idMarca
+	left join SalidaDetalle sd on p.id=sd.idProducto where p.idMarca=m.idMarca
+	group by id, nombre,p.precio,costo,existencia,m.nombreMarca
+	order by nombre , nombreMarca asc
+
+
 /*
 --ESCENARIO 3
 --3.	Scenario: Reporte de ventas (Allan y David)
