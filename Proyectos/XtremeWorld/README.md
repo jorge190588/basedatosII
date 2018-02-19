@@ -13,7 +13,7 @@ if ( datepart(dw, @fecha_inicial) != 5 )
 
 Para este proyecto se ha utilizado el sistema gestor SQL Server 2014 con formato de fecha `YY-MM-DD`.
 
-El lenguaje utilizado para la conección a la BD se utilizó `PHP 7.1.12`
+El lenguaje utilizado para la conección a la BD es `PHP 7.1.12`
 y como servidor web `Apache`.
 
 Para el diseño de la página web se ha utilizado `Materialize`.
