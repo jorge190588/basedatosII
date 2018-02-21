@@ -3,14 +3,17 @@
 --3.	Scenario: Reporte de ventas (Allan y David)
 --a.	Given: el dueÃ±o de un negocio requiere informaciÃ³n de las ventas
 --b.	When: requiera la informaciÃ³n
---c.	Then: deberÃ­a mostrar la fecha, nit, cliente, total de venta, numero de productos vendidos y fecha de ultima venta del Ãºltimo trimestre por cliente
+--c.	Then: deberÃ­a mostrar la fecha, nit, cliente, total de venta, numero de productos vendidos y 
+        fecha de ultima venta del Ãºltimo trimestre por cliente
 --d.	And: debe estar ordenado por AÃ±o, mes y dÃ­a.
 */
-select s.fecha, s.documento, nit, nombreCliente Cliente, costoTotal Total_Venta,cantidad NumProdVendidos, max(s.fecha) from salida s
+select c.nit, c.nombreCliente, sum(sd.cantidad * sd.precio) as Total_Venta, sum(sd.cantidad) as NumProVendidos, max(s.fecha) as Fecha_Ult_Venta
+	from Salida s
 inner join Clientes c on c.idCliente = s.idCliente
 inner join SalidaDetalle sd on sd.idSalida = s.idSalida
-group by s.fecha, s.documento, nit, nombreCliente, costoTotal,cantidad
-order by s.fecha asc
+group by s.idCliente, c.nit, c.nombreCliente
+order by max(s.fecha) asc
+
 
 /*
 --escenario 4
@@ -19,12 +22,11 @@ order by s.fecha asc
 --b.	When: requiera la informaciÃ³n
 --c.	Then: deberÃ­a mostrar el nombre del producto, utilidad bruta.
 --d.	And: debe estar ordenado por nombre de producto.
-*/
-select p.nombre, sum((sd.cantidad * p.precio)-(sd.cantidad * p.costo)) Utilidad_Bruta from Productos p
+*/ 
+select p.nombre, sum((sd.cantidad * sd.precio)-(sd.cantidad * p.costo)) Utilidad_Bruta from Productos p
 inner join SalidaDetalle sd on sd.idProducto = p.id
 group by p.nombre
 order by p.nombre asc
-
 
 /*
 5.  Scenario: Reporte detallado de utilidad por marca (Eloina Carrillo)
