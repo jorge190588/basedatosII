@@ -1,12 +1,14 @@
 /*
 --ESCENARIO 3
 --3.	Scenario: Reporte de ventas (Allan y David)
---a.	Given: el dueÃƒÂ±o de un negocio requiere informaciÃƒÂ³n de las ventas
---b.	When: requiera la informaciÃƒÂ³n
+--a.	Given: el due±o de un negocio requiere informacion de las ventas
+--b.	When: requiera la informacion
 --c.	Then: deberÃƒÂ­a mostrar la fecha, nit, cliente, total de venta, numero de productos vendidos y 
-        fecha de ultima venta del ÃƒÂºltimo trimestre por cliente
---d.	And: debe estar ordenado por AÃƒÂ±o, mes y dÃƒÂ­a.
+        fecha de ultima venta del ultimo trimestre por cliente
+--d.	And: debe estar ordenado por A±o, mes y di­a.
+
 */
+
 select c.nit, c.nombreCliente, sum(sd.cantidad * sd.precio) as Total_Venta, sum(sd.cantidad) as NumProVendidos, max(s.fecha) as Fecha_Ult_Venta
 	from Salida s
 inner join Clientes c on c.idCliente = s.idCliente
@@ -18,25 +20,26 @@ order by max(s.fecha) asc
 /*
 --escenario 4
 --4.	Scenario: Reporte detallado de utilidad por productos (David Vazquez)
---a.	Given: el dueÃƒÂ±o de un negocio requiere conocer la utilidad bruta. 
---b.	When: requiera la informaciÃƒÂ³n
---c.	Then: deberÃƒÂ­a mostrar el nombre del producto, utilidad bruta.
+--a.	Given: el dueÃ±o de un negocio requiere conocer la utilidad bruta. 
+--b.	When: requiera la informaciÃ³n
+--c.	Then: deberÃ­a mostrar el nombre del producto, utilidad bruta.
 --d.	And: debe estar ordenado por nombre de producto.
 */ 
-select p.nombre, sum((sd.cantidad * sd.precio)-(sd.cantidad * p.costo)) Utilidad_Bruta from Productos p
+
+select p.nombre as NombreProducto, sum((sd.cantidad * sd.precio)-(sd.cantidad * p.costo)) Utilidad_Bruta from Productos p
 inner join SalidaDetalle sd on sd.idProducto = p.id
 group by p.nombre
 order by p.nombre asc
 
 /*
 5.  Scenario: Reporte detallado de utilidad por marca (Eloina Carrillo)
-Given: el dueÃ±o de un negocio requiere conocer la utilidad bruta  por marca
-When: requiera la informaciÃ³n
-Then: deberÃ­a mostrar el aÃ±o, el nombre la marca, utilidad bruta.
-And: debe estar ordenado por aÃ±o en forma descendente y por nombre de marca en forma ascendente.
-And: debe estar agrupado por aÃ±o y nombre de marca.
+Given: el dueño de un negocio requiere conocer la utilidad bruta  por marca
+When: requiera la información
+Then: debería mostrar el año, el nombre la marca, utilidad bruta.
+And: debe estar ordenado por año en forma descendente y por nombre de marca en forma ascendente.
+And: debe estar agrupado por año y nombre de marca.
 */
-select year(s.fecha) as AÃ±o,
+select year(s.fecha) as Año,
        m.nombreMarca as Marca,
        sum(isnull(costoTotal, 0) - isnull(cantidad, 0) * p.costo) as Utilidad_Bruta
 from Marca m
@@ -48,9 +51,9 @@ order by year(s.fecha) desc, Marca asc
 
 
 /*6.Scenario: Frecuencia de ventas por cliente. (Guillermo Pisqui)
-a.	Given: el dueÃ±o de un negocio requiere la frecuencia de ventas por cliente
-b.	When: requiera la informaciÃ³n
-c.	Then: debe mostrar el nombre del cliente y la frecuencia de ventas segÃºn la fecha.
+a.	Given: el dueño de un negocio requiere la frecuencia de ventas por cliente
+b.	When: requiera la información
+c.	Then: debe mostrar el nombre del cliente y la frecuencia de ventas según la fecha.
 d.	And: debe estar ordenado por la frecuencia de menor a mayor.
 */
 --MUESTRA LA FRECUENCIA DE COMPRA POR CADA CLIENTE, segun una fecha determinada
@@ -64,12 +67,12 @@ order by frecuencia asc
 
 /*
 1.	Scenario: Reporte de clientes
-Given: El dueÃ±o del negocio requiere conocer a sus clientes
-When: requiera la informaciÃ³n
-Then: un reporte deberÃ­a mostrar el nombre, direcciÃ³n, telÃ©fono y nit
+Given: El dueño del negocio requiere conocer a sus clientes
+When: requiera la información
+Then: un reporte debería mostrar el nombre, dirección, teléfono y nit
 And: debe estar ordenado por nombre 
-And: debe estar filtrado por las ventas del primer semestre de cada aÃ±o.
-And: debe estar filtrado por el dÃ­a lunes de las ventas.
+And: debe estar filtrado por las ventas del primer semestre de cada año.
+And: debe estar filtrado por el día lunes de las ventas.
 */
 
 select nombreCliente nombre, direccion,telefono,nit,
@@ -83,11 +86,11 @@ and datename(dw,s.fecha)='Lunes'
 order by nombreCliente
 
 /*
-2.	Scenario: Reporte de artÃ­culos
-Given: El dueÃ±o del negocio requiere un listado de productos
-When: requiera la informaciÃ³n
-Then: deberÃ­a mostrar el cÃ³digo, nombre, precio, costo, existencia, marca, total en ventas, total en costos y total en utilidad 
-And: debe estar ordenado por marca y nombre de artÃ­culo
+2.	Scenario: Reporte de artículos
+Given: El dueño del negocio requiere un listado de productos
+When: requiera la información
+Then: debería mostrar el código, nombre, precio, costo, existencia, marca, total en ventas, total en costos y total en utilidad 
+And: debe estar ordenado por marca y nombre de artículo
 */
 
 select  codigo,nombre,d.precio,d.cantidad, d.costoTotal costo, existencia, m.nombreMarca marca,
@@ -130,11 +133,11 @@ order by fecha desc
 
 /*
 9.  Scenario: Reporte de utilidad bruta (Daniel Estupe)
-Given: el dueÃ±o de un negocio requiere informaciÃ³n de las ventas
-When: requiera la informaciÃ³n
-Then: deberÃ­a mostrar el aÃ±o, mes, ingresos, egresos y utilidad bruta 
-And: debe estar ordenado por aÃ±o y mes
-And: debe ser posible filtrar por ninguno o varios aÃ±os y por ninguno o varios meses
+Given: el dueño de un negocio requiere información de las ventas
+When: requiera la información
+Then: debería mostrar el año, mes, ingresos, egresos y utilidad bruta 
+And: debe estar ordenado por año y mes
+And: debe ser posible filtrar por ninguno o varios años y por ninguno o varios meses
 */
 
 use ComputerDB;
@@ -145,7 +148,7 @@ declare @meses varchar(50)
 select @anhos = '2016,2017'
 select @meses = '2'
 
-set @consulta = 'select year(fecha) as AÃ±o,
+set @consulta = 'select year(fecha) as Año,
 					   datename(month, fecha) as Mes,
 					   sum(sd.costoTotal) as Ingresos,
 					   sum(sd.cantidad * p.costo) as Egresos,
@@ -158,7 +161,7 @@ set @consulta = 'select year(fecha) as AÃ±o,
 				and (year(fecha) in (' + @anhos + ')) 
 				and month(fecha) in (' + @meses + ')
 				group by year(fecha), datename(month, fecha), month(fecha)
-				order by AÃ±o desc, month(fecha) asc'
+				order by Año desc, month(fecha) asc'
 print(@consulta)
 exec(@consulta)
 
@@ -201,18 +204,19 @@ min (fecha) as fechaminima, max (fecha) as fechamaxima
 /*
 11.	Scenario: Reporte de proveedores (Francisco Ramirez)
 
-a.	Given: El dueÃ±o del negocio requiere conocer a sus proveedores
-b.	When: requiera la informaciÃ³n
-c.	Then: un reporte deberÃ­a mostrar el nombre del proveedor, direcciÃ³n, telÃ©fono, nit, fecha de primera compra, fecha de Ãºltima compra, frecuencia de compra promedio 
+a.	Given: El dueño del negocio requiere conocer a sus proveedores
+b.	When: requiera la información
+c.	Then: un reporte debería mostrar el nombre del proveedor, dirección, teléfono, nit, 
+fecha de primera compra, fecha de última compra, frecuencia de compra promedio 
 d.	And: debe estar ordenado por nombre
-e.	And: debe estar filtrado por uno o varios meses y uno o varios aÃ±os
+e.	And: debe estar filtrado por uno o varios meses y uno o varios años
 */
 declare @consulta varchar(max)
-declare @aÃ±os varchar(40)
+declare @años varchar(40)
 declare @meses varchar(40)
 
-select @aÃ±os = '2013, 2017'
-select @meses = '2, 3'
+select @años = '2016,2017'
+select @meses = '10'
 
 set @consulta = 'select pr.idProveedor, pr.nombreProveedor, pr.direccion, pr.telefono, pr.nit,
 			(select min(entrada.fecha) from entrada)primera_compra, 
@@ -220,12 +224,10 @@ set @consulta = 'select pr.idProveedor, pr.nombreProveedor, pr.direccion, pr.tel
 													            from proveedor pr
 
 				inner join Entrada en on en.idProveedor = pr.idProveedor
-		where	(len('''+ @aÃ±os + ''') > 0) 
+		where	(len('''+ @años + ''') > 0) 
 				and (len(''' + @meses + ''') > 0)
-				and (year(fecha) in (' + @aÃ±os + ')) 
+				and (year(fecha) in (' + @años + ')) 
 				and month(fecha) in (' + @meses + ')
-
- -- where (month(en.fecha)=3) and (year(en.fecha) = 2017)
 
 			group by pr.idProveedor, pr.nombreProveedor, pr.direccion, pr.telefono, pr.nit, en.fecha
 			order by pr.nombreProveedor asc '
@@ -253,7 +255,8 @@ group by id, nombre,costo, existencia, p.precio, m.nombreMarca
 order by nombre, nombreMarca asc
 
 
-
+select * from entradadetalle
+select * from entrada
 
 
 
