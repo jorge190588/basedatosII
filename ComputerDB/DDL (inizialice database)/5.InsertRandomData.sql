@@ -35,7 +35,7 @@ set @idEntrada=1
 --select @variable as [Variable]
 while(@idEntrada <= @totalDeEntradas)
 begin
-	execute sp_InsertarEntradaMasivo '2017-10-10',@idEntrada
+	execute sp_InsertarEntradaMasivo @idEntrada
 	set @idEntrada = @idEntrada+1
 end
 
