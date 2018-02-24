@@ -113,16 +113,26 @@ from (
 /*6.Scenario: Frecuencia de ventas por cliente. (Guillermo Pisqui)
 a.	Given: el dueño de un negocio requiere la frecuencia de ventas por cliente
 b.	When: requiera la información
-c.	Then: debe mostrar el nombre del cliente y la frecuencia de ventas según la fecha.
+c.	Then: debe mostrar el nombre del cliente y la frecuencia de ventas
 d.	And: debe estar ordenado por la frecuencia de menor a mayor.
 */
---MUESTRA LA FRECUENCIA DE COMPRA POR CADA CLIENTE, segun una fecha determinada
-use ComputerDB
-select c.idCliente, c.nombreCliente, COUNT(s.idSalida)as frecuencia from clientes c
-inner join Salida s on s.idCliente = c.idCliente where s.fecha ='2013-02-12'
-group by c.nombreCliente,c.idCliente
-order by frecuencia asc
+	use ComputerDB;
+	select c.idCliente, c.nombreCliente
+	,isnull((round((cast((DATEDIFF(day,MIN(s.fecha),max(s.fecha)))as float)/
+	(count(distinct fecha))),2,0)),0)as frecuencia_en_dias 
+	from Clientes c
+	left join Salida s on s.idCliente = c.idCliente
+	left join SalidaDetalle sa on sa.idSalida = s.idSalida
+	group by c.idCliente, c.nombreCliente
+	order by frecuencia_en_dias asc
 
+--comprobacion con el cliente id=10. Sara Aguilar
+	select 
+	cast((datediff(DAY,min(s.fecha),max(s.fecha)))as float)
+	/COUNT(distinct s.fecha)
+	from Salida s where s.idCliente=10
+--comprobando que el cliente id=165 nunca compra
+	select * from Salida where idCliente = 165
 
 /*
 9.  Scenario: Reporte de utilidad bruta (Daniel Estupe)
