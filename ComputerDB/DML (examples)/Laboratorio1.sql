@@ -9,12 +9,7 @@ e.	And: debe estar ordenado por marca y nombre de artículo.
 
  use ComputerDB
 select 
-	id codigo,
-	nombre,
-	p.precio,
-	costo,
-	existencia,
-	m.nombreMarca, 
+	id codigo, nombre, p.precio, costo,  existencia, m.nombreMarca, 
 	count(sd.cantidad) as [recuento de ventas] 
 from  
 	productos p, marca m, SalidaDetalle sd
