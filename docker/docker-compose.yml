@@ -1,0 +1,13 @@
+version: '3'
+services:
+ sql:
+  container_name: sqlExpress2017
+  build: .
+  volumes:
+   - ./files:/files
+  environment:
+   - SA_PASSWORD=ComputerDB190%
+   - ACCEPT_EULA=Y
+   - MSSQL_PID=Express
+  ports:
+   - "1433:1433"
