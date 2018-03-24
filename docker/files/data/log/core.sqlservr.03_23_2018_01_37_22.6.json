@@ -1,0 +1,40 @@
+{
+    "reason": "0x00000006",
+    "processName": "sqlservr",
+    "pid": "6",
+    "instanceId": "5a25b9e8-d941-442e-beca-46e06dfdce81",
+    "crashId": "22b00a47-0296-4a90-8f65-ed23f2d36d45",
+    "threadId": "10",
+    "libosThreadId": "0x1000",
+    "buildStamp": "993256bf4ed5b23dccdd9c7a12c2daa08a22885491809c4d54e790018127d446",
+    "status": "0x40000015",
+    "message": "Kernel bug check",
+    "address": "0x6a42b460",
+    "parameters": [
+        {
+            "value": "0x41"
+        },
+        {
+            "value": "0xffffffffc000000d"
+        },
+        {
+            "value": "0x5"
+        },
+        {
+            "value": "0x0"
+        },
+        {
+            "value": "0x0"
+        }
+    ],
+    "libosStack": [
+        "0x000000006a4e83d6",
+        "0x000000006a42b4bb",
+        "0x000000006a41ecfd",
+        "0x000000006a42ae5b",
+        "0x000000006a4e6955",
+        "0x000000006a4e5a04",
+        "0x000000006a4e5876",
+        "0x000000006a4e575e"
+    ]
+}

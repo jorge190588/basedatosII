@@ -1,0 +1,21 @@
+sqlservr
+  Version 14.0.3022.28
+  Build ID 993256bf4ed5b23dccdd9c7a12c2daa08a22885491809c4d54e790018127d446
+  Build Type release
+  Git Version 9efc5f7
+  Built at Fri Feb 16 22:21:07 GMT 2018
+
+PAL
+  Build ID 282f4d946a6eeda11007df35967ce8efca292a1bb5cae75151c41c58944da6d5
+  Build Type release
+  Git Version 41c8816
+  Built at Fri Feb 16 22:19:33 GMT 2018
+
+Packages
+  system.sfp                    6.2.9200.4,41c8816e8,
+  system.common.sfp             10.0.15063.540
+  system.certificates.sfp       6.2.9200.4,41c8816e8,
+  system.netfx.sfp              4.6.1590.0
+  secforwarderxplat.sfp         14.0.3022.28
+  sqlservr.sfp                  14.0.3022.28
+  sqlagent.sfp                  14.0.3022.28

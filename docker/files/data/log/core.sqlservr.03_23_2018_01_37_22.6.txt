@@ -1,0 +1,16 @@
+This program has encountered a fatal error and cannot continue running.
+The following diagnostic information is available:
+
+       Reason: 0x00000006
+       Status: 0x40000015
+      Message: Kernel bug check
+      Address: 0x6a42b460
+   Parameters: 0x6a629610
+                                                                              Stacktrace: 000000006a4e83d6 000000006a42b4bb 000000006a41ecfd 
+               000000006a42ae5b 000000006a4e6955 000000006a4e5a04 
+               000000006a4e5876 000000006a4e575e 
+      Process: 6 - sqlservr
+       Thread: 10 (application thread 0x1000)
+  Instance Id: 5a25b9e8-d941-442e-beca-46e06dfdce81
+     Crash Id: 22b00a47-0296-4a90-8f65-ed23f2d36d45
+  Build stamp: 993256bf4ed5b23dccdd9c7a12c2daa08a22885491809c4d54e790018127d446

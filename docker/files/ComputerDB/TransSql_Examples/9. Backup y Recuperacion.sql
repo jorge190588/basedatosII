@@ -4,7 +4,7 @@ use ComputerDB
 BACKUP DATABASE ComputerDB						--Se selecciona la bd a copiar
 TO DISK = 'C:\backups\ComputerDB.Bak'				--seleccionamos a la carperta en donde se guardara junto con el nombre de la base de datos y la extencion .bak
    WITH FORMAT,								-- FORMAT (elimina las copias de seguridad existente y crea una nueva (con el mismo nombre) ).
-      MEDIANAME = 'Z_SQLServerBackups',
+      MEDIANAME = 'ComputerDB',
       NAME = 'ComputerDB';
 GO
 
@@ -15,12 +15,20 @@ GO
 ------------- 2 REstarurar una Base de Datos 
 -- Que permite cambiar la ubicacion de almacenamiento, nombre de la base de datos
 -- nombre del archivo mdf y nombre del archivo log
+use master;
 
-RESTORE DATABASE ComputerDB												-- Se elige la base de datos a restaurar
- FROM Z_SQLServerBackups											-- la direccion donde se guardan los backups
+RESTORE DATABASE ComputerDB_2												-- Se elige la base de datos a restaurar
+ FROM ComputerDB											-- la direccion donde se guardan los backups
  WITH RECOVERY,
- MOVE 'Z_SQLServerBackups' TO 'C:\backups\ComputerDB.mdf',
- MOVE 'Z_SQLServerBackups_Log' TO 'C:\backups\ComputerDB.ldf';
+ MOVE 'ComputerDB' TO 'C:\backups\ComputerDB.mdf',
+ MOVE 'ComputerDB_log' TO 'C:\backups\ComputerDB_log.ldf';
+GO
+
+RESTORE DATABASE ComputerDB_2												-- Se elige la base de datos a restaurar
+ FROM DISK = 'C:\backups\ComputerDB.bak'											-- la direccion donde se guardan los backups
+ WITH RECOVERY,
+ MOVE 'ComputerDB' TO 'C:\backups\ComputerDB.mdf',
+ MOVE 'ComputerDB_log' TO 'C:\backups\ComputerDB_log.ldf';
 GO
 
 ---------------------------------------------------------------

@@ -1,0 +1,256 @@
+[    0.000000] vboxvideo: Unknown symbol drm_mode_create_suggested_offset_properties (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_config_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_crtc_cleanup (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_device_release (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_encoder_cleanup (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_object_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_connector_unregister (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_prime_handle_to_fd (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_crtc_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_add_modes_noedid (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_object_lookup (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_get_pci_dev (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_irq_uninstall (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_kunmap (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_del_sub_from_lru (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_framebuffer_unregister_private (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_prime_import (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_ioctl (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_prime_fd_to_handle (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_object_free (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_connector_update_edid_property (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_kms_helper_poll_enable (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_connector_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_err (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_device_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_init_mm (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_dma_acc_size (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_read (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_object_release (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_tt_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_kmap (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_dumb_destroy (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_handle_create (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_put_dev (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_object_attach_property (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_helper_mode_fill_fb_struct (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_add_to_lru (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_unref (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_irq_install (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_connector_attach_encoder (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_mem_global_release (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_helper_connector_dpms (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_mem_global_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_connector_cleanup (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_pci_set_busid (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_object_property_set_value (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_encoder_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_kms_helper_hotplug_event (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_global_item_ref (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_helper_probe_single_connector_modes (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_cvt_mode (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_validate (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_destroy (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_config_reset (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_config_cleanup (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_move_memcpy (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_helper_resume_force_mode (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_compat_ioctl (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_crtc_helper_set_config (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_tt_fini (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_pool_populate (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_release (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_prime_export (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_mmap (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_framebuffer_cleanup (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_global_item_unref (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_open (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_poll (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_object_find (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_global_release (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_kms_helper_poll_disable (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_crtc_set_gamma_size (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_connector_register (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_pool_unpopulate (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_framebuffer_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_helper_disable_unused_functions (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_modeset_unlock_all (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_manager_func (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_probed_add (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_global_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_modeset_lock_all (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_create_suggested_offset_properties (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_config_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_crtc_cleanup (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_device_release (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_encoder_cleanup (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_object_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_connector_unregister (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_prime_handle_to_fd (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_crtc_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_add_modes_noedid (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_object_lookup (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_get_pci_dev (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_irq_uninstall (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_kunmap (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_del_sub_from_lru (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_framebuffer_unregister_private (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_prime_import (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_ioctl (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_prime_fd_to_handle (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_object_free (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_connector_update_edid_property (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_kms_helper_poll_enable (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_connector_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_err (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_device_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_init_mm (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_dma_acc_size (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_read (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_object_release (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_tt_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_kmap (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_dumb_destroy (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_handle_create (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_put_dev (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_object_attach_property (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_helper_mode_fill_fb_struct (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_add_to_lru (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_unref (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_irq_install (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_connector_attach_encoder (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_mem_global_release (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_helper_connector_dpms (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_mem_global_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_connector_cleanup (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_pci_set_busid (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_object_property_set_value (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_encoder_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_kms_helper_hotplug_event (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_global_item_ref (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_helper_probe_single_connector_modes (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_cvt_mode (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_init (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_validate (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_destroy (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_config_reset (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_mode_config_cleanup (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_bo_move_memcpy (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_helper_resume_force_mode (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_compat_ioctl (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_crtc_helper_set_config (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_tt_fini (err 0)
+[    0.000000] vboxvideo: Unknown symbol ttm_pool_populate (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_release (err 0)
+[    0.000000] vboxvideo: Unknown symbol drm_gem_prime_export (err 0)
+[    0.000000] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    0.000000] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    0.000000] vboxsf: Successfully loaded version 5.2.2 (interface 0x00010004)
+[    0.000000] VBoxService 5.2.2 r119230 (verbosity: 0) linux.amd64 (Nov 22 2017 17:22:52) release log
+[    0.000000] 00:00:00.000124 main     Log opened 2018-03-22T18:51:51.757150000Z
+[    0.000000] 00:00:00.001855 main     OS Product: Linux
+[    0.000000] 00:00:00.001895 main     OS Release: 4.4.115-boot2docker
+[    0.000000] 00:00:00.001928 main     OS Version: #1 SMP Thu Feb 8 17:36:45 UTC 2018
+[    0.000000] 00:00:00.001958 main     Executable: /sbin/VBoxService
+[    0.000000] 00:00:00.001959 main     Process ID: 2044
+[    0.000000] 00:00:00.001960 main     Package type: LINUX_64BITS_GENERIC
+[    0.000000] 00:00:00.006637 main     5.2.2 r119230 started. Verbose level = 0
+[    0.000000] 00:00:00.010811 vminfo   rtldrNativeLoad: dlopen('libdbus-1.so.3', RTLD_NOW | RTLD_LOCAL) failed: libdbus-1.so.3: cannot open shared object file: No such file or directory
+[    0.000000] 00:00:00.010888 vminfo   Error: Unable to connect to system D-Bus (1/3): D-Bus not installed
+[    0.000000] sf_read_super_aux err=-22
+[    0.000000] random: sshd: uninitialized urandom read (32 bytes read, 106 bits of entropy available)
+[    0.000000] NET: Registered protocol family 10
+[    0.000000] random: sshd: uninitialized urandom read (32 bytes read, 119 bits of entropy available)
+[    0.000000] 00:00:05.012980 vminfo   Error: Unable to connect to system D-Bus (2/3): D-Bus not installed
+[    0.000000] random: sshd: uninitialized urandom read (32 bytes read, 120 bits of entropy available)
+[    0.000000] random: sshd: uninitialized urandom read (32 bytes read, 128 bits of entropy available)
+[    0.000000] random: nonblocking pool is initialized
+[    0.000000] aufs au_opts_verify:1606:dockerd[2192]: dirperm1 breaks the protection by the permission bits on the lower branch
+[    0.000000] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    0.000000] Bridge firewalling registered
+[    0.000000] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    0.000000] ctnetlink v0.93: registering with nfnetlink.
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): br-d44ba5febe9a: link is not ready
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): br-e43ab551f74d: link is not ready
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): docker0: link is not ready
+[    0.000000] 00:00:10.014389 vminfo   Error: Unable to connect to system D-Bus (3/3): D-Bus not installed
+[    0.000000] device veth5781f29 entered promiscuous mode
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): veth5781f29: link is not ready
+[    0.000000] cgroup: docker-runc (2561) created nested cgroup for controller "memory" which has incomplete hierarchy support. Nested cgroups may change behavior in the future.
+[    0.000000] cgroup: "memory" requires setting use_hierarchy to 1 on the root
+[    0.000000] eth0: renamed from vethacbe2ec
+[    0.000000] IPv6: ADDRCONF(NETDEV_CHANGE): veth5781f29: link becomes ready
+[    0.000000] br-e43ab551f74d: port 1(veth5781f29) entered forwarding state
+[    0.000000] br-e43ab551f74d: port 1(veth5781f29) entered forwarding state
+[    0.000000] IPv6: ADDRCONF(NETDEV_CHANGE): br-e43ab551f74d: link becomes ready
+[    0.000000] br-e43ab551f74d: port 1(veth5781f29) entered forwarding state
+[    0.000000] br-e43ab551f74d: port 1(veth5781f29) entered disabled state
+[    0.000000] vethacbe2ec: renamed from eth0
+[    0.000000] br-e43ab551f74d: port 1(veth5781f29) entered disabled state
+[    0.000000] device veth5781f29 left promiscuous mode
+[    0.000000] br-e43ab551f74d: port 1(veth5781f29) entered disabled state
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): br-74e510847c72: link is not ready
+[    0.000000] device veth5ac4659 entered promiscuous mode
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): veth5ac4659: link is not ready
+[    0.000000] eth0: renamed from vethe29f127
+[    0.000000] IPv6: ADDRCONF(NETDEV_CHANGE): veth5ac4659: link becomes ready
+[    0.000000] br-74e510847c72: port 1(veth5ac4659) entered forwarding state
+[    0.000000] br-74e510847c72: port 1(veth5ac4659) entered forwarding state
+[    0.000000] IPv6: ADDRCONF(NETDEV_CHANGE): br-74e510847c72: link becomes ready
+[    0.000000] br-74e510847c72: port 1(veth5ac4659) entered forwarding state
+[    0.000000] e1000: eth1 NIC Link is Down
+[    0.000000] e1000: eth1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    0.000000] vethe29f127: renamed from eth0
+[    0.000000] br-74e510847c72: port 1(veth5ac4659) entered disabled state
+[    0.000000] br-74e510847c72: port 1(veth5ac4659) entered disabled state
+[    0.000000] device veth5ac4659 left promiscuous mode
+[    0.000000] br-74e510847c72: port 1(veth5ac4659) entered disabled state
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): br-778577e9b86f: link is not ready
+[    0.000000] device vethe1e3e24 entered promiscuous mode
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): vethe1e3e24: link is not ready
+[    0.000000] eth0: renamed from vethea97dd1
+[    0.000000] IPv6: ADDRCONF(NETDEV_CHANGE): vethe1e3e24: link becomes ready
+[    0.000000] docker0: port 1(vethe1e3e24) entered forwarding state
+[    0.000000] docker0: port 1(vethe1e3e24) entered forwarding state
+[    0.000000] IPv6: ADDRCONF(NETDEV_CHANGE): docker0: link becomes ready
+[    0.000000] docker0: port 1(vethe1e3e24) entered disabled state
+[    0.000000] vethea97dd1: renamed from eth0
+[    0.000000] docker0: port 1(vethe1e3e24) entered disabled state
+[    0.000000] device vethe1e3e24 left promiscuous mode
+[    0.000000] docker0: port 1(vethe1e3e24) entered disabled state
+[    0.000000] device vetheeed0bb entered promiscuous mode
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): vetheeed0bb: link is not ready
+[    0.000000] br-778577e9b86f: port 1(vetheeed0bb) entered forwarding state
+[    0.000000] br-778577e9b86f: port 1(vetheeed0bb) entered forwarding state
+[    0.000000] br-778577e9b86f: port 1(vetheeed0bb) entered disabled state
+[    0.000000] eth0: renamed from veth2c21f8a
+[    0.000000] IPv6: ADDRCONF(NETDEV_CHANGE): vetheeed0bb: link becomes ready
+[    0.000000] br-778577e9b86f: port 1(vetheeed0bb) entered forwarding state
+[    0.000000] br-778577e9b86f: port 1(vetheeed0bb) entered forwarding state
+[    0.000000] IPv6: ADDRCONF(NETDEV_CHANGE): br-778577e9b86f: link becomes ready
+[    0.000000] br-778577e9b86f: port 1(vetheeed0bb) entered forwarding state
+[    0.000000] br-778577e9b86f: port 1(vetheeed0bb) entered disabled state
+[    0.000000] veth2c21f8a: renamed from eth0
+[    0.000000] br-778577e9b86f: port 1(vetheeed0bb) entered disabled state
+[    0.000000] device vetheeed0bb left promiscuous mode
+[    0.000000] br-778577e9b86f: port 1(vetheeed0bb) entered disabled state
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): br-cb93a3f21537: link is not ready
+[    0.000000] device veth710e8eb entered promiscuous mode
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): veth710e8eb: link is not ready
+[    0.000000] eth0: renamed from vethe0b9a58
+[    0.000000] IPv6: ADDRCONF(NETDEV_CHANGE): veth710e8eb: link becomes ready
+[    0.000000] br-cb93a3f21537: port 1(veth710e8eb) entered forwarding state
+[    0.000000] br-cb93a3f21537: port 1(veth710e8eb) entered forwarding state
+[    0.000000] IPv6: ADDRCONF(NETDEV_CHANGE): br-cb93a3f21537: link becomes ready
+[    0.000000] br-cb93a3f21537: port 1(veth710e8eb) entered disabled state
+[    0.000000] vethe0b9a58: renamed from eth0
+[    0.000000] br-cb93a3f21537: port 1(veth710e8eb) entered disabled state
+[    0.000000] device veth710e8eb left promiscuous mode
+[    0.000000] br-cb93a3f21537: port 1(veth710e8eb) entered disabled state
+[    0.000000] device veth2966040 entered promiscuous mode
+[    0.000000] IPv6: ADDRCONF(NETDEV_UP): veth2966040: link is not ready
+[    0.000000] eth0: renamed from vethc589ece
+[    0.000000] IPv6: ADDRCONF(NETDEV_CHANGE): veth2966040: link becomes ready
+[    0.000000] br-cb93a3f21537: port 1(veth2966040) entered forwarding state
+[    0.000000] br-cb93a3f21537: port 1(veth2966040) entered forwarding state
