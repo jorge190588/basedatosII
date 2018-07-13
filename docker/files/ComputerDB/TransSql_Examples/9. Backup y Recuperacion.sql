@@ -10,6 +10,18 @@ GO
 
 ------------------------------------------------------------
 
+----- Cerrar las conexions antes de restaurar la base de datos
+DECLARE @processid INT 
+SELECT  @processid = MIN(spid)
+FROM    master.dbo.sysprocesses
+WHERE   dbid = DB_ID(@dbname) 
+WHILE @processid IS NOT NULL 
+    BEGIN 
+        EXEC ('KILL ' + @processid) 
+        SELECT  @processid = MIN(spid)
+        FROM    master.dbo.sysprocesses
+        WHERE   dbid = DB_ID('ComputerDB_2') 
+    END
 
 
 ------------- 2 REstarurar una Base de Datos 
