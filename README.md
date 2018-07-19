@@ -43,6 +43,10 @@ Las herramientas utilizadas para hacer los ejercicios son>
 ## Requerimientos 
 Utilizando Gherkin se describen los requermientos para la extraccion de informacion.  Se debe justificar con datos cuantificables cada respuesta, es decir debe realizar como minimo pruebas con diferente sintaxis sql (SQL,join y TransSQL)
 
+## Diagramas
+
+1. [Qué es un diagrama entidad-relación](https://www.lucidchart.com/pages/es/qué-es-un-diagrama-entidad-relación) 
+
 ## Contenido
 1. Transacciones
 2. Prodecimientos almacenados (sin parametros, con parametros y con TVP)
