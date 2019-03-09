@@ -7,10 +7,10 @@ select * from productos
 
 -- first example
 SET IMPLICIT_TRANSACTIONS ON
-BEGIN TRAN 
+BEGIN TRAN NOMBRETRANSACCION
 	update Productos set idBodega=2 where id=1;
-    ROLLBACK TRAN      
---COMMIT TRAN
+    ROLLBACK TRAN NOMBRETRANSACCION      
+-- COMMIT TRAN NOMBRETRANSACCION
 
 -- second example
 declare @contador int
