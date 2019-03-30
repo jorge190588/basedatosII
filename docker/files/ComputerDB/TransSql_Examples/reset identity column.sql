@@ -1,0 +1,2 @@
+DBCC CHECKIDENT (metaMesArchivo, RESEED, 0);
+GO
