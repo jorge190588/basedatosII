@@ -48,7 +48,7 @@ DECLARE @cantidadRegistros INT, @id int;
 SET @cantidadRegistros = 0;
 select @id = max(id) from persona;
 
-WHILE @cantidadRegistros <= 20000
+WHILE @cantidadRegistros <= 50000
 BEGIN
 	SET @cantidadRegistros = @cantidadRegistros + 1;
 	set @id=@id+1
@@ -63,7 +63,7 @@ DECLARE @cantidadRegistros INT, @id int;
 SET @cantidadRegistros = 0;
 select @id = max(id) from alumno;
 
-WHILE @cantidadRegistros <= 20000
+WHILE @cantidadRegistros <= 50000
 BEGIN
    SET @cantidadRegistros = @cantidadRegistros + 1;
 	set @id=@id+1
@@ -72,15 +72,18 @@ BEGIN
 END;
 
 select count(id) contador, Activo from (
-	select p.id, p.nombre nombrePersona, p.nit, p.fechaNacimiento, 
+	select p.id, p.nombre nombrePersona, p.nit nitPersona, p.fechaNacimiento, 
 			day(p.fechaNacimiento) diaNacimiento,month(p.fechaNacimiento) mesNacimiento, 
 			year(p.fechaNacimiento) anoNacimiento,
 			a.id idAlumno, case when a.esActivo=1 then 'activo' else 'no activo' end activo,
-			e.id idEstablecimiento, e.nombre nombreEstablecimiento, e.direccion, e.nit
+			e.id idEstablecimiento, e.nombre nombreEstablecimiento, e.direccion, e.nit nitEstablecimiento
 	from persona p
 	inner join alumno a on p.id=a.persona
 	inner join establecimiento e on a.establecimiento=e.id
-
 ) as datos
 group by datos.Activo
 
+select * from alumno a where a.persona in 
+	(	select p.id from persona p, alumno a  
+		where a.persona=p.id and  a.esactivo=0 and a.establecimiento in
+				(select id from establecimiento) )
