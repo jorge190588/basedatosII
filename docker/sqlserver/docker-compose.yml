@@ -1,0 +1,23 @@
+version: "3"
+services:
+  sqlserver:
+    container_name: sqlserver2017
+    build: 
+      context: .
+      dockerfile: Dockerfilesqlserver.dockerfile
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Web45666
+    healthcheck:
+      test: sqlcmd -S db1.internal.prod.example.com -U SA -P 'Web45666' -Q 'select distinct 1 from master'
+    networks:
+      mynetwork:
+        aliases:
+          - db1.internal.prod.example.com
+
+
+networks:
+  mynetwork:
+    driver: bridge
