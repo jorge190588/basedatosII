@@ -8,15 +8,19 @@ END else begin
 	print('entities schme already exists')
 end
 */
-
+select * from sysobjects where name='student'
 if not exists (select * from sysobjects where name='student' and xtype='U')
     create table [student] (
 		id int primary key not null  IDENTITY(1,1),
-        firstName varchar(50) not null,
+        carne varchar(50) not null,
+		firstName varchar(50) not null,
 		lastName varchar(50) not null,
-		carne varchar(50) not null,
+		direccion varchar(50) null,
+		telefonos varchar(50) null,
+		correos varchar(50) null,
 		created_at datetime default getdate(),
-		updated_at datetime default getdate()
+		updated_at datetime null,
+		version int
     );
 
 if not exists (select * from sysobjects where name='teacher' and xtype='U')
