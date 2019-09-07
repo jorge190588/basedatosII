@@ -43,6 +43,32 @@ if not exists (select * from sysobjects where name='city' and xtype='U')
 		version int
 );
 
+alter table city add constraint FK_city_state foreign key(state) references state(id)
+
+if not exists (select * from sysobjects where name='state' and xtype='U')
+    create table [state] (
+		id int primary key not null  IDENTITY(1,1),
+        name varchar(50) not null,
+		country int not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+);
+alter table state add constraint FK_state_country foreign key(country) references country(id)
+
+if not exists (select * from sysobjects where name='country' and xtype='U')
+    create table [country] (
+		id int primary key not null  IDENTITY(1,1),
+        name varchar(50) not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+);
+
 
 
 if not exists (select * from sysobjects where name='teacher' and xtype='U')
