@@ -1,0 +1,28 @@
+version: "3"
+services:
+  
+  mysql:
+    container_name: mysql
+    build: 
+      context: .
+      dockerfile: Dockerfilemysql.dockerfile
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=ranking_videos
+      - MYSQL_USER=tony
+      - MYSQL_PASSWORD=dpa\*12d
+      - MYSQL_ROOT_PASSWORD=web
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    #volumes:
+    #  - ./app_online:/app
+
+#volumes:
+#  app_online:
+
+#bash -c "npm -prefix /web install /web && npm --prefix /web run startProd"
+# create only the mysql image docker build -t jsantos/alpine-mysql -f ./Dockerfilemysql.dockerfile .      
