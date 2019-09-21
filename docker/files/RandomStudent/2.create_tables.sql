@@ -1,11 +1,138 @@
 use RandomStudent;
-/*
- drop table student
-select * from student
-insert into student (birthday, city) values('19/05/1988',4)
-select * from student
-drop table student
-*/
+drop table course;
+drop table pensum;
+drop table grade;
+drop table city;
+drop table state;
+drop table country;
+drop table student;
+drop table town;
+
+if not exists (select * from sysobjects where name='pensum' and xtype='U')
+    create table [pensum] (
+		id int primary key not null  IDENTITY(1,1),
+        name varchar(50) null,
+		code varchar(20) not null,
+		year int not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+	)
+
+if not exists (select * from sysobjects where name='course' and xtype='U')
+    create table [course] (
+		id int primary key not null  IDENTITY(1,1),
+        name varchar(50) null,
+		code varchar(20) not null,
+		pensum int not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+	)
+alter table course add constraint FK_course_pensum foreign key(pensum) references pensum(id)
+
+if not exists (select * from sysobjects where name='grade' and xtype='U')
+    create table [grade] (
+		id int primary key not null  IDENTITY(1,1),
+        name varchar(50) null,
+		code varchar(20) not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+	)
+
+if not exists (select * from sysobjects where name='grade_course' and xtype='U')
+    create table [grade_course] (
+		id int primary key not null  IDENTITY(1,1),
+        course int not null,
+		grade int not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+	)
+alter table grade_course add constraint FK_grade_course_course foreign key(course) references course(id);
+alter table grade_course add constraint FK_grade_course_grade foreign key(grade) references grade(id);
+
+
+if not exists (select * from sysobjects where name='content' and xtype='U')
+    create table [content] (
+		id int primary key not null  IDENTITY(1,1),
+        code varchar(10) not null,
+		name varchar(150) not null,
+		indicator int not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+	)
+
+if not exists (select * from sysobjects where name='evaluationCriteria' and xtype='U')
+    create table [evaluationCriteria] (
+		id int primary key not null  IDENTITY(1,1),
+        code varchar(10) not null,
+		name varchar(150) not null,
+		indicator int not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+	)
+
+if not exists (select * from sysobjects where name='indicator' and xtype='U')
+    create table [indicator] (
+		id int primary key not null  IDENTITY(1,1),
+        code varchar(10) not null,
+		name varchar(150) not null,
+		competency int not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+	)
+	
+if not exists (select * from sysobjects where name='competency' and xtype='U')
+    create table [competency] (
+		id int primary key not null  IDENTITY(1,1),
+        code varchar(10) not null,
+		name varchar(150) not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+	)
+	
+if not exists (select * from sysobjects where name='grade_course_content' and xtype='U')
+    create table grade_course_content (
+		id int primary key not null  IDENTITY(1,1),
+        content int not null,
+		course_grade int not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+	)
+
+
+alter table course_grade_cont add constraint FK_course_course foreign key(course) references course(id);
+alter table course_grade add constraint FK_course_grade foreign key(grade) references grade(id);
+
+
+
+
+
 if not exists (select * from sysobjects where name='student' and xtype='U')
     create table [student] (
 		id int primary key not null  IDENTITY(1,1),
