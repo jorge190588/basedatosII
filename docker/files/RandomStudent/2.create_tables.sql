@@ -1,12 +1,20 @@
 use RandomStudent;
+drop table quizDetail;
+drop table quiz;
+drop table teacher;
+drop table competency;
+drop table evaluationCriteria;
+drop table grade_course;
+drop table grade_course_content;
+drop table indicator;
 drop table course;
 drop table pensum;
 drop table grade;
+drop table student;
 drop table city;
 drop table state;
 drop table country;
-drop table student;
-drop table town;
+drop table content;
 
 if not exists (select * from sysobjects where name='pensum' and xtype='U')
     create table [pensum] (
@@ -21,20 +29,7 @@ if not exists (select * from sysobjects where name='pensum' and xtype='U')
 		version int
 	)
 
-if not exists (select * from sysobjects where name='course' and xtype='U')
-    create table [course] (
-		id int primary key not null  IDENTITY(1,1),
-        name varchar(50) null,
-		code varchar(20) not null,
-		pensum int not null,
-		created_at datetime default getdate(),
-		updated_at datetime null,
-		created_by int null,
-		updated_by int null,
-		version int
-	)
-alter table course add constraint FK_course_pensum foreign key(pensum) references pensum(id)
-
+	
 if not exists (select * from sysobjects where name='grade' and xtype='U')
     create table [grade] (
 		id int primary key not null  IDENTITY(1,1),
@@ -46,11 +41,14 @@ if not exists (select * from sysobjects where name='grade' and xtype='U')
 		updated_by int null,
 		version int
 	)
+	 
 
-if not exists (select * from sysobjects where name='grade_course' and xtype='U')
-    create table [grade_course] (
+if not exists (select * from sysobjects where name='course' and xtype='U')
+    create table [course] (
 		id int primary key not null  IDENTITY(1,1),
-        course int not null,
+        name varchar(50) null,
+		code varchar(20) not null,
+		pensum int not null,
 		grade int not null,
 		created_at datetime default getdate(),
 		updated_at datetime null,
@@ -58,8 +56,9 @@ if not exists (select * from sysobjects where name='grade_course' and xtype='U')
 		updated_by int null,
 		version int
 	)
-alter table grade_course add constraint FK_grade_course_course foreign key(course) references course(id);
-alter table grade_course add constraint FK_grade_course_grade foreign key(grade) references grade(id);
+
+alter table course add constraint FK_course_pensum foreign key(pensum) references pensum(id);
+alter table course add constraint FK_course_grade foreign key(grade) references grade(id);
 
 
 if not exists (select * from sysobjects where name='content' and xtype='U')
@@ -67,6 +66,7 @@ if not exists (select * from sysobjects where name='content' and xtype='U')
 		id int primary key not null  IDENTITY(1,1),
         code varchar(10) not null,
 		name varchar(150) not null,
+		grade int not null,
 		indicator int not null,
 		created_at datetime default getdate(),
 		updated_at datetime null,
@@ -112,25 +112,47 @@ if not exists (select * from sysobjects where name='competency' and xtype='U')
 		updated_by int null,
 		version int
 	)
-	
-if not exists (select * from sysobjects where name='grade_course_content' and xtype='U')
-    create table grade_course_content (
+	  
+
+if not exists (select * from sysobjects where name='country' and xtype='U')
+    create table [country] (
 		id int primary key not null  IDENTITY(1,1),
-        content int not null,
-		course_grade int not null,
+        name varchar(50) not null,
 		created_at datetime default getdate(),
 		updated_at datetime null,
 		created_by int null,
 		updated_by int null,
 		version int
-	)
+);
+
+if not exists (select * from sysobjects where name='state' and xtype='U')
+    create table [state] (
+		id int primary key not null  IDENTITY(1,1),
+        name varchar(50) not null,
+		country int not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+);
 
 
-alter table course_grade_cont add constraint FK_course_course foreign key(course) references course(id);
-alter table course_grade add constraint FK_course_grade foreign key(grade) references grade(id);
+if not exists (select * from sysobjects where name='city' and xtype='U')
+    create table [city] (
+		id int primary key not null  IDENTITY(1,1),
+        name varchar(50) not null,
+		[state] int not null,
+		created_at datetime default getdate(),
+		updated_at datetime null,
+		created_by int null,
+		updated_by int null,
+		version int
+);
 
 
-
+alter table city add constraint FK_city_state foreign key(state) references state(id);
+alter table state add constraint FK_state_country foreign key(country) references country(id);
 
 
 if not exists (select * from sysobjects where name='student' and xtype='U')
@@ -155,46 +177,6 @@ if not exists (select * from sysobjects where name='student' and xtype='U')
 		constraint FK_student_city foreign key(city) references city(id)
     );
 
-/*select * from city
-insert into city(name,state) values ('Reu',1111)
-drop table city*/
-if not exists (select * from sysobjects where name='city' and xtype='U')
-    create table [city] (
-		id int primary key not null  IDENTITY(1,1),
-        name varchar(50) not null,
-		[state] int not null,
-		created_at datetime default getdate(),
-		updated_at datetime null,
-		created_by int null,
-		updated_by int null,
-		version int
-);
-
-alter table city add constraint FK_city_state foreign key(state) references state(id)
-
-if not exists (select * from sysobjects where name='state' and xtype='U')
-    create table [state] (
-		id int primary key not null  IDENTITY(1,1),
-        name varchar(50) not null,
-		country int not null,
-		created_at datetime default getdate(),
-		updated_at datetime null,
-		created_by int null,
-		updated_by int null,
-		version int
-);
-alter table state add constraint FK_state_country foreign key(country) references country(id)
-
-if not exists (select * from sysobjects where name='country' and xtype='U')
-    create table [country] (
-		id int primary key not null  IDENTITY(1,1),
-        name varchar(50) not null,
-		created_at datetime default getdate(),
-		updated_at datetime null,
-		created_by int null,
-		updated_by int null,
-		version int
-);
 
 
 
