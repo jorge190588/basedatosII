@@ -47,6 +47,7 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 
 1. [Qué es un diagrama entidad-relación](https://www.lucidchart.com/pages/es/qué-es-un-diagrama-entidad-relación) 
 2. [Modelo entidad relación](https://es.wikipedia.org/wiki/Modelo_entidad-relación)
+3. [Crear diagramas](https://dbdiagram.io/)
 
 ## Contenido
 1. Transacciones
