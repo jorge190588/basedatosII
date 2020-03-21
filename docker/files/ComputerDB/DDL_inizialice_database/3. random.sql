@@ -17,7 +17,7 @@ GO
 
 
 
--- step 3
+-- step 2
 USE [ComputerDB]
 GO
 /****** Object:  UserDefinedFunction [dbo].[getRandomDate]    Script Date: 08/02/2018 7:11:34 p. m. ******/
@@ -26,7 +26,6 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
--- step 3
 CREATE FUNCTION [dbo].[getRandomDate]
 (
 	@lower DATE,
