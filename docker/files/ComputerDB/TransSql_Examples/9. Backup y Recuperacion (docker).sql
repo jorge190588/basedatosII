@@ -36,6 +36,8 @@ WHILE @processid IS NOT NULL
 -- Que permite cambiar la ubicacion de almacenamiento, nombre de la base de datos
 -- nombre del archivo mdf y nombre del archivo log
 use master;
+--NO FUNCIONA
+--  To create a new backup device use either sp_addumpdevice or SQL Server Management Studio.
 --opcion 1. Recuperación de backup desde otra base de datos del motor de base de datos.
 RESTORE DATABASE ComputerBDfromBD	-- Se elige la base de datos a restaurar
  FROM ComputerDB WITH RECOVERY,		-- la direccion donde se guardan los backups 
