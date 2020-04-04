@@ -31,26 +31,24 @@ WHILE @processid IS NOT NULL
         WHERE   dbid = DB_ID('ComputerDB_2') 
     END
 
+	use studentdata
 ------------- 2 REstarurar una Base de Datos 
 -- Que permite cambiar la ubicacion de almacenamiento, nombre de la base de datos
 -- nombre del archivo mdf y nombre del archivo log
 use master;
 --opcion 1. Recuperación de backup desde otra base de datos del motor de base de datos.
-RESTORE DATABASE ComputerDB_backup_fromBD	-- Se elige la base de datos a restaurar
- FROM ComputerDB				-- la direccion donde se guardan los backups
- WITH RECOVERY,
- MOVE 'ComputerDB_backup_fromBD' TO '/home/ComputerDB_backup_fromBD.mdf', -- archivo con objecto (tablas, sp, funciones, otros) y datos.
- MOVE 'ComputerDB_backup_fromBD_log' TO '/home/ComputerDB_backup_fromBD_log.ldf'; -- archivo de registros (logs)
+RESTORE DATABASE ComputerBDfromBD	-- Se elige la base de datos a restaurar
+ FROM ComputerDB WITH RECOVERY,		-- la direccion donde se guardan los backups 
+ MOVE 'ComputerDB' TO '/home/ComputerBDfromBD.mdf',
+ MOVE 'ComputerDB_log' TO '/home/ComputerBDfromBD_log.ldf';
 GO
 
 --opcion 2. Recuperación de backup desde un archivo con extensión .bak
 -- crear automaticamente la base de datos
-RESTORE DATABASE ComputerDB_backup_fromFile			-- Se elige la base de datos a restaurar
- FROM DISK = '/home/ComputerDB.Bak'	-- la direccion donde se guardan los backups
- WITH RECOVERY,
- MOVE 'ComputerDB_backup_fromFile' TO '/home/ComputerDB_backup_fromFile.mdf',
- MOVE 'ComputerDB_backup_fromFile_log' TO '/home/ComputerDB_backup_fromFile_log.ldf';
-GO
+RESTORE DATABASE ComputerBDfromFile
+    FROM DISK = '/home/ComputerDB.Bak' WITH RECOVERY,
+ MOVE 'ComputerDB' TO '/home/ComputerBDfromFile.mdf',
+ MOVE 'ComputerDB_log' TO '/home/ComputerBDfromFile_log.ldf';
 
  
 ---------------------------------------------------------------
