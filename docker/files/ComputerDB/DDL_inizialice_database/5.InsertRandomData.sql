@@ -1,8 +1,16 @@
-
 use ComputerDB;
-
+/*
+delete from SalidaDetalle
+delete from Salida
+delete from EntradaDetalle
+delete from entrada
+DBCC CHECKIDENT ('SalidaDetalle', RESEED, 0)
+DBCC CHECKIDENT ('Salida', RESEED, 0)
+DBCC CHECKIDENT ('EntradaDetalle', RESEED, 0)
+DBCC CHECKIDENT ('entrada', RESEED, 0)
+*/
 declare @totalDeSalidas int,@totalDeEntradas int
-select @totalDeSalidas=10,@totalDeEntradas=10
+select @totalDeSalidas=500,@totalDeEntradas=500
 
 -- INSERTAR ENCABEZADO DE SALIDAS
 declare @idsalida int

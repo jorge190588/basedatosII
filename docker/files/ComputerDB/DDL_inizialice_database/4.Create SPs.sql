@@ -22,7 +22,7 @@ begin
 	SELECT @Random = ROUND(((@maximo - @minimo -1) * RAND() + @minimo), 0)
 
 	declare @fecha datetime
-	select @fecha=dbo.getRandomDate('01/01/2013','10/04/2017')
+	select @fecha=dbo.getRandomDate('01/01/2013','12/12/2021')
 	insert into dbo.Salida(fecha,documento,idCliente)
 	values(@fecha,@contador,@Random)
 end
@@ -87,7 +87,7 @@ begin
 	SET @maximo = 31 
 	SELECT @Random = ROUND(((@maximo - @minimo -1) * RAND() + @minimo), 0)
 	declare @fecha datetime 
-	SELECT @fecha = dbo.getRandomDate('01/01/2013','22/02/2018')
+	SELECT @fecha = dbo.getRandomDate('01/01/2013','12/12/2021')
 
 	insert into dbo.Entrada(fecha,documento,idProveedor)
 	values(@fecha,@contador,@Random)
