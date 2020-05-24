@@ -70,7 +70,8 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 ### Mineria de datos
 1. [Documentacion de Microsoft sobre mineria de datos](https://msdn.microsoft.com/es-es/library/ms175595(v=sql.120).aspx)
 2. [Factores](https://miblogtecnico.wordpress.com/2014/03/18/mineria-de-datos-en-sql-server-2012/)
-3. [Mineria de datos](https://www.youtube.com/watch?v=hbiRtv2WxDY)
+3. [Configuring Microsoft SQL Server Analysis Services on Amazon RDS for SQL Server](https://aws.amazon.com/es/blogs/database/configuring-microsoft-sql-server-analysis-services-on-amazon-rds-for-sql-server/)
+4. [Mineria de datos](https://www.youtube.com/watch?v=hbiRtv2WxDY) 
   * Asociacion de patrones
   * Clustering
   * Arboles de desicion [Ejemplo 1](https://www.youtube.com/watch?v=ss1_BehIU1g),[Ejemplo 2](https://www.youtube.com/watch?v=aXY-T3ohrdE), [Ejemplo 3](https://www.youtube.com/watch?v=WO8Vi-s92FM)
