@@ -1,11 +1,25 @@
-# basedatosII
+# CURSO DE BASE DE DATOS
+
+# BASE DE DATOS I
+
+## Diagrama ER y Diagrama Relacional
+
+1. [Qué es un diagrama entidad-relación](https://www.lucidchart.com/pages/es/qué-es-un-diagrama-entidad-relación) 
+2. [Modelo entidad relación](https://es.wikipedia.org/wiki/Modelo_entidad-relación)
+3. [Crear diagramas](https://dbdiagram.io/)
+
+## Ejemplos DDL
+
+## Ejemplos DML
+
+
+
+
+
+# BASE DE DATOS II
 El proyecto contiene un script de la base de datos de un giro de negocio de ventas.   Los movimientos registrados deben de ser sobre productos de computadoras
 
-## Alumnos
-
-Deben aportan en el proyecto por medio de commits, actualizando el script de la base de datos e ingresando como minimo 500,000 registros en las transacciones principales que son movimientos de compras y ventas.
-
-## Tablas de la base de datos y sus atributos
+## BASE DE DATOS DE EJEMPLO
 A partir del listado de tablas con atributos minimos deben incrementar la estructura de la base de datos.  
 
 1. Productos (id, nombre, descripcion, precio, costos, existencia, idmarca, iddimension, idcolor)
@@ -24,8 +38,6 @@ A partir del listado de tablas con atributos minimos deben incrementar la estruc
 14. Entrada (id,fecha,documento,idproveedor)
 15. Entradadetalle(id,identrada,idproducto,cantidad,precio,costo)
 
-## Reglas de negocio.
-En esta seccion se proporcionan casos de uso sobre la estructura de la base de datos, como por ejemplo el funcionamiento de la clasificacion de clientes.
 
 ## Software
 Las herramientas utilizadas para hacer los ejercicios son>
@@ -42,12 +54,6 @@ Las herramientas utilizadas para hacer los ejercicios son>
 
 ## Requerimientos 
 Utilizando Gherkin se describen los requermientos para la extraccion de informacion.  Se debe justificar con datos cuantificables cada respuesta, es decir debe realizar como minimo pruebas con diferente sintaxis sql (SQL,join y TransSQL)
-
-## Diagramas
-
-1. [Qué es un diagrama entidad-relación](https://www.lucidchart.com/pages/es/qué-es-un-diagrama-entidad-relación) 
-2. [Modelo entidad relación](https://es.wikipedia.org/wiki/Modelo_entidad-relación)
-3. [Crear diagramas](https://dbdiagram.io/)
 
 ## Contenido
 1. Transacciones
