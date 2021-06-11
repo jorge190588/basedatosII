@@ -72,6 +72,7 @@ Utilizando Gherkin se describen los requermientos para la extraccion de informac
 
 1. [Analisis multidimensional (cubos olap)](https://www.youtube.com/watch?v=PDqmZY1msZs)
 2. [Ejemplo de cubo de salidas](https://youtu.be/zlJNtwXBq4k)
+3. [¿En qué consiste un proceso de ETL (Extraer, Transformar y Cargar)?](https://www.sqlshack.com/es/como-construir-un-cubo-desde-cero-usando-sql-server-analysis-services-ssas/)
 
 ### Mineria de datos
 1. [Documentacion de Microsoft sobre mineria de datos](https://msdn.microsoft.com/es-es/library/ms175595(v=sql.120).aspx)
